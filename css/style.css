@@ -1,0 +1,8408 @@
+body {
+    background-color: #0b1026;
+    color: #f4f1de;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 100px;
+}
+
+p {
+    font-size: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #3d466b;
+    background-image:
+        linear-gradient(
+            rgba(11, 16, 38, 0.35),
+            rgba(11, 16, 38, 0.65)
+        ),
+        url("../images/header-moonlight.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: moonlightZoom 50s ease-in-out infinite alternate;
+}
+@keyframes moonlightZoom {
+    from {
+        background-size: 100% auto;
+    }
+
+    to {
+        background-size: 115% auto;
+    }
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #f4f1de;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #c9a7ff;
+}
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    background-color: transparent;
+    color: #f4f1de;
+    border: 1px solid #f4f1de;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #f4f1de;
+    color: #0b1026;
+}
+.coin-counter {
+    font-size: 18px;
+    padding: 8px 14px;
+    border: 1px solid #3d466b;
+    border-radius: 20px;
+}
+.coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.coin:hover {
+    transform: scale(1.15);
+    filter: brightness(1.3);
+}
+
+.bronze {
+    background: linear-gradient(145deg, #cd7f32, #8b4513);
+    border: 2px solid #e0a15c;
+    box-shadow: 0 0 8px rgba(205, 127, 50, 0.7);
+}
+.silver {
+    background: linear-gradient(145deg, #eeeeee, #888888);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(220, 220, 220, 0.8);
+}
+.gold {
+    background: linear-gradient(145deg, #fff3a3, #d4af37);
+    border: 2px solid #fff8c6;
+    box-shadow:
+        0 0 8px rgba(255, 215, 0, 0.8),
+        0 0 18px rgba(255, 215, 0, 0.5);
+}
+.coin {
+    animation: coinAppear 0.4s ease-out;
+}
+
+@keyframes coinAppear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.coin-reward {
+    position: fixed;
+    color: #fff3a3;
+    font-size: 20px;
+    font-weight: bold;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+}
+.coin-reward.show {
+    animation: rewardFloat 1s ease-out forwards;
+}
+
+@keyframes rewardFloat {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+.academy-intro {
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.academy-intro h1 {
+    font-size: 52px;
+    margin: 10px 0;
+}
+
+.academy-intro .subtitle {
+    max-width: 600px;
+    line-height: 1.6;
+}
+.subjects {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 40px 80px;
+}
+
+.subject-card {
+    width: 220px;
+    padding: 25px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.subject-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.subject-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.subject-card:hover {
+    transform: translateY(-8px);
+    border-color: #c9a7ff;
+    box-shadow: 0 0 20px rgba(201, 167, 255, 0.2);
+}
+.subject-card .explore-button {
+    margin-top: 15px;
+    padding: 9px 20px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    background-color: #1d2d5a;
+    color: #f4f1de;
+    border: 1px solid #5269a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.subject-card .explore-button:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 12px rgba(201, 167, 255, 0.7);
+}
+.spell-list {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 40px 80px;
+}
+
+.spell-card {
+    width: auto;
+    padding: 25px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.spell-card:last-child {
+    grid-column: 2;
+}
+.spell-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.spell-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.spell-card:hover {
+    transform: translateY(-8px);
+    border-color: #c9a7ff;
+    box-shadow: 0 0 20px rgba(201, 167, 255, 0.2);
+}
+/* Individual spell glow */
+
+.spell-card.lux:hover {
+    border-color: #f6d86b;
+    box-shadow: 0 0 22px rgba(246, 216, 107, 0.45);
+}
+
+.spell-card.ignis:hover {
+    border-color: #ff6347;
+    box-shadow: 0 0 22px rgba(255, 99, 71, 0.45);
+}
+
+.spell-card.aegis:hover {
+    border-color: #d8e2ec;
+    box-shadow: 0 0 22px rgba(216, 226, 236, 0.45);
+}
+
+.spell-card.glacius:hover {
+    border-color: #78d7ff;
+    box-shadow: 0 0 22px rgba(120, 215, 255, 0.45);
+}
+
+.spell-card.incrementum:hover {
+    border-color: #72e6a6;
+    box-shadow: 0 0 22px rgba(114, 230, 166, 0.45);
+}
+
+.spell-card.procella:hover {
+    border-color: #f4f1de;
+    box-shadow: 0 0 22px rgba(244, 241, 222, 0.45);
+}
+
+.spell-card.duplicatio:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 22px rgba(201, 167, 255, 0.5);
+}
+.spell-discovery {
+    margin: 20px auto 80px;
+    padding: 30px;
+    max-width: 600px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+}
+
+.spell-discovery h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.spell-discovery p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#discoverSpell {
+    margin-top: 15px;
+    padding: 10px 22px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    background-color: #1d2d5a;
+    color: #f4f1de;
+    border: 1px solid #5269a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+#discoverSpell:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 12px rgba(201, 167, 255, 0.7);
+}
+
+#spellResult {
+    min-height: 30px;
+    margin-top: 20px;
+    color: #c9a7ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#spellResult.show {
+    animation: spellReveal 0.6s ease-out;
+}
+.discovered-spell-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto 15px;
+}
+@keyframes spellReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+#discoverSpell:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgba(201, 167, 255, 0.9);
+}
+.potion-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 40px 80px;
+}
+
+.potion-card {
+    width: 220px;
+    padding: 25px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+    box-shadow: 0 0 10px rgba(124, 255, 155, 0.08);
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.potion-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.potion-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.potion-card:hover {
+    transform: translateY(-8px);
+    border-color: #7cff9b;
+    box-shadow: 0 0 25px rgba(124, 255, 155, 0.35);
+}
+
+.potion-card:hover h2 {
+    text-shadow: 0 0 14px rgba(124, 255, 155, 0.8);
+}
+.potion-card h2 {
+    color: #f4f1de;
+    text-shadow: 0 0 8px rgba(124, 255, 155, 0.5);
+}
+.potion-mixer {
+    margin: 20px auto 80px;
+    padding: 30px;
+    max-width: 600px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+    box-shadow: 0 0 10px rgba(124, 255, 155, 0.08);
+}
+
+.potion-mixer h2 {
+    color: #f4f1de;
+    text-shadow: 0 0 8px rgba(124, 255, 155, 0.5);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.potion-mixer p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ingredients {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ingredients button {
+    padding: 10px 16px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    background-color: #1d2d5a;
+    color: #f4f1de;
+    border: 1px solid #5269a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.ingredients button:hover {
+    border-color: #7cff9b;
+    box-shadow: 0 0 12px rgba(124, 255, 155, 0.7);
+}
+
+#potionResult {
+    min-height: 30px;
+    margin-top: 25px;
+    color: #f4f1de;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(124, 255, 155, 0.6);
+}
+.ingredients button.selected {
+    border-color: #7cff9b;
+    box-shadow: 0 0 18px rgba(124, 255, 155, 0.8);
+    transform: translateY(-3px);
+}
+#potionResult.show {
+    animation: potionReveal 0.6s ease-out;
+}
+
+@keyframes potionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+#quizResult {
+    min-height: 30px;
+    margin-top: 25px;
+    color: #c9a7ff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(201, 167, 255, 0.7);
+}
+
+#quizResult.show {
+    animation: quizReveal 0.6s ease-out;
+}
+
+@keyframes quizReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.difficulty-select {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.difficulty-select button {
+    padding: 10px 18px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    background-color: #1d2d5a;
+    color: #f4f1de;
+    border: 1px solid #5269a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+.difficulty-select button:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 12px rgba(201, 167, 255, 0.7);
+}
+
+.difficulty-select button:active {
+    transform: scale(0.95);
+}
+.quiz-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.quiz-options button {
+    padding: 12px 22px;
+    min-width: 120px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    background-color: #1d2d5a;
+    color: #f4f1de;
+    border: 1px solid #5269a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.quiz-options button:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 12px rgba(201, 167, 255, 0.7);
+}
+
+.quiz-options button:active {
+    transform: scale(0.95);
+}
+.quiz-options button.correct {
+    border-color: #7cff9b;
+    box-shadow: 0 0 18px rgba(124, 255, 155, 0.8);
+}
+
+.quiz-options button.wrong {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 18px rgba(255, 107, 107, 0.8);
+}
+.difficulty-select button.selected {
+    border-color: #c9a7ff;
+    box-shadow:
+        0 0 12px rgba(201, 167, 255, 0.8),
+        0 0 22px rgba(201, 167, 255, 0.35);
+    transform: translateY(-3px);
+}
+#questionCounter {
+    margin-bottom: 10px;
+    color: #c9a7ff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+#retryQuiz {
+    display: none;
+    margin: 25px auto 0;
+    padding: 11px 24px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    background-color: #1d2d5a;
+    color: #f4f1de;
+    border: 1px solid #5269a3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
+}
+
+#retryQuiz:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 14px rgba(201, 167, 255, 0.7);
+}
+
+#retryQuiz:active {
+    transform: scale(0.95);
+}
+
+.achievements-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 40px 80px;
+}
+
+.achievement-card {
+    width: 220px;
+    padding: 25px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+    opacity: 0.75;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.achievement-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+    filter: grayscale(0.7);
+}
+
+.achievement-card h2 {
+    font-size: 21px;
+    margin-bottom: 12px;
+    color: #f4f1de;
+}
+
+.achievement-card p {
+    min-height: 48px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.achievement-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 12px;
+    border: 1px solid #5269a3;
+    border-radius: 15px;
+    color: #aab3d1;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .coin-counter {
+        font-size: 16px;
+    }
+    .academy-intro h1 {
+    font-size: 38px;
+    }
+
+    .hero h1 {
+    font-size: 44px;
+    }
+
+    .subtitle {
+    font-size: 18px;
+    padding: 0 15px;
+    }
+
+    .academy-intro {
+    min-height: 40vh;
+    }
+    .spell-list {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 80px;
+}
+
+.spell-card {
+    width: auto;
+}
+
+.spell-card:last-child {
+    grid-column: auto;
+}
+}
+
+.astral-list {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 40px 80px;
+}
+
+.astral-card {
+    width: auto;
+    padding: 25px;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    background-color: #111936;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.astral-card:last-child {
+    grid-column: 2;
+}
+
+.astral-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.astral-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.astral-subject-card:hover {
+    transform: translateY(-8px);
+    border-color: #8fa8ff;
+    box-shadow:
+        0 0 15px rgba(143, 168, 255, 0.5),
+        0 0 30px rgba(201, 167, 255, 0.2);
+}
+/* Individual Astral glow */
+
+.astral-card.silver-moon:hover {
+    border-color: #d8d4ff;
+    box-shadow: 0 0 22px rgba(216, 212, 255, 0.45);
+}
+
+.astral-card.aqualis:hover {
+    border-color: #59c9ff;
+    box-shadow: 0 0 22px rgba(89, 201, 255, 0.45);
+}
+
+.astral-card.ignara:hover {
+    border-color: #ff6347;
+    box-shadow: 0 0 22px rgba(255, 99, 71, 0.45);
+}
+
+.astral-card.terravon:hover {
+    border-color: #72e6a6;
+    box-shadow: 0 0 22px rgba(114, 230, 166, 0.45);
+}
+
+.astral-card.caelus:hover {
+    border-color: #c9efff;
+    box-shadow: 0 0 22px rgba(201, 239, 255, 0.45);
+}
+
+.astral-card.vespera:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 22px rgba(201, 167, 255, 0.5);
+}
+
+.astral-card.eternal-stars:hover {
+    border-color: #f6d86b;
+    box-shadow: 0 0 22px rgba(246, 216, 107, 0.45);
+}
+.astral-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+.celestial-observation {
+    position: relative;
+    overflow: hidden;
+    max-width: 650px;
+    margin: 0 auto 80px;
+    padding: 35px;
+    text-align: center;
+
+    background: #111936;
+    border: 1px solid #3d466b;
+    border-radius: 14px;
+
+    box-shadow: 0 0 20px rgba(120, 170, 255, 0.12);
+}
+
+.celestial-observation h2 {
+    margin-bottom: 12px;
+}
+
+.observation-intro {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+#observeSky {
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #243b73, #553c8b);
+    color: #f4f1de;
+
+    border: 1px solid #9ebcff;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+#observeSky:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(158, 188, 255, 0.55),
+        0 0 30px rgba(201, 167, 255, 0.2);
+}
+/* Magical telescope button */
+
+#observeSky.telescope-button {
+    display: block;
+    width: 230px;
+    height: auto;
+    margin: 15px auto 5px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    cursor: pointer;
+}
+
+.telescope-image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    filter: drop-shadow(0 0 8px rgba(158, 188, 255, 0.25));
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+#observeSky.telescope-button:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+#observeSky.telescope-button:hover .telescope-image {
+    transform: translateY(-5px) scale(1.04);
+
+    filter:
+        drop-shadow(0 0 10px rgba(158, 188, 255, 0.65))
+        drop-shadow(0 0 20px rgba(201, 167, 255, 0.35));
+}
+
+#observeSky.telescope-button:active .telescope-image {
+    transform: translateY(-2px) scale(0.98);
+}
+.observation-sky {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(85, 60, 139, 0.18),
+            transparent 65%
+        );
+}
+.observation-sky::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(120, 90, 180, 0.18),
+            rgba(5, 7, 20, 0.88) 70%
+        );
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.observation-sky.shadow-moon::before {
+    animation: shadowMoonEffect 5s ease-in-out;
+}
+
+@keyframes shadowMoonEffect {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.observation-sky::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(89, 201, 255, 0.55),
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(255, 99, 71, 0.45),
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(201, 167, 255, 0.6),
+            transparent 50%
+        );
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.observation-sky.convergence::after {
+    animation: convergenceEffect 5s ease-in-out;
+}
+
+@keyframes convergenceEffect {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    35% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    55% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+    75% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+.convergence-star {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: white;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 5px white,
+        0 0 10px rgba(201, 220, 255, 0.9);
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    animation: convergenceStar 3s ease-in-out infinite;
+}
+
+@keyframes convergenceStar {
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+.vespera-veil {
+    position: absolute;
+    inset: -30%;
+
+    background:
+        radial-gradient(
+            ellipse at 20% 50%,
+            rgba(125, 90, 255, 0.45),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 55% 35%,
+            rgba(201, 167, 255, 0.4),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 80% 60%,
+            rgba(89, 201, 255, 0.3),
+            transparent 40%
+        );
+
+    filter: blur(18px);
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    animation: vesperaVeil 6s ease-in-out forwards;
+}
+
+@keyframes vesperaVeil {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-15%) scale(1);
+    }
+
+    25% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translateX(5%) scale(1.08);
+    }
+
+    75% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(15%) scale(1);
+    }
+}
+.telescope-button {
+    position: relative;
+    z-index: 2;
+}
+.observe-label {
+    margin-top: 8px;
+    color: #c9a7ff;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+#celestialResult {
+    margin-top: 25px;
+    min-height: 30px;
+}
+.meteor {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: #ffffff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 6px #ffffff,
+        0 0 12px #9ebcff;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    animation: meteorFall 1.2s linear forwards;
+}
+
+.meteor::after {
+    content: "";
+
+    position: absolute;
+    left: 2px;
+    top: 1px;
+
+    width: 70px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.9),
+        rgba(158, 188, 255, 0)
+    );
+
+    transform-origin: left center;
+}
+
+
+@keyframes meteorFall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-35deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-140px, 100px) rotate(-35deg);
+    }
+}
+@keyframes astralFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.astral-card:nth-child(2) .astral-image {
+    animation-delay: -1s;
+}
+
+.astral-card:nth-child(3) .astral-image {
+    animation-delay: -2s;
+}
+
+.astral-card:nth-child(4) .astral-image {
+    animation-delay: -3s;
+}
+
+.astral-card:nth-child(5) .astral-image {
+    animation-delay: -4s;
+}
+
+.astral-card:nth-child(6) .astral-image {
+    animation-delay: -5s;
+}
+
+.astral-card:nth-child(7) .astral-image {
+    animation-delay: -2.5s;
+}
+.astral-image {
+    animation: astralFloat 6s ease-in-out infinite;
+}
+.library {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 40px 80px;
+}
+
+.book {
+    width: 190px;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #171f42, #0f1633);
+    border: 1px solid #4d5780;
+    border-radius: 8px 18px 18px 8px;
+    cursor: pointer;
+
+    box-shadow:
+        -5px 0 0 #090d1f,
+        0 8px 18px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.book:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    border-color: #d4af37;
+
+    box-shadow:
+        -5px 0 0 #090d1f,
+        0 10px 25px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(212, 175, 55, 0.35);
+}
+
+.book-icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.book h2 {
+    font-size: 19px;
+    color: #f4f1de;
+    margin-bottom: 12px;
+}
+
+.book p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b9bfd6;
+}
+
+.book-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(5, 8, 20, 0.85);
+    z-index: 2000;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.book-modal.show {
+    display: flex;
+}
+
+.open-book {
+    position: relative;
+    width: 700px;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    padding: 50px 60px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e8d8ad 0%,
+            #f5e8c4 48%,
+            #d1bd8d 50%,
+            #f5e8c4 52%,
+            #e8d8ad 100%
+        );
+
+    color: #2b2118;
+
+    border: 8px solid #5c3a21;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(201, 167, 255, 0.25);
+
+    animation: openBook 0.5s ease-out;
+}
+
+.open-book h2 {
+    font-size: 32px;
+    margin: 10px 0 30px;
+    color: #3d2918;
+}
+
+.book-chapter {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #725438;
+}
+
+.book-content {
+    text-align: left;
+}
+
+.book-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #2b2118;
+    margin-bottom: 20px;
+}
+
+.close-book {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    background: transparent;
+    border: none;
+
+    color: #5c3a21;
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.close-book:hover {
+    transform: scale(1.15);
+}
+
+@keyframes openBook {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotateX(15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateX(0);
+    }
+
+}
+/* Magical Creatures */
+.creature-image {
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+.creature-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.creature-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 40px 80px;
+}
+
+.creature-card {
+    width: 220px;
+    padding: 25px;
+    background-color: #111936;
+    border: 1px solid #3d466b;
+    border-radius: 12px;
+    text-align: center;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.creature-card:hover {
+    transform: translateY(-8px);
+    border-color: #72e6a6;
+
+    box-shadow:
+        0 0 15px rgba(114, 230, 166, 0.5),
+        0 0 30px rgba(114, 230, 166, 0.2);
+}
+.creature-icon {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.creature-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #f4f1de;
+}
+
+.creature-type {
+    color: #72e6a6;
+    font-size: 14px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.creature-card p {
+    line-height: 1.5;
+}
+
+#exploreWilds {
+    margin-top: 20px;
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #173d35, #245c4b);
+    color: #f4f1de;
+
+    border: 1px solid #72e6a6;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(114, 230, 166, 0.25);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
+}
+
+#exploreWilds:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    background: linear-gradient(135deg, #1d4d40, #2f755e);
+
+    box-shadow:
+        0 0 15px rgba(114, 230, 166, 0.6),
+        0 0 30px rgba(114, 230, 166, 0.25);
+}
+
+#exploreWilds:active {
+    transform: translateY(0) scale(0.98);
+}
+.encounter-image {
+    width: 220px;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto 15px;
+}
+
+.creature-result h3 {
+    font-size: 1.6rem;
+    margin: 5px 0 8px;
+}
+
+.encounter-rarity {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.encounter-rarity.common {
+    color: #c7c7c7;
+}
+
+.encounter-rarity.uncommon {
+    color: #72e6a6;
+}
+
+.encounter-rarity.rare {
+    color: #72b8ff;
+}
+
+.encounter-rarity.very-rare {
+    color: #c9a7ff;
+}
+
+.encounter-rarity.legendary {
+    color: #ffd76a;
+    text-shadow: 0 0 10px rgba(255, 215, 106, 0.6);
+}
+
+.encounter-house {
+    color: #c9a7ff;
+    font-style: italic;
+    margin: 8px 0;
+}
+/* Unlocked Achievement */
+
+.achievement-card.unlocked {
+    opacity: 1;
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.5),
+        0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.achievement-card.unlocked .achievement-icon {
+    filter: grayscale(0);
+}
+
+.achievement-card.unlocked h2 {
+    color: #d4af37;
+}
+
+/* Profile */
+
+.profile-setup {
+    max-width: 600px;
+    margin: 0 auto 80px;
+    padding: 30px;
+    text-align: center;
+
+    background-color: #111936;
+    border: 1px solid #3d466b;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.15);
+}
+
+.profile-setup h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #f4f1de;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.profile-form label,
+.profile-form p {
+    color: #c9a7ff;
+}
+
+.profile-form input {
+    padding: 14px;
+
+    background-color: #0b1026;
+    color: #f4f1de;
+
+    border: 1px solid #3d466b;
+    border-radius: 8px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    outline: none;
+}
+
+.profile-form input:focus {
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 10px rgba(201, 167, 255, 0.4);
+}
+
+.role-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.role-options button {
+    padding: 14px 25px;
+
+    background-color: #171f42;
+    color: #f4f1de;
+
+    border: 1px solid #3d466b;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.role-options button:hover {
+    transform: translateY(-3px);
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.4);
+}
+
+.role-options button.selected {
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.7),
+        0 0 30px rgba(201, 167, 255, 0.25);
+}
+
+#saveProfile {
+    align-self: center;
+
+    padding: 14px 30px;
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, #323b76, #594a8a);
+    color: #f4f1de;
+
+    border: 1px solid #c9a7ff;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+#saveProfile:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.6),
+        0 0 30px rgba(201, 167, 255, 0.25);
+}
+.student-profile {
+    display: none;
+}
+/* Student Profile Card */
+
+.student-profile {
+    display: none;
+    max-width: 520px;
+    margin: 0 auto 80px;
+    padding: 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111936,
+            #171f42
+        );
+
+    border: 1px solid #c9a7ff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.25),
+        0 0 40px rgba(201, 167, 255, 0.1);
+}
+
+.profile-avatar {
+    width: 500px;
+    max-width: 90%;
+    height: 400px;
+    margin: 20px auto;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    background-color: #0b1026;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 2px solid #c9a7ff;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.4);
+}
+
+.profile-character {
+    width: auto;
+    height: 75%;
+    max-width: 90%;
+
+    object-fit: contain;
+    object-position: bottom center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.student-profile h2 {
+    font-size: 32px;
+    color: #f4f1de;
+    margin-bottom: 8px;
+}
+
+.profile-role {
+    color: #c9a7ff;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-details div {
+    min-width: 150px;
+    padding: 18px;
+
+    background-color: #0b1026;
+
+    border: 1px solid #3d466b;
+    border-radius: 10px;
+}
+
+.profile-details span {
+    display: block;
+    margin-bottom: 10px;
+    color: #b9bfd6;
+}
+
+.profile-details strong {
+    display: block;
+    color: #f4f1de;
+    font-size: 18px;
+}
+.edit-profile-button {
+    margin-top: 25px;
+    padding: 12px 24px;
+
+    background: transparent;
+    color: #c9a7ff;
+
+    border: 1px solid #6f6494;
+    border-radius: 8px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.edit-profile-button:hover {
+    transform: translateY(-2px);
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 12px rgba(201, 167, 255, 0.4);
+}
+/* House Trial */
+
+.house-trial-intro {
+    max-width: 650px;
+    margin: 0 auto 80px;
+    padding: 35px;
+    text-align: center;
+
+    background: linear-gradient(145deg, #111936, #171f42);
+
+    border: 1px solid #c9a7ff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.25),
+        0 0 40px rgba(201, 167, 255, 0.1);
+}
+
+.house-trial-intro h2 {
+    margin-bottom: 20px;
+    color: #f4f1de;
+    font-size: 28px;
+}
+
+.house-trial-intro p {
+    max-width: 520px;
+    margin: 0 auto 30px;
+
+    color: #b9bfd6;
+    line-height: 1.7;
+}
+
+#beginTrial {
+    padding: 14px 30px;
+
+    background: linear-gradient(135deg, #323b76, #594a8a);
+    color: #f4f1de;
+
+    border: 1px solid #c9a7ff;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+#beginTrial:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.6),
+        0 0 30px rgba(201, 167, 255, 0.25);
+}
+.house-trial-question {
+    display: none;
+
+    max-width: 750px;
+    margin: 0 auto 80px;
+    padding: 35px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #111936, #171f42);
+
+    border: 1px solid #c9a7ff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.25),
+        0 0 40px rgba(201, 167, 255, 0.1);
+}
+
+.house-trial-question h2 {
+    margin: 20px auto 30px;
+    max-width: 650px;
+
+    color: #f4f1de;
+    font-size: 25px;
+    line-height: 1.5;
+}
+.house-answer-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.house-answer-options button {
+    padding: 18px;
+
+    background-color: #0b1026;
+    color: #f4f1de;
+
+    border: 1px solid #3d466b;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.house-answer-options button:hover {
+    transform: translateY(-3px);
+
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.4);
+}
+
+@media (max-width: 600px) {
+    .house-answer-options {
+        grid-template-columns: 1fr;
+    }
+}
+/* House Trial Result */
+
+.house-result {
+    display: none;
+
+    max-width: 650px;
+    margin: 0 auto 80px;
+    padding: 40px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #111936, #171f42);
+
+    border: 1px solid #c9a7ff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 25px rgba(201, 167, 255, 0.3),
+        0 0 50px rgba(201, 167, 255, 0.15);
+}
+
+.house-result h2 {
+    margin: 20px 0 30px;
+    color: #f4f1de;
+}
+
+.house-reveal-text {
+    color: #b9bfd6;
+    font-size: 18px;
+}
+
+#winningHouse {
+    margin: 15px 0;
+
+    color: #c9a7ff;
+    font-size: 46px;
+
+    text-shadow:
+        0 0 10px rgba(201, 167, 255, 0.7),
+        0 0 25px rgba(201, 167, 255, 0.4);
+}
+
+.house-motto {
+    margin-bottom: 30px;
+
+    color: #f4f1de;
+    font-size: 18px;
+    font-style: italic;
+}
+
+#returnProfile {
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #323b76, #594a8a);
+    color: #f4f1de;
+
+    border: 1px solid #c9a7ff;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+#returnProfile:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.6),
+        0 0 30px rgba(201, 167, 255, 0.25);
+}
+.house-trial-button {
+    margin-top: 25px;
+    padding: 12px 24px;
+
+    background: linear-gradient(135deg, #323b76, #594a8a);
+    color: #f4f1de;
+
+    border: 1px solid #c9a7ff;
+    border-radius: 8px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.house-trial-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.5);
+}
+.logo img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* =========================
+   HOUSES OF SILVERMOON
+   ========================= */
+
+.houses-intro {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.houses-grid {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.house-card {
+    background: linear-gradient(145deg, #111936, #171f42);
+    border: 1px solid #3d466b;
+    border-radius: 16px;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        border-color 0.3s;
+}
+
+.house-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.house-card-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.house-card-content h2 {
+    margin: 0 0 5px;
+    font-size: 30px;
+}
+
+.house-founder {
+    margin: 0 0 20px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.house-card-content > p:not(.house-founder):not(.house-motto) {
+    line-height: 1.6;
+}
+
+.house-card .house-motto {
+    margin-top: 22px;
+    font-style: italic;
+    font-weight: bold;
+}
+/* Serenia – Blue & Silver */
+
+.house-card.serenia:hover {
+    border-color: #8fc7ff;
+    box-shadow:
+        0 0 18px rgba(143, 199, 255, 0.35),
+        0 0 35px rgba(192, 192, 192, 0.15);
+}
+
+
+/* Kaelthorn – Red & Orange */
+
+.house-card.kaelthorn:hover {
+    border-color: #ff7a45;
+    box-shadow:
+        0 0 18px rgba(255, 90, 50, 0.4),
+        0 0 35px rgba(255, 150, 50, 0.15);
+}
+
+
+/* Eldergard – Green & Earth */
+
+.house-card.eldergard:hover {
+    border-color: #72c98b;
+    box-shadow:
+        0 0 18px rgba(114, 201, 139, 0.35),
+        0 0 35px rgba(120, 90, 55, 0.18);
+}
+
+
+/* Caeloria – White & Gold */
+
+.house-card.caeloria:hover {
+    border-color: #f4df91;
+    box-shadow:
+        0 0 18px rgba(244, 223, 145, 0.35),
+        0 0 35px rgba(255, 255, 255, 0.12);
+}
+/* Houses - Mobile */
+
+@media (max-width: 600px) {
+.astral-list {
+    grid-template-columns: 1fr;
+    padding: 20px 20px 80px;
+}
+
+.astral-card {
+    width: auto;
+}
+
+.astral-card:last-child {
+    grid-column: auto;
+}
+
+.astral-image {
+    width: 170px;
+    height: 170px;
+}
+    .houses-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .house-card-content {
+        padding: 20px;
+    }
+
+}
+/* =========================
+   DISCOVER THE HOUSES
+   ========================= */
+
+.houses-discover {
+    max-width: 850px;
+    margin: 20px auto 80px;
+    padding: 0 25px;
+}
+
+.houses-discover-content {
+    padding: 35px;
+    text-align: center;
+
+    background: linear-gradient(145deg, #111936, #171f42);
+
+    border: 1px solid #c9a7ff;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.18),
+        0 0 40px rgba(201, 167, 255, 0.08);
+}
+
+.houses-discover-content h2 {
+    margin-top: 8px;
+    color: #f4f1de;
+}
+
+.houses-discover-content p {
+    line-height: 1.6;
+}
+
+.houses-discover-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 22px;
+
+    color: #f4f1de;
+    text-decoration: none;
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #29356f, #4c3c78);
+
+    border: 1px solid #c9a7ff;
+    border-radius: 10px;
+
+    box-shadow: 0 0 12px rgba(201, 167, 255, 0.25);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.houses-discover-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(201, 167, 255, 0.55),
+        0 0 30px rgba(201, 167, 255, 0.2);
+}
+/* Ancient Knowledge book covers */
+
+.ancient-book-cover {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px;
+
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.45));
+
+    transition:
+        transform 0.3s,
+        filter 0.3s;
+}
+
+.book:hover .ancient-book-cover {
+    transform: translateY(-5px) scale(1.03);
+
+    filter:
+        drop-shadow(0 10px 14px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+/* =========================
+   HOUSE CREATURES
+   ========================= */
+.house-creature-image {
+    width: 100%;
+    height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+.house-creature-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.house-creatures {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.house-creatures .subtitle {
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.house-creature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.house-creature-card {
+    background: linear-gradient(145deg, #111936, #171f42);
+    border: 1px solid #3d466b;
+    border-radius: 16px;
+    padding: 30px 25px;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        border-color 0.3s;
+}
+
+.house-creature-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-creature-card .creature-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.creature-house {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.house-creature-card h3 {
+    font-size: 1.6rem;
+    margin: 5px 0 15px;
+}
+
+
+/* Serenia */
+
+.serenia-creature:hover {
+    border-color: #8fcfff;
+    box-shadow: 0 0 22px rgba(143, 207, 255, 0.35);
+}
+
+.serenia-creature .creature-house {
+    color: #8fcfff;
+}
+
+
+/* Kaelthorn */
+
+.kaelthorn-creature:hover {
+    border-color: #ff784f;
+    box-shadow: 0 0 22px rgba(255, 120, 79, 0.35);
+}
+
+.kaelthorn-creature .creature-house {
+    color: #ff784f;
+}
+
+
+/* Eldergard */
+
+.eldergard-creature:hover {
+    border-color: #72e6a6;
+    box-shadow: 0 0 22px rgba(114, 230, 166, 0.35);
+}
+
+.eldergard-creature .creature-house {
+    color: #72e6a6;
+}
+
+
+/* Caeloria */
+
+.caeloria-creature:hover {
+    border-color: #f1d77a;
+    box-shadow: 0 0 22px rgba(241, 215, 122, 0.35);
+}
+
+.caeloria-creature .creature-house {
+    color: #f1d77a;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .house-creatures {
+        padding: 0 15px;
+    }
+
+    .house-creature-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   FAMILIARS
+   ========================= */
+.familiar-image {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+.familiar-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.familiar-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.familiar-section .subtitle {
+    max-width: 750px;
+    margin: 0 auto 18px;
+}
+
+.familiar-grid {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.familiar-card {
+    background: linear-gradient(145deg, #111936, #171f42);
+    border: 1px solid #3d466b;
+    border-radius: 16px;
+    padding: 25px 18px;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        border-color 0.3s;
+}
+
+.familiar-card:hover {
+    transform: translateY(-5px);
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 20px rgba(201, 167, 255, 0.25);
+}
+
+.familiar-icon {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.familiar-card h3 {
+    color: #c9a7ff;
+    font-size: 1.3rem;
+    margin: 8px 0 12px;
+}
+
+.familiar-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* Tablet */
+
+@media (max-width: 850px) {
+
+    .familiar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .familiar-section {
+        padding: 0 15px;
+    }
+
+    .familiar-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-avatar {
+    width: 90%;
+    height: 280px;
+    }
+
+    .profile-character {
+    height: 75%;
+    }
+
+}
+.profile-form select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+
+    background-color: #0b1026;
+    color: #f4f1de;
+
+    border: 1px solid #3d466b;
+    border-radius: 8px;
+
+    font-family: Georgia, serif;
+    font-size: 1rem;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.profile-form select:hover,
+.profile-form select:focus {
+    border-color: #c9a7ff;
+
+    box-shadow:
+        0 0 10px rgba(201, 167, 255, 0.35);
+}
+.coin-display {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.coin-pile-icon {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+.academy-subject-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+main {
+    animation: pageFadeIn 0.8s ease-out;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.alchemy-workbench {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.alchemy-workbench img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ingredient-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    width: 100px;
+    min-height: 110px;
+    padding: 8px;
+
+    background: #111936;
+    color: #f4f1de;
+
+    border: 1px solid #3d466b;
+    border-radius: 10px;
+
+    font-family: Georgia, serif;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.ingredient-button img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.ingredient-button:hover {
+    transform: translateY(-4px);
+    border-color: #73e6bd;
+    box-shadow: 0 0 15px rgba(115, 230, 189, 0.45);
+}
+
+.ingredient-button.selected {
+    border-color: #73e6bd;
+    box-shadow:
+        0 0 10px rgba(115, 230, 189, 0.7),
+        0 0 20px rgba(115, 230, 189, 0.35);
+}
+.potion-image {
+    display: block;
+    width: 150px;
+    height: 180px;
+    object-fit: contain;
+    margin: 10px auto 18px;
+
+    filter: drop-shadow(
+        0 0 12px rgba(120, 170, 255, 0.35)
+    );
+}
+.brewed-potion {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 20px;
+}
+
+.brewed-potion img {
+    width: 110px;
+    height: 130px;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 0 15px rgba(120, 200, 255, 0.6)
+    );
+}
+.brewed-potion.show img {
+    animation: potionAppear 0.7s ease;
+}
+
+@keyframes potionAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.4);
+        filter: drop-shadow(0 0 5px rgba(120, 200, 255, 0));
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 25px rgba(120, 200, 255, 0.9));
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 0 15px rgba(120, 200, 255, 0.6));
+    }
+}
+.theme-toggle {
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(11, 16, 38, 0.55);
+    border: 1px solid #3d466b;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.theme-toggle img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(201, 167, 255, 0.6);
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+body.light-mode {
+    background-color: #f4ecd8;
+    color: #252033;
+}
+
+body.light-mode header {
+    background-image:
+        linear-gradient(
+            rgba(255, 244, 210, 0.10),
+            rgba(255, 244, 210, 0.25)
+        ),
+        url("../images/header-daylight.png");
+}
+/* ---------- LIGHT MODE ---------- */
+
+body.light-mode {
+    background-color: #f4ecd8;
+    color: #2b2540;
+}
+
+/* Navigation */
+
+body.light-mode nav a {
+    color: #2b2540;
+}
+
+body.light-mode nav a:hover {
+    color: #7654a8;
+}
+
+/* Cards */
+
+body.light-mode .card,
+body.light-mode .subject-card,
+body.light-mode .potion-card {
+    background: #fffaf0;
+    color: #2b2540;
+
+    border-color: #c8b6d9;
+
+    box-shadow:
+        0 4px 15px rgba(70, 55, 90, 0.12);
+}
+
+/* Headings */
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3 {
+    color: #3b3155;
+}
+/* Light mode - clearer navigation */
+
+body.light-mode nav {
+    background: rgba(255, 250, 240, 0.78);
+    padding: 10px 18px;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 12px rgba(40, 30, 60, 0.18);
+}
+
+body.light-mode nav a {
+    color: #2b1f3d;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+body.light-mode nav a:hover {
+    color: #7654a8;
+}
+
+
+/* Light mode - clearer header controls */
+
+body.light-mode .header-actions {
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+body.light-mode .theme-toggle {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: #c8ad7f;
+}
+body.light-mode .coin-counter {
+    background: rgba(255, 252, 242, 0.95);
+    color: #2b1f3d;
+
+    border-color: #c8ad7f;
+
+    box-shadow:
+        0 2px 8px rgba(40, 30, 60, 0.15),
+        0 0 10px rgba(255, 220, 140, 0.20);
+
+    font-weight: bold;
+}
+/* Theme button */
+
+body.light-mode .theme-toggle {
+    background: rgba(255, 252, 242, 0.95);
+    border-color: #c8ad7f;
+
+    box-shadow:
+        0 2px 8px rgba(40, 30, 60, 0.15);
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    background: #4f5fa8;
+    color: #f4f1de;
+
+    border: 1px solid #7f8ed6;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 12px rgba(201, 167, 255, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.hero-button:hover {
+    background: #6172bd;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(201, 167, 255, 0.55);
+}
+body.light-mode .hero-button {
+    background: #7654a8;
+    color: #fffaf0;
+
+    border: 1px solid #5f428d;
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 12px rgba(118, 84, 168, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+body.light-mode .hero-button:hover {
+    background: #654394;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(118, 84, 168, 0.55);
+}
+/* Academy - Houses section */
+
+body.light-mode .houses-discover-content {
+    background: #fffaf0;
+    color: #2b2540;
+
+    border: 1px solid #c8b6d9;
+
+    box-shadow:
+        0 4px 18px rgba(70, 55, 90, 0.15);
+}
+
+body.light-mode .houses-discover-content h2 {
+    color: #3b3155;
+}
+
+body.light-mode .houses-discover-content .welcome {
+    color: #7654a8;
+}
+
+body.light-mode .houses-discover-content p {
+    color: #2b2540;
+}
+body.light-mode #questionCounter {
+    color: #7654a8;
+    font-weight: bold;
+}
+/* Achievements - Light Mode */
+
+body.light-mode .achievement-card {
+    background: #fffaf0;
+    color: #2b2540;
+
+    border-color: #d4b85f;
+
+    box-shadow:
+        0 4px 15px rgba(70, 55, 90, 0.12),
+        0 0 12px rgba(212, 184, 95, 0.18);
+}
+
+body.light-mode .achievement-card h2 {
+    color: #8a6500;
+}
+
+body.light-mode .achievement-card p {
+    color: #4a4158;
+}
+
+body.light-mode .achievement-status {
+    color: #3b3155;
+    background: rgba(118, 84, 168, 0.08);
+
+    border-color: #9b82bd;
+}
+/* Profile - Light Mode */
+
+body.light-mode .student-profile {
+    color: #f4f1de;
+}
+
+body.light-mode .student-profile .welcome {
+    color: #c9a7ff;
+}
+
+body.light-mode .student-profile #displayName {
+    color: #f4f1de;
+}
+
+body.light-mode .student-profile .profile-role {
+    color: #c9a7ff;
+}
+
+body.light-mode .student-profile .profile-details {
+    color: #f4f1de;
+}
+
+body.light-mode .student-profile .profile-details strong {
+    color: #fffaf0;
+}
+body.light-mode .profile-setup h2 {
+    color: #f4f1de;
+}
+body.light-mode .profile-setup {
+    color: #f4f1de;
+}
+
+body.light-mode .profile-setup label,
+body.light-mode .profile-setup p {
+    color: #c9a7ff;
+}
+body.light-mode .potion-mixer {
+    color: #f4f1de;
+}
+
+body.light-mode .potion-mixer h2 {
+    color: #f4f1de;
+}
+
+body.light-mode .potion-mixer > p {
+    color: #c9a7ff;
+}
+/* Spellcraft - Light Mode */
+
+body.light-mode .spell-card {
+    color: #f4f1de;
+}
+
+body.light-mode .spell-card h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .spell-card p {
+    color: #f4f1de;
+}
+
+body.light-mode .spell-discovery {
+    color: #f4f1de;
+}
+
+body.light-mode .spell-discovery h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .spell-discovery p {
+    color: #f4f1de;
+}
+/* Astral Studies - Light Mode */
+
+body.light-mode .astral-list .astral-card {
+    color: #f4f1de;
+}
+
+body.light-mode .astral-list .astral-card h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .astral-list .astral-card p {
+    color: #f4f1de;
+}
+/* Ancient Knowledge - Light Mode */
+
+body.light-mode .book h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .book p {
+    color: #f4f1de;
+}
+/* Magical Creatures - Light Mode */
+
+body.light-mode .creature-card h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .creature-card p:not(.creature-type) {
+    color: #f4f1de;
+}
+/* House Creatures - Light Mode */
+
+body.light-mode .house-creature-card h3 {
+    color: #c9a7ff;
+}
+
+body.light-mode .house-creature-card p:not(.creature-house) {
+    color: #f4f1de;
+}
+
+
+/* Familiars - Light Mode */
+
+body.light-mode .familiar-card h3 {
+    color: #c9a7ff;
+}
+
+body.light-mode .familiar-card p {
+    color: #f4f1de;
+}
+/* Houses - Light Mode */
+
+body.light-mode .house-card-content h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .house-card-content .house-founder {
+    color: #c9a7ff;
+}
+
+body.light-mode .house-card-content p:not(.house-founder):not(.house-motto) {
+    color: #f4f1de;
+}
+/* House Trial - Light Mode */
+
+body.light-mode .house-trial-intro h2 {
+    color: #c9a7ff;
+}
+
+body.light-mode .house-trial-intro p {
+    color: #f4f1de;
+}
+body.light-mode .house-trial-question .welcome {
+    color: #c9a7ff;
+}
+
+body.light-mode .house-trial-question h2 {
+    color: #f4f1de;
+}
+body.light-mode .house-result .welcome {
+    color: #c9a7ff;
+}
+
+body.light-mode .house-result h2 {
+    color: #f4f1de;
+}
+/* Rarity filter */
+.rarity-filter {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.rarity-filter p {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.rarity-filter-btn {
+    padding: 6px 12px;
+    margin: 4px 2px;
+    background: #161b35;
+    color: #c9a7ff;
+    border: 1px solid #5b5278;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    transition: 0.2s ease;
+}
+
+.rarity-filter-btn:hover {
+    border-color: #c9a7ff;
+    box-shadow: 0 0 8px rgba(201, 167, 255, 0.5);
+}
+
+.rarity-filter-btn.active {
+    background: #c9a7ff;
+    color: #0b1026;
+    border-color: #c9a7ff;
+}
+.spell-image {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+/* =========================
+   QUIZ PARCHMENT
+========================= */
+
+.quiz-parchment {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+.quiz-parchment > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.parchment-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #3b2718;
+}
+
+.parchment-content h3 {
+    margin: 0 0 12px;
+    font-size: 1.7rem;
+    color: #382316;
+}
+
+.parchment-content p {
+    margin: 0 auto 18px;
+    line-height: 1.5;
+}
+
+.parchment-info {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.parchment-button {
+    padding: 10px 20px;
+    border: 1px solid #6f4c2d;
+    border-radius: 6px;
+    background: #4b2b68;
+    color: #f4f1de;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.parchment-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(126, 76, 170, 0.7);
+}
+/* =========================
+   QUIZ QUESTION PARCHMENT
+========================= */
+
+.quiz-question-parchment {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 50px auto;
+}
+
+.quiz-question-parchment > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.quiz-question-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #3b2718;
+}
+
+.quiz-question-content #questionCounter {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #4a2d18;
+    letter-spacing: 1px;
+}
+
+.quiz-question-content #question {
+    margin: 0 0 20px;
+    color: #382316;
+    font-size: 1.35rem;
+}
+
+.quiz-question-content .quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-question-content .quiz-options button {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #7a5837;
+    border-radius: 6px;
+    background: rgba(255, 248, 220, 0.75);
+    color: #382316;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-question-content .quiz-options button:hover {
+    background: rgba(255, 248, 220, 0.95);
+    transform: translateY(-2px);
+}
+.passed-stamp {
+    position: absolute;
+    width: 95px;
+    right: -30px;
+    bottom: -15px;
+    transform: rotate(-8deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 5px rgba(40, 100, 60, 0.35));
+    pointer-events: none;
+}
+
+.quiz-parchment.passed {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.45));
+}
+/* =========================
+   QUIZZES - MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .quiz-parchment {
+        width: 100%;
+        max-width: 320px;
+        margin: 20px auto;
+    }
+
+    .parchment-content {
+        top: 54%;
+        width: 62%;
+    }
+
+    .parchment-content h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        line-height: 1.1;
+    }
+
+    .parchment-content p {
+        font-size: 0.72rem;
+        line-height: 1.2;
+        margin-bottom: 7px;
+    }
+
+    .parchment-info {
+        gap: 8px;
+        margin-bottom: 7px;
+        font-size: 0.65rem;
+    }
+
+    .parchment-button {
+        padding: 6px 10px;
+        font-size: 0.65rem;
+    }
+
+    .passed-stamp {
+        width: 58px;
+        right: -25px;
+        bottom: -8px;
+    }
+    /* Quiz question parchment - mobile */
+
+.quiz-question-parchment {
+    width: 100%;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+.quiz-question-content {
+    top: 61%;
+    width: 62%;
+}
+
+.quiz-question-content #questionCounter {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.quiz-question-content #question {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.quiz-question-content .quiz-options {
+    gap: 7px;
+}
+
+.quiz-question-content .quiz-options button {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+}
+
+
+.quiz-question-parchment {
+    width: 100%;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+.quiz-question-parchment > img {
+    width: 100%;
+    height: 360px;
+    object-fit: fill;
+}
+}
+
+/* THE WHISPERING CRESCENT */
+
+.store-page {
+    background:
+        linear-gradient(
+            rgba(11, 16, 38, 0.25),
+            rgba(11, 16, 38, 0.55)
+        ),
+        url("../images/whispering-crescent-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.store-main {
+    padding: 80px 20px;
+}
+
+.store-intro {
+    text-align: center;
+    margin: 0 auto 60px;
+}
+
+.store-intro h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #f4f1de;
+    text-shadow: 0 0 20px #c9a7ff;
+}
+
+.store-intro p {
+    color: #e2d0ff;
+    font-style: italic;
+    margin-top: 12px;
+}
+
+/* STORE PRODUCTS */
+
+.store-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.store-card {
+    background: rgba(17, 25, 54, 0.65);
+    border: 1px solid rgba(201, 167, 255, 0.5);
+    border-radius: 18px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(150, 90, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(201, 167, 255, 0.5);
+}
+
+.store-item-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.store-card h2 {
+    color: #f4f1de;
+    margin-bottom: 15px;
+}
+
+.store-card p {
+    color: #d8d1e8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.store-price {
+    color: #f5d67b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.store-buy-button {
+    background: #34205c;
+    color: #f4f1de;
+    border: 1px solid #c9a7ff;
+    border-radius: 10px;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.store-buy-button:hover {
+    background: #58358d;
+    box-shadow: 0 0 15px #c9a7ff;
+}
+.store-item-image {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    filter: drop-shadow(0 0 12px rgba(201, 167, 255, 0.5));
+}
+.store-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #f5d67b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.store-coin-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+/* MAGICAL STORE POPUP */
+
+.store-popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.store-popup-overlay.show {
+    display: flex;
+}
+
+.store-popup {
+    width: 100%;
+    max-width: 380px;
+    background: rgba(17, 25, 54, 0.97);
+    border: 1px solid #c9a7ff;
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(201, 167, 255, 0.5);
+    animation: storePopupAppear 0.35s ease-out;
+}
+
+.store-popup-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.store-popup h2 {
+    color: #f4f1de;
+    margin-bottom: 15px;
+}
+
+.store-popup p {
+    color: #d8d1e8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+@keyframes storePopupAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.store-popup-image {
+    display: block;
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+
+    filter: drop-shadow(0 0 15px rgba(201, 167, 255, 0.6));
+
+    animation: tokenFloat 3s ease-in-out infinite;
+}
+
+@keyframes tokenFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* FAMILIAR BONDING RITUAL */
+
+.familiar-ritual-main {
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.familiar-ritual-intro {
+    max-width: 650px;
+    padding: 45px 35px;
+    text-align: center;
+
+    background: rgba(17, 25, 54, 0.8);
+    border: 1px solid #c9a7ff;
+    border-radius: 20px;
+
+    box-shadow: 0 0 35px rgba(201, 167, 255, 0.25);
+}
+
+.familiar-ritual-intro h1 {
+    color: #f4f1de;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 20px;
+}
+
+.familiar-ritual-intro p {
+    color: #d8d1e8;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.familiar-ritual-subtitle {
+    color: #c9a7ff !important;
+    font-style: italic;
+}
+/* PROFILE FAMILIAR */
+
+.profile-familiar {
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.familiar-token-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #c9a7ff;
+    font-size: 0.9rem;
+}
+
+.familiar-token-link img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(201, 167, 255, 0.6));
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.familiar-token-link:hover img {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 18px rgba(201, 167, 255, 0.9));
+}
+.store-popup-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.store-popup-actions [hidden] {
+    display: none;
+}
+/* FAMILIAR RITUAL QUESTIONS */
+
+.familiar-question-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px 35px;
+    text-align: center;
+    background: rgba(17, 25, 54, 0.9);
+    border: 1px solid #c9a7ff;
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(201, 167, 255, 0.25);
+}
+
+.familiar-question-card[hidden] {
+    display: none;
+}
+
+.familiar-question-number {
+    color: #c9a7ff;
+    margin-bottom: 15px;
+}
+
+.familiar-progress {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 30px;
+}
+
+.familiar-progress span {
+    flex: 1;
+    height: 6px;
+    background: #343052;
+    border-radius: 10px;
+}
+
+.familiar-progress span.active {
+    background: #b596ec;
+    box-shadow: 0 0 8px rgba(201, 167, 255, 0.5);
+}
+
+.familiar-question-card h2 {
+    color: #f4f1de;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.familiar-answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.familiar-answer-button {
+    padding: 15px 20px;
+    background: rgba(40, 48, 86, 0.85);
+    color: #f4f1de;
+    border: 1px solid #6e5a91;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.familiar-answer-button:hover {
+    background: #49366f;
+    border-color: #c9a7ff;
+    box-shadow: 0 0 12px rgba(201, 167, 255, 0.35);
+}
+.familiar-ritual-intro[hidden] {
+    display: none;
+}
+/* FAMILIAR RITUAL RESULT */
+
+.familiar-result-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 35px;
+    text-align: center;
+    background: rgba(17, 25, 54, 0.9);
+    border: 1px solid #c9a7ff;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(201, 167, 255, 0.35);
+    animation: familiarReveal 1.2s ease;
+}
+
+.familiar-result-card[hidden] {
+    display: none;
+}
+
+.familiar-result-label {
+    color: #c9a7ff;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.familiar-result-card h2 {
+    color: #f4f1de;
+    margin-bottom: 25px;
+}
+
+#familiarResultImage {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 25px rgba(201, 167, 255, 0.6));
+    animation: tokenFloat 4s ease-in-out infinite;
+}
+
+#familiarResultName {
+    color: #c9a7ff;
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+#familiarResultDescription {
+    color: #d8d1e8;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.familiar-profile-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+@keyframes familiarReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.profile-familiar.has-familiar img {
+    width: 160px;
+    height: 160px;
+}
+.store-equipment-section {
+    max-width: 1100px;
+    margin: 70px auto 0;
+}
+
+.store-equipment-section h2 {
+    text-align: center;
+    color: #f4f1de;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #c9a7ff;
+}
+
+.store-equipment-description {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    text-align: center;
+    color: #e2d0ff;
+    font-style: italic;
+    line-height: 1.7;
+}
+/* Larger staff images in the shop */
+
+.store-equipment-section .staff-image {
+    transform: scale(1.8);
+    transform-origin: center;
+}
+/* Extra space for the larger staffs */
+
+.store-equipment-section .store-card:has(.staff-image) {
+    padding-top: 55px;
+}
+
+.store-equipment-section .staff-image {
+    margin-bottom: 45px;
+}
+/* Magical Equipment */
+
+.profile-equipment {
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 420px;
+
+    background: rgba(15, 20, 45, 0.55);
+    border: 1px solid rgba(201, 167, 255, 0.4);
+    border-radius: 16px;
+
+    text-align: center;
+    box-shadow: 0 0 18px rgba(150, 90, 255, 0.15);
+}
+
+.profile-equipment h3 {
+    color: #e2d0ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(201, 167, 255, 0.5);
+}
+
+.equipped-item {
+    color: #f4f1de;
+    margin-bottom: 20px;
+}
+
+.equipment-button {
+    padding: 10px 22px;
+
+    background: rgba(75, 45, 130, 0.65);
+    color: #f4f1de;
+
+    border: 1px solid #c9a7ff;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.equipment-button:hover {
+    background: rgba(110, 65, 180, 0.8);
+    box-shadow: 0 0 15px rgba(201, 167, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Equipment inventory */
+
+.equipment-inventory {
+    margin-top: 20px;
+}
+
+.equipment-inventory[hidden] {
+    display: none;
+}
+
+/* Equipped magical item */
+
+.profile-equipment-image {
+    width: 130px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+    filter: drop-shadow(0 0 12px rgba(201, 167, 255, 0.5));
+}
+
+.equipment-option {
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid rgba(201, 167, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(20, 25, 55, 0.6);
+}
+
+.equipment-option img {
+    width: 100px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.equipment-option p {
+    margin: 8px 0;
+    color: #e2d0ff;
+}
+/* The Moonbound Grimoire */
+
+.potion-grimoire {
+    text-align: center;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 35px 20px;
+
+    background: rgba(17, 25, 54, 0.55);
+    border: 1px solid rgba(201, 167, 255, 0.4);
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(150, 90, 255, 0.2);
+}
+
+.potion-grimoire h2 {
+    color: #f4f1de;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #c9a7ff;
+}
+
+.potion-grimoire p {
+    color: #e2d0ff;
+    margin-bottom: 20px;
+}
+
+.grimoire-image {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    margin: 20px auto;
+
+    filter: drop-shadow(0 0 15px rgba(201, 167, 255, 0.4));
+    transition: transform 0.3s;
+}
+
+.grimoire-image:hover {
+    transform: scale(1.05);
+}
+
+.grimoire-button {
+    padding: 12px 28px;
+    background: rgba(75, 45, 130, 0.8);
+    color: #f4f1de;
+    border: 1px solid #c9a7ff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.grimoire-button:hover {
+    background: rgba(110, 65, 180, 0.9);
+    box-shadow: 0 0 18px rgba(201, 167, 255, 0.6);
+    transform: translateY(-2px);
+}
+/* Moonbound Grimoire Popup */
+
+.grimoire-modal[hidden] {
+    display: none;
+}
+
+.grimoire-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(5, 5, 20, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grimoire-book {
+    position: relative;
+    width: 850px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    border: 8px solid #493021;
+    border-radius: 20px;
+    background: #37241e;
+    box-shadow: 0 0 45px rgba(180, 120, 255, 0.45);
+}
+
+.grimoire-book h2 {
+    text-align: center;
+    color: #e8c98b;
+    margin-bottom: 25px;
+}
+
+.grimoire-pages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.grimoire-page {
+    min-height: 350px;
+    padding: 25px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f4e6bf, #d8be8b);
+    color: #39251c;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(80, 45, 15, 0.2);
+}
+
+.grimoire-page h3 {
+    color: #603b36;
+    margin-bottom: 15px;
+}
+
+.grimoire-page img {
+    width: 130px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.grimoire-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    color: #e8c98b;
+}
+
+.grimoire-navigation button,
+.grimoire-close {
+    background: #68436e;
+    color: white;
+    border: 1px solid #c9a7ff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.grimoire-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+}
+
+@media (max-width: 600px) {
+    .grimoire-pages {
+        grid-template-columns: 1fr;
+    }
+
+    .grimoire-book {
+        padding: 35px 15px 20px;
+    }
+}
+/* Grimoire Ingredient Images */
+
+.grimoire-ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.grimoire-ingredient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.grimoire-ingredient img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 5px rgba(60, 35, 15, 0.3));
+}
+
+.grimoire-ingredient span {
+    color: #493021;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grimoire-potion-image {
+    width: 130px;
+    height: 150px;
+    object-fit: contain;
+}
+/* Moon Amulet on Profile */
+
+.profile-moon-amulet[hidden] {
+    display: none;
+}
+
+.profile-moon-amulet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 15px auto 25px;
+}
+
+.profile-moon-amulet img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 12px rgba(180, 100, 255, 0.5));
+}
+
+.profile-moon-amulet span {
+    color: #d9c4ff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+/* Cauldron Selection */
+
+.cauldron-selection {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.cauldron-selection h3 {
+    color: #e4d0ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px rgba(180, 100, 255, 0.4);
+}
+
+.cauldron-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cauldron-option {
+    padding: 12px 22px;
+    background: rgba(35, 25, 65, 0.8);
+    color: #e4d0ff;
+    border: 1px solid rgba(180, 100, 255, 0.4);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cauldron-option:hover:not(:disabled) {
+    background: rgba(85, 50, 140, 0.8);
+    box-shadow: 0 0 15px rgba(180, 100, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.cauldron-option.selected {
+    background: rgba(110, 65, 180, 0.8);
+    border-color: #d9b8ff;
+    box-shadow: 0 0 18px rgba(180, 100, 255, 0.5);
+}
+
+.cauldron-option:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+/* Enchanted Cauldron Overlay */
+
+.alchemy-workbench {
+    position: relative;
+}
+
+.alchemy-workbench .workbench-image {
+    display: block;
+    width: 100%;
+}
+
+.enchanted-cauldron-overlay[hidden] {
+    display: none;
+}
+
+.alchemy-workbench img.enchanted-cauldron-overlay {
+    position: absolute;
+    width: 32%;
+    height: auto;
+
+    left: 50%;
+    top: 36%;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(180, 100, 255, 0.5));
+
+    pointer-events: none;
+}
+/* Crystal Ball on Profile */
+
+.profile-crystal-ball[hidden] {
+    display: none;
+}
+
+.profile-crystal-ball {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 25px auto;
+}
+
+.profile-crystal-ball-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 15px rgba(160, 90, 255, 0.5));
+
+    transition: transform 0.3s ease;
+}
+
+.profile-crystal-ball-image:hover {
+    transform: scale(1.05);
+}
+
+.crystal-ball-button {
+    padding: 12px 25px;
+    background: rgba(75, 45, 130, 0.8);
+    color: #f4f1de;
+    border: 1px solid #c9a7ff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.crystal-ball-button:hover {
+    background: rgba(110, 65, 180, 0.9);
+    box-shadow: 0 0 18px rgba(201, 167, 255, 0.6);
+    transform: translateY(-2px);
+}
+/* Crystal Ball Prophecy Popup */
+
+.crystal-ball-modal[hidden] {
+    display: none;
+}
+
+.crystal-ball-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(5, 5, 20, 0.9);
+}
+
+.crystal-ball-popup {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+    animation: crystalAppear 0.6s ease-out;
+}
+
+.crystal-ball-vision {
+    position: relative;
+    width: 100%;
+}
+
+.crystal-ball-large {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    filter: drop-shadow(0 0 25px rgba(160, 90, 255, 0.6));
+}
+
+.crystal-ball-prophecy {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 48%;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    
+    text-shadow:
+    1px 1px 2px #10001f,
+    -1px -1px 2px #10001f,
+    0 0 5px #250044,
+    0 0 10px #6b21a8;
+    font-weight: 700;
+    font-style: italic;
+    pointer-events: none;
+}
+
+.crystal-ball-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    background: rgba(40, 20, 70, 0.85);
+    color: white;
+    border: 1px solid #c9a7ff;
+    border-radius: 50%;
+
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@keyframes crystalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .crystal-ball-prophecy {
+        font-size: 12px;
+    }
+}
+/* Crystal Ball Prophecy Animation */
+
+.crystal-ball-prophecy {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.crystal-ball-prophecy.revealed {
+    animation: prophecyReveal 2s ease forwards;
+}
+
+@keyframes prophecyReveal {
+    from {
+        opacity: 0;
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+/* Magical Prophecy Glow */
+
+.crystal-ball-prophecy.revealed {
+    animation:
+        prophecyReveal 2s ease forwards,
+        prophecyGlow 4s ease-in-out 2s infinite alternate;
+}
+
+@keyframes prophecyGlow {
+    from {
+        text-shadow:
+            1px 1px 2px #10001f,
+            -1px -1px 2px #10001f,
+            0 0 5px #250044;
+    }
+
+    to {
+        text-shadow:
+            1px 1px 2px #10001f,
+            -1px -1px 2px #10001f,
+            0 0 12px #9333ea,
+            0 0 18px #6b21a8;
+    }
+}
+/* Floating Crystal Ball Prophecy */
+
+.crystal-ball-prophecy.revealed {
+    animation:
+        prophecyReveal 2s ease forwards,
+        prophecyGlow 4s ease-in-out 2s infinite alternate,
+        prophecyFloat 9s ease-in-out 2s infinite;
+}
+
+@keyframes prophecyFloat {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, calc(-50% - 4px));
+    }
+}
+.store-section-heading {
+    text-align: center;
+    margin: 90px auto 35px;
+    padding: 25px 20px;
+}
+
+.store-section-heading h2 {
+    color: #e9d5ff;
+    font-size: 32px;
+    margin-bottom: 12px;
+    text-shadow:
+        0 0 10px rgba(180, 100, 255, 0.7),
+        0 0 25px rgba(120, 50, 200, 0.4);
+}
+
+.store-section-heading p {
+    color: #d6c5e8;
+    font-style: italic;
+    font-size: 17px;
+}
+/* House Crest on Student Profile */
+
+.student-profile {
+    position: relative;
+}
+
+.profile-house-crest[hidden] {
+    display: none;
+}
+
+.profile-house-crest {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 115px;
+    z-index: 2;
+}
+
+.profile-house-crest img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    filter: drop-shadow(0 0 12px rgba(180, 100, 255, 0.6));
+
+    animation: houseCrestFloat 8s ease-in-out infinite;
+}
+
+@keyframes houseCrestFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+/* House Crest - Magical House Glow */
+
+.profile-house-crest[data-house="serenia"] img {
+    filter:
+        drop-shadow(0 0 12px #4da6ff)
+        drop-shadow(0 0 22px #b8dfff);
+}
+
+.profile-house-crest[data-house="kaelthorn"] img {
+    filter:
+        drop-shadow(0 0 12px #ff4500)
+        drop-shadow(0 0 22px #ff9900);
+}
+
+.profile-house-crest[data-house="eldergard"] img {
+    filter:
+        drop-shadow(0 0 12px #3dbb5d)
+        drop-shadow(0 0 22px #8b6b3d);
+}
+
+.profile-house-crest[data-house="caeloria"] img {
+    filter:
+        drop-shadow(0 0 12px #fff4c2)
+        drop-shadow(0 0 22px #ffd700);
+}
+/* Orb of Forgotten Stars */
+
+.profile-forgotten-orb {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 450px;
+}
+
+.profile-forgotten-orb[hidden] {
+    display: none;
+}
+
+.profile-forgotten-orb-image {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 15px rgba(160, 100, 255, 0.5));
+}
+
+.profile-forgotten-orb h3 {
+    color: #d8b4fe;
+    margin-top: 15px;
+}
+
+.profile-forgotten-orb p {
+    margin: 10px 0 20px;
+}
+
+.forgotten-orb-button {
+    padding: 12px 22px;
+    border: 1px solid #a855f7;
+    border-radius: 10px;
+    background: #25143d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+    transition: 0.3s;
+}
+
+.forgotten-orb-button:hover {
+    background: #3b2060;
+    box-shadow: 0 0 22px rgba(168, 85, 247, 0.7);
+    transform: translateY(-2px);
+}
+/* ==================================
+   THE FORGOTTEN PROPHECIES
+================================== */
+
+/* Dark overlay behind the popup */
+.forgotten-prophecies-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background: rgba(3, 2, 15, 0.9);
+}
+
+/* Keep popup hidden until opened */
+.forgotten-prophecies-popup[hidden] {
+    display: none;
+}
+
+/* Magical story window */
+.forgotten-prophecies-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 3 / 2;
+
+    background-image: url("../images/forgotten-prophecies-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 12px;
+    box-shadow: 0 0 45px rgba(155, 90, 255, 0.5);
+
+    overflow: hidden;
+}
+
+/* Hide duplicate title because it's already in the image */
+.forgotten-prophecies-content > h2 {
+    display: none;
+}
+
+/* Position story text on the right */
+.forgotten-prophecies-intro,
+#prophecyChapterTitle,
+#prophecyChapterText,
+#beginProphecyTrial {
+    position: relative;
+    width: 42%;
+    margin-left: 49%;
+    text-align: center;
+}
+
+/* Intro */
+.forgotten-prophecies-intro {
+    margin-top: 21%;
+    color: #e5d6ff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Chapter heading */
+#prophecyChapterTitle {
+    margin-top: 20px;
+    color: #f1d9ff;
+    font-size: 1.4rem;
+    text-shadow: 0 0 12px rgba(180, 110, 255, 0.8);
+}
+
+/* Chapter text */
+#prophecyChapterText {
+    margin-top: 15px;
+    color: #eee5ff;
+    line-height: 1.6;
+}
+
+/* Trial button */
+#beginProphecyTrial {
+    display: block;
+    width: 35%;
+    margin-left: 52.5%;
+    margin-top: 25px;
+    padding: 12px 20px;
+}
+
+/* Close button */
+.forgotten-prophecies-close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 10;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #c9a8ff;
+    border-radius: 50%;
+
+    background: rgba(20, 10, 40, 0.8);
+    color: white;
+    font-size: 26px;
+
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(170, 100, 255, 0.6);
+}
+
+.forgotten-prophecies-close:hover {
+    background: #563082;
+    box-shadow: 0 0 20px rgba(190, 120, 255, 0.9);
+}
+/* ==================================
+   FORGOTTEN PROPHECIES - RESPONSIVE
+================================== */
+
+@media (max-width: 1100px) {
+
+    .forgotten-prophecies-content {
+        aspect-ratio: auto;
+        height: min(650px, 85vh);
+        overflow-y: auto;
+    }
+
+    .forgotten-prophecies-intro {
+        margin-top: 22%;
+        font-size: 0.85rem;
+    }
+
+    #prophecyChapterTitle {
+        font-size: 1.1rem;
+        margin-top: 12px;
+    }
+
+    #prophecyChapterText {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-top: 10px;
+    }
+
+    #beginProphecyTrial {
+        margin-top: 15px;
+        font-size: 0.85rem;
+    }
+}
+/* ==================================
+   FORGOTTEN PROPHECIES - QUIZ
+================================== */
+
+.prophecy-quiz {
+    position: absolute;
+    top: 38%;
+    left: 52%;
+    width: 40%;
+
+    text-align: center;
+    color: #eee5ff;
+    z-index: 2;
+}
+
+.prophecy-quiz[hidden] {
+    display: none;
+}
+
+#prophecyQuestionNumber {
+    color: #c9a8ff;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+#prophecyQuestionText {
+    color: #f1d9ff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-shadow: 0 0 12px rgba(180, 110, 255, 0.6);
+}
+/* Ensure hidden story elements stay hidden */
+.forgotten-prophecies-content [hidden] {
+    display: none;
+}
+#beginProphecyTrial[hidden] {
+    display: none;
+}
+/* Forgotten Prophecies - Answer Buttons */
+
+#prophecyAnswerOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.prophecy-answer-button {
+    padding: 10px 14px;
+    background: rgba(30, 12, 55, 0.9);
+    color: #f1e6ff;
+    border: 1px solid #a855f7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prophecy-answer-button:hover {
+    background: rgba(100, 45, 150, 0.9);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+#prophecyQuizFeedback {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+/* =====================================
+   ELEMENTORUMIA - HIDDEN SYMBOL
+===================================== */
+
+.profile-avatar-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.elementorumia-secret {
+    position: absolute;
+
+    /* Position near the left statue */
+    top: 72%;
+    left: 65.5%;
+
+    width: 25px;
+    height: 25px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+    z-index: 5;
+
+    opacity: 0.15;
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.elementorumia-secret img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.elementorumia-secret:hover,
+.elementorumia-secret:focus-visible {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(170, 100, 255, 0.9));
+}
+
+.elementorumia-secret[hidden] {
+    display: none;
+}
+/* =====================================
+   CHAPTER IV - THE LOST INCANTATION
+===================================== */
+
+.prophecy-rune-puzzle {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(3, 2, 15, 0.94);
+}
+/* Let the rune wall fill the entire puzzle */
+.prophecy-rune-puzzle {
+    padding: 0;
+}
+
+.rune-wall {
+    flex: 1;
+    min-height: 0;
+}
+.prophecy-rune-puzzle[hidden] {
+    display: none;
+}
+
+/* Ancient stone wall */
+.rune-wall {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../images/forgotten-rune-wall.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Elemental rune buttons */
+.rune-button {
+    position: absolute;
+
+    width: 21.5%;
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+    opacity: 0;
+
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.rune-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Reveal the runes when activated */
+.rune-button.activated {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(180, 120, 255, 0.7));
+}
+
+/* Keep the fifth element hidden */
+.rune-button[hidden] {
+    display: none;
+}
+
+/* Rune positions - centered on stone engravings */
+
+.rune-water {
+    top: 25.5%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+
+.rune-fire {
+    top: 25.5%;
+    left: 65.5%;
+    transform: translate(-50%, -50%);
+}
+
+.rune-earth {
+    top: 61.5%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+
+.rune-wind {
+    top: 61.5%;
+    left: 65.5%;
+    transform: translate(-50%, -50%);
+}
+
+.rune-aether {
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Puzzle feedback */
+#runePuzzleFeedback {
+    color: #e5d6ff;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+/* Chapter IV - Ancient inscription */
+
+.rune-inscription {
+    position: absolute;
+    top: 77.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 85%;
+    z-index: 5;
+
+    text-align: center;
+    pointer-events: none;
+}
+
+.rune-inscription p {
+    color: #e8d6ff;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    line-height: 1.35;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 15px #000,
+        0 0 12px rgba(160, 90, 255, 0.8);
+}
+/* Aether - gateway to Chapter V */
+.rune-aether.activated {
+    cursor: pointer;
+    animation: aetherPulse 2s ease-in-out infinite;
+}
+
+@keyframes aetherPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(180, 120, 255, 0.6));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(200, 150, 255, 1));
+    }
+}
+
+/* Potion ingredient inventory */
+
+.ingredients button .ingredient-count {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #d8b4ff;
+}
+
+.ingredients button.out-of-stock {
+    filter: grayscale(100%);
+    opacity: 0.4;
+}
+
+.ingredients button.out-of-stock .ingredient-count {
+    color: #aaa;
+}
+
+
+/* =====================================
+   PROFILE - POTION INVENTORY
+===================================== */
+
+.profile-potion-inventory {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 25px 18px;
+
+    background: rgba(10, 15, 35, 0.45);
+    border: 1px solid rgba(190, 145, 255, 0.4);
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.profile-potion-inventory h3 {
+    color: #e6c5ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(180, 100, 255, 0.5);
+}
+
+.potion-inventory-description {
+    color: #d5c6e8;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.profile-potion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+
+/* Individual potion cards */
+
+.profile-potion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 8px;
+    border: 1px solid rgba(190, 145, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(8, 12, 30, 0.55);
+}
+
+.profile-potion-card img {
+    width: 85px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(170, 90, 255, 0.35));
+}
+
+.profile-potion-card span {
+    color: #f0e5ff;
+    font-size: 0.85rem;
+}
+
+.profile-potion-card strong {
+    color: #d6a8ff;
+    font-size: 1rem;
+}
+
+/* Potions that are not owned */
+
+.profile-potion-card.empty-potion img {
+    filter: grayscale(100%);
+    opacity: 0.35;
+}
+
+.profile-potion-card.empty-potion span,
+.profile-potion-card.empty-potion strong {
+    opacity: 0.5;
+}
+
+
+/* =====================================
+   CHAPTER V - HALL OF GUARDIANS
+===================================== */
+
+.guardians-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+}
+
+.guardians-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.guardians-intro h1 {
+    color: #f0dcff;
+    text-shadow: 0 0 20px rgba(180, 100, 255, 0.6);
+}
+
+.guardians-hall {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(190, 145, 255, 0.5);
+    box-shadow: 0 0 35px rgba(140, 75, 255, 0.25);
+}
+
+.guardians-hall-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.guardians-message {
+    max-width: 750px;
+    margin: 35px auto 0;
+    text-align: center;
+    color: #ded0f2;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* =====================================
+   GUARDIAN PORTALS
+===================================== */
+
+.guardians-hall {
+    position: relative;
+}
+
+
+
+.guardian-portal {
+    position: absolute;
+    top: 24%;
+    width: 11%;
+    height: 35%;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Water - Sirena */
+.portal-water:hover,
+.portal-water:focus-visible {
+    background: rgba(60, 180, 255, 0.15);
+    box-shadow: 0 0 35px 12px rgba(60, 180, 255, 0.65);
+}
+
+/* Fire - Keraon */
+.portal-fire:hover,
+.portal-fire:focus-visible {
+    background: rgba(255, 100, 30, 0.15);
+    box-shadow: 0 0 35px 12px rgba(255, 100, 30, 0.65);
+}
+
+/* Earth - Gorgana */
+.portal-earth:hover,
+.portal-earth:focus-visible {
+    background: rgba(80, 210, 100, 0.15);
+    box-shadow: 0 0 35px 12px rgba(80, 210, 100, 0.65);
+}
+
+/* Wind - Hippora */
+.portal-wind:hover,
+.portal-wind:focus-visible {
+    background: rgba(255, 220, 140, 0.15);
+    box-shadow: 0 0 35px 12px rgba(255, 220, 140, 0.65);
+}
+
+
+.portal-water {
+    left: 6%;
+}
+
+.portal-fire {
+    left: 29%;
+}
+
+.portal-earth {
+    left: 60%;
+}
+
+.portal-wind {
+    left: 82%;
+}
+
+
+/* =====================================
+   CHAPTER V - SIRENA'S REALM
+===================================== */
+
+.sirena-page {
+    background: #061323;
+}
+
+.sirena-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.sirena-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sirena-intro h1 {
+    color: #a9e9ff;
+    text-shadow: 0 0 25px rgba(50, 180, 255, 0.7);
+}
+
+.sirena-intro h2 {
+    color: #d1efff;
+}
+
+.sirena-scene {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 160, 255, 0.3);
+}
+
+.sirena-background {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sirena-character {
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+    height: 85%;
+    max-width: 45%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(100, 210, 255, 0.6));
+}
+
+.sirena-dialogue {
+    max-width: 750px;
+    margin: 35px auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.sirena-dialogue h3 {
+    color: #a9e9ff;
+}
+
+.sirena-dialogue p {
+    margin-bottom: 15px;
+}
+
+.sirena-return {
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+/* =====================================
+   NERIEL'S RESCUE
+===================================== */
+
+.neriel-rescue {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 30px;
+    text-align: center;
+    background: rgba(10, 55, 85, 0.65);
+    border: 1px solid rgba(100, 210, 255, 0.4);
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(40, 170, 255, 0.15);
+}
+
+.neriel-rescue[hidden] {
+    display: none;
+}
+
+.neriel-rescue h2 {
+    color: #a9e9ff;
+    margin-bottom: 20px;
+}
+
+.neriel-rescue p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   NERIEL - RESCUE IMAGE
+===================================== */
+
+.neriel-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(130, 210, 255, 0.4);
+    box-shadow: 0 0 25px rgba(70, 180, 255, 0.25);
+}
+
+/* =====================================
+   NERIEL - FISHING NET PUZZLE
+===================================== */
+
+.neriel-net-puzzle {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(4, 35, 65, 0.75);
+    border: 1px solid rgba(120, 210, 255, 0.45);
+    border-radius: 16px;
+}
+
+.neriel-net-puzzle[hidden] {
+    display: none;
+}
+
+.neriel-net-puzzle h3 {
+    color: #a9e9ff;
+    margin-bottom: 15px;
+}
+
+.neriel-puzzle-clue {
+    font-style: italic;
+    color: #d0efff;
+    margin: 20px 0;
+}
+
+.neriel-knot-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.neriel-knot {
+    padding: 12px 25px;
+    background: rgba(35, 105, 155, 0.45);
+    border: 1px solid #78cfff;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.neriel-knot:hover {
+    background: rgba(65, 165, 220, 0.6);
+    box-shadow: 0 0 18px rgba(100, 200, 255, 0.5);
+}
+
+.neriel-knot.unraveled {
+    background: rgba(40, 150, 120, 0.45);
+    border-color: #8affce;
+    cursor: default;
+}
+
+#nerielPuzzleFeedback {
+    margin-top: 20px;
+    min-height: 25px;
+    color: #a9e9ff;
+}
+
+/* =====================================
+   NERIEL - HEALING
+===================================== */
+
+.neriel-healing {
+    margin-top: 25px;
+    padding: 20px;
+    border-top: 1px solid rgba(130, 210, 255, 0.3);
+}
+
+.neriel-healing[hidden] {
+    display: none;
+}
+
+#nerielHealingFeedback {
+    margin-top: 15px;
+    color: #a9e9ff;
+}
+
+/* =====================================
+   NERIEL - HEALED
+===================================== */
+
+.neriel-glowing {
+    box-shadow:
+        0 0 30px rgba(110, 220, 255, 0.65),
+        0 0 60px rgba(150, 190, 255, 0.3);
+    transition: box-shadow 0.8s ease;
+}
+
+/* =====================================
+   SIRENA - BLESSING OF WATER
+===================================== */
+
+.sirena-reward {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    text-align: center;
+    background: rgba(5, 40, 75, 0.8);
+    border: 1px solid rgba(120, 215, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(60, 180, 255, 0.2);
+}
+
+.sirena-reward[hidden] {
+    display: none;
+}
+
+.sirena-reward h2,
+.sirena-reward h3 {
+    color: #a9e9ff;
+}
+
+.sirena-reward-dialogue {
+    font-style: italic;
+    color: #d5efff;
+    margin: 20px 0;
+}
+
+.sirena-reward-item {
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(35, 100, 150, 0.2);
+    border-radius: 15px;
+}
+
+.sirena-reward-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    filter: drop-shadow(0 0 20px rgba(100, 210, 255, 0.5));
+}
+
+#waterBlessingFeedback {
+    margin-top: 20px;
+    color: #a9e9ff;
+}
+
+/* =====================================
+   NERIEL - HEALED REWARD IMAGE
+===================================== */
+
+.neriel-reward-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 16px;
+    border: 1px solid rgba(130, 220, 255, 0.5);
+    box-shadow: 0 0 30px rgba(80, 190, 255, 0.35);
+}
+
+/* =====================================
+   COMPLETED GUARDIAN PORTALS
+===================================== */
+
+.portal-water.guardian-completed {
+    background: rgba(60, 180, 255, 0.12);
+    box-shadow:
+        0 0 25px 8px rgba(60, 180, 255, 0.45),
+        0 0 50px rgba(120, 220, 255, 0.3);
+    border: 1px solid rgba(150, 230, 255, 0.5);
+}
+
+/* =====================================
+   KERAON - REALM OF FIRE
+===================================== */
+
+.keraon-realm {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 45px 35px;
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        rgba(35, 12, 12, 0.95),
+        rgba(12, 8, 15, 0.95)
+    );
+
+    border: 1px solid rgba(255, 110, 35, 0.5);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 30px rgba(255, 80, 20, 0.2),
+        inset 0 0 40px rgba(130, 35, 10, 0.15);
+}
+
+.keraon-realm h1 {
+    color: #ff9b45;
+    text-shadow: 0 0 20px rgba(255, 100, 20, 0.6);
+}
+
+.keraon-realm h2 {
+    color: #ffd19a;
+}
+
+.keraon-realm h3 {
+    color: #ffb66e;
+    margin-top: 35px;
+}
+
+.keraon-realm p {
+    color: #f1ded2;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 750px;
+}
+
+.keraon-realm .forgotten-orb-button {
+    margin-top: 25px;
+    border: 1px solid #ff8533;
+    box-shadow: 0 0 18px rgba(255, 90, 20, 0.35);
+}
+
+.keraon-realm .forgotten-orb-button:hover {
+    box-shadow: 0 0 30px rgba(255, 100, 20, 0.7);
+}
+
+/* =====================================
+   KERAON - GUARDIAN SCENE
+===================================== */
+
+.keraon-scene {
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 120, 40, 0.5);
+    box-shadow: 0 0 35px rgba(255, 90, 20, 0.3);
+}
+
+.keraon-background {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.keraon-guardian {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 28%;
+    height: auto;
+    max-height: 95%;
+    object-fit: contain;
+    object-position: bottom;
+    filter: drop-shadow(0 0 20px rgba(255, 90, 0, 0.5));
+}
+
+/* =====================================
+   KERAON - THE BURNING PASSAGE
+===================================== */
+
+.keraon-trial {
+    margin: 40px auto 0;
+    padding: 30px;
+    background: rgba(75, 20, 10, 0.45);
+    border: 1px solid rgba(255, 120, 40, 0.45);
+    border-radius: 16px;
+}
+
+.keraon-trial[hidden] {
+    display: none;
+}
+
+.keraon-warning {
+    font-style: italic;
+    color: #ffd19a !important;
+}
+
+#keraonPotionFeedback {
+    margin-top: 20px;
+    color: #ffca8a;
+}
+
+/* =====================================
+   KERAON - ETERNAL FLAME CHAMBER
+===================================== */
+
+.keraon-chamber {
+    margin: 40px auto 0;
+    padding: 35px;
+    text-align: center;
+    background: rgba(30, 10, 15, 0.9);
+    border: 1px solid rgba(255, 140, 45, 0.5);
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(255, 85, 20, 0.2);
+}
+
+.keraon-chamber[hidden] {
+    display: none;
+}
+
+.keraon-riddle {
+    padding: 20px;
+    font-style: italic;
+    color: #ffd19a !important;
+    border-left: 3px solid #ff8533;
+    background: rgba(255, 110, 25, 0.08);
+}
+
+.keraon-seals {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.keraon-seal {
+    padding: 18px 28px;
+    border: 2px solid #ff8533;
+    border-radius: 12px;
+    background: rgba(75, 20, 10, 0.8);
+    color: #ffd19a;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.keraon-seal:hover {
+    background: rgba(180, 60, 15, 0.5);
+    box-shadow: 0 0 22px rgba(255, 110, 20, 0.6);
+    transform: translateY(-3px);
+}
+
+.keraon-seal.activated {
+    background: rgba(255, 140, 35, 0.4);
+    box-shadow: 0 0 25px rgba(255, 140, 35, 0.8);
+    border-color: #ffd19a;
+}
+
+#keraonSealFeedback {
+    color: #ffca8a;
+    margin-top: 20px;
+}
+
+/* Keraon's Eternal Flame chamber image */
+
+.keraon-chamber-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 130, 40, 0.5);
+    box-shadow: 0 0 25px rgba(255, 100, 20, 0.25);
+}
+
+/* =====================================
+   KERAON - BLESSING OF FIRE
+===================================== */
+
+.keraon-reward {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    text-align: center;
+    background: rgba(45, 15, 10, 0.9);
+    border: 1px solid rgba(255, 145, 50, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(255, 90, 20, 0.25);
+}
+
+.keraon-reward[hidden] {
+    display: none;
+}
+
+.keraon-reward h2,
+.keraon-reward h3 {
+    color: #ffb66e;
+}
+
+.keraon-reward-dialogue {
+    font-style: italic;
+    color: #ffdfbd !important;
+    margin: 20px 0;
+}
+
+.keraon-reward-item {
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(150, 55, 15, 0.15);
+    border-radius: 15px;
+}
+
+.keraon-reward-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    filter: drop-shadow(0 0 20px rgba(255, 110, 20, 0.5));
+}
+
+#fireBlessingFeedback {
+    margin-top: 20px;
+    color: #ffd19a;
+}
+
+
+/* =====================================
+   KERAON - COMPLETED FIRE PORTAL
+===================================== */
+
+.portal-fire.guardian-completed {
+    background: rgba(255, 100, 20, 0.12);
+    box-shadow:
+        0 0 25px 8px rgba(255, 90, 20, 0.5),
+        0 0 50px rgba(255, 160, 40, 0.3);
+    border: 1px solid rgba(255, 170, 80, 0.6);
+}
+
+/* =====================================
+   GORGANA - REALM OF EARTH
+===================================== */
+
+.gorgana-realm {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    color: #e3f5d8;
+    background: rgba(10, 30, 18, 0.92);
+    border: 1px solid rgba(80, 180, 100, 0.4);
+    border-radius: 20px;
+}
+
+.gorgana-realm h1 {
+    color: #8ee6a2;
+    font-size: 2.8rem;
+    text-shadow: 0 0 20px rgba(60, 220, 110, 0.5);
+}
+
+.gorgana-realm h2,
+.gorgana-realm h3 {
+    color: #b8e8a0;
+}
+
+.gorgana-scene {
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(90, 200, 110, 0.5);
+    box-shadow: 0 0 35px rgba(60, 180, 90, 0.3);
+}
+
+.gorgana-background {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gorgana-guardian {
+    position: absolute;
+    bottom: 17%;
+    right: 13%;
+    width: 24%;
+    height: auto;
+    max-height: 95%;
+    object-fit: contain;
+    object-position: bottom;
+    filter: drop-shadow(0 0 18px rgba(80, 230, 110, 0.45));
+}
+
+.gorgana-realm .forgotten-orb-button {
+    margin-top: 25px;
+    border: 1px solid #65d987;
+    box-shadow: 0 0 18px rgba(60, 200, 100, 0.35);
+}
+
+.gorgana-realm .forgotten-orb-button:hover {
+    box-shadow: 0 0 30px rgba(60, 220, 110, 0.7);
+}
+
+/* =====================================
+   GORGANA - THE SILENT FOREST
+===================================== */
+
+.gorgana-trial {
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(15, 45, 25, 0.85);
+    border: 1px solid rgba(100, 200, 120, 0.4);
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(60, 180, 90, 0.2);
+}
+
+.gorgana-trial[hidden] {
+    display: none;
+}
+
+.gorgana-warning {
+    font-style: italic;
+    color: #b8e8a0 !important;
+    margin: 25px 0;
+}
+
+/* =========================================
+   GORGANA - THE SHATTERED HEARTROOT
+========================================= */
+
+.heartroot-puzzle {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.heartroot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(100%, 450px);
+    aspect-ratio: 3 / 4;
+    margin: 30px auto;
+    border: 4px solid #54794d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(83, 166, 89, 0.4);
+}
+
+.heartroot-tile {
+    background-image: url("../images/heartroot-petrified.png");
+    background-size: 300% 300%;
+    border: 1px solid rgba(200, 220, 190, 0.45);
+    cursor: pointer;
+    transition: filter 0.2s, box-shadow 0.2s;
+}
+
+.heartroot-tile:hover {
+    filter: brightness(1.25);
+}
+
+.heartroot-tile.selected {
+    box-shadow: inset 0 0 0 4px #b4ff87;
+    filter: brightness(1.3);
+}
+
+.heartroot-awakened {
+    display: block;
+    width: min(100%, 450px);
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 45px rgba(87, 255, 119, 0.8);
+    animation: heartrootAwaken 1.8s ease-out;
+}
+
+@keyframes heartrootAwaken {
+    from {
+        opacity: 0;
+        filter: brightness(3);
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        filter: brightness(1);
+        transform: scale(1);
+    }
+}
+
+/* Keep hidden elements hidden */
+.heartroot-puzzle[hidden],
+.heartroot-awakened[hidden] {
+    display: none;
+}
+.heartroot-grid[hidden],
+#resetHeartroot[hidden] {
+    display: none;
+}
+
+/* Gorgana's Reward */
+
+.gorgana-reward {
+    margin: 35px auto;
+    padding: 25px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.gorgana-seed {
+    display: block;
+    width: 150px;
+    max-width: 60%;
+    margin: 25px auto;
+    filter: drop-shadow(0 0 20px #69e89a);
+}
+
+.gorgana-reward button {
+    padding: 12px 25px;
+    border: 1px solid #80cf91;
+    border-radius: 8px;
+    background: #173c27;
+    color: #e3ffe9;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(105, 232, 154, 0.4);
+}
+
+.gorgana-reward button:hover {
+    background: #276b3d;
+    box-shadow: 0 0 25px rgba(105, 232, 154, 0.7);
+}
+
+.gorgana-reward[hidden] {
+    display: none;
+}
+
+/* Gorgana's completed portal */
+
+.portal-earth.guardian-completed {
+    filter: drop-shadow(0 0 15px #4dff88)
+            drop-shadow(0 0 30px #1bbf57)
+            brightness(1.25);
+
+    animation: earthPortalGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes earthPortalGlow {
+    from {
+        filter: drop-shadow(0 0 10px #4dff88)
+                brightness(1.1);
+    }
+
+    to {
+        filter: drop-shadow(0 0 30px #4dff88)
+                drop-shadow(0 0 45px #1bbf57)
+                brightness(1.4);
+    }
+}
+
+/* Gorgana - visible completed portal glow */
+
+.portal-earth.guardian-completed {
+    filter: none;
+    animation: none;
+    border-radius: 50%;
+    box-shadow:
+        0 0 15px 5px rgba(70, 255, 110, 0.55),
+        inset 0 0 20px rgba(70, 255, 110, 0.4);
+
+    animation: earthBlessingPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes earthBlessingPulse {
+    from {
+        box-shadow:
+            0 0 12px 3px rgba(70, 255, 110, 0.4),
+            inset 0 0 15px rgba(70, 255, 110, 0.25);
+    }
+
+    to {
+        box-shadow:
+            0 0 28px 10px rgba(70, 255, 110, 0.85),
+            inset 0 0 25px rgba(70, 255, 110, 0.6);
+    }
+}
+
+/* =========================================
+   COMPLETED GUARDIAN PORTALS
+========================================= */
+
+/* Shared pulsing animation */
+@keyframes guardianBlessingPulse {
+    from {
+        box-shadow:
+            0 0 12px 3px var(--portal-glow-soft),
+            inset 0 0 15px var(--portal-glow-soft);
+    }
+
+    to {
+        box-shadow:
+            0 0 28px 10px var(--portal-glow-strong),
+            inset 0 0 25px var(--portal-glow-strong);
+    }
+}
+
+/* All completed portals */
+.guardian-portal.guardian-completed {
+    filter: none;
+    border-radius: 50%;
+    animation: guardianBlessingPulse 2.5s
+               ease-in-out infinite alternate;
+}
+
+/* Sirena - Water */
+.portal-water.guardian-completed {
+    --portal-glow-soft: rgba(55, 170, 255, 0.35);
+    --portal-glow-strong: rgba(55, 170, 255, 0.85);
+}
+
+/* Keraon - Fire */
+.portal-fire.guardian-completed {
+    --portal-glow-soft: rgba(255, 95, 30, 0.35);
+    --portal-glow-strong: rgba(255, 95, 30, 0.85);
+}
+
+/* Gorgana - Earth */
+.portal-earth.guardian-completed {
+    --portal-glow-soft: rgba(70, 255, 110, 0.35);
+    --portal-glow-strong: rgba(70, 255, 110, 0.85);
+}
+
+/* Hippora - Wind */
+.portal-wind.guardian-completed {
+    --portal-glow-soft: rgba(255, 230, 160, 0.35);
+    --portal-glow-strong: rgba(255, 230, 160, 0.85);
+}
+
+/* =========================================
+   HIPPORA'S REALM - THE WHISPERING SKIES
+========================================= */
+
+.hippora-realm {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    color: #f4e8ff;
+}
+
+.hippora-realm h1 {
+    color: #f8e4ad;
+    text-shadow: 0 0 20px rgba(255, 215, 130, 0.6);
+}
+
+.hippora-realm h2 {
+    color: #d7e9ff;
+}
+
+/* The realm scene */
+
+.hippora-scene {
+    position: relative;
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(140, 180, 255, 0.4);
+}
+
+.hippora-background {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hippora standing on the marble terrace */
+
+.hippora-guardian {
+    position: absolute;
+    width: 34%;
+    right: 6%;
+    bottom: 3%;
+    height: auto;
+    filter: drop-shadow(0 0 18px rgba(255, 225, 150, 0.65));
+    animation: hipporaGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes hipporaGlow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(255, 225, 150, 0.4));
+    }
+
+    to {
+        filter: drop-shadow(0 0 28px rgba(255, 225, 150, 0.9));
+    }
+}
+
+/* Introduction */
+
+.hippora-intro {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+.hippora-intro p {
+    margin-bottom: 18px;
+}
+
+#beginFlightTrial {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: 1px solid #e8d49a;
+    border-radius: 10px;
+    background: #263b69;
+    color: #fff0c7;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 215, 130, 0.4);
+    transition: 0.3s;
+}
+
+#beginFlightTrial:hover {
+    background: #38558f;
+    box-shadow: 0 0 30px rgba(255, 215, 130, 0.8);
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+    .hippora-realm {
+        padding: 12px;
+    }
+
+    .hippora-guardian {
+        width: 42%;
+        right: 3%;
+        bottom: 2%;
+    }
+
+    .hippora-intro {
+        padding: 15px;
+    }
+}
+
+/* =========================================
+   HIPPORA - THE FLIGHT TRIAL
+========================================= */
+
+.hippora-flight-trial {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.hippora-flight-trial[hidden] {
+    display: none;
+}
+
+.hippora-flight-trial h2 {
+    color: #ffe4a3;
+    text-shadow: 0 0 18px rgba(255, 220, 140, 0.6);
+}
+
+/* Flight information */
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 15px;
+    color: #fff0c7;
+    font-weight: bold;
+}
+
+/* The sky */
+
+.flight-game {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border: 3px solid #d8c38a;
+    border-radius: 15px;
+
+    background:
+        radial-gradient(
+            ellipse at 25% 85%,
+            rgba(255, 255, 255, 0.75),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 80% 20%,
+            rgba(255, 235, 180, 0.45),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #294b91 0%,
+            #6596d0 55%,
+            #c5e5f7 100%
+        );
+
+    box-shadow: 0 0 30px rgba(130, 185, 255, 0.45);
+}
+
+/* Hippora - temporary player graphic */
+
+.flight-player {
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    left: 35px;
+    top: 150px;
+
+    background-image: url("../images/hippora-flying.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    filter: drop-shadow(0 0 12px rgba(255, 225, 150, 0.8));
+    pointer-events: none;
+}
+
+/* Instructions */
+
+#flightMessage {
+    margin: 20px auto;
+    color: #e6efff;
+}
+
+/* Flight controls */
+
+.flight-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 55px);
+    grid-template-rows: repeat(2, 55px);
+    justify-content: center;
+    gap: 8px;
+    margin: 25px auto;
+}
+
+.flight-controls button {
+    border: 1px solid #e6d49a;
+    border-radius: 12px;
+    background: #263d70;
+    color: #fff3cf;
+    font-size: 24px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.flight-controls button:hover {
+    background: #4266a0;
+    box-shadow: 0 0 15px rgba(255, 220, 140, 0.6);
+}
+
+/* Directional layout */
+
+#flightUp {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#flightLeft {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#flightDown {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#flightRight {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* Start button */
+
+#startFlightGame {
+    padding: 14px 32px;
+    border: 1px solid #e6d49a;
+    border-radius: 10px;
+    background: #294b7c;
+    color: #fff1cb;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 215, 130, 0.4);
+}
+
+#startFlightGame:hover {
+    background: #4168a0;
+    box-shadow: 0 0 25px rgba(255, 215, 130, 0.8);
+}
+
+/* Mobile screens */
+
+@media (max-width: 600px) {
+    .hippora-flight-trial {
+        padding: 12px;
+    }
+
+    .flight-game {
+        height: 300px;
+    }
+
+    .flight-player {
+        width: 110px;
+        height: 80px;
+    }
+
+    .flight-info {
+        justify-content: center;
+    }
+}
+#startFlightGame[hidden] {
+    display: none;
+}
+
+.flight-controls button {
+    touch-action: none;
+    user-select: none;
+}
+
+/* =========================================
+   HIPPORA - MAGICAL WIND RINGS
+========================================= */
+
+.wind-ring {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border: 5px solid #fff0b0;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    background: radial-gradient(
+        circle,
+        rgba(180, 225, 255, 0.08) 35%,
+        rgba(255, 240, 170, 0.25) 75%,
+        transparent 100%
+    );
+
+    box-shadow:
+        0 0 12px #fff4b0,
+        0 0 25px rgba(255, 215, 100, 0.8),
+        inset 0 0 15px rgba(255, 255, 255, 0.7);
+
+    animation: windRingPulse 1.5s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes windRingPulse {
+    from {
+        filter: brightness(0.9);
+        transform: scale(0.95);
+    }
+
+    to {
+        filter: brightness(1.4);
+        transform: scale(1.08);
+    }
+}
+
+/* =========================================
+   HIPPORA - STORM CRYSTAL
+========================================= */
+
+.storm-crystal {
+    position: absolute;
+    width: 48px;
+    height: 70px;
+
+    background: linear-gradient(
+        135deg,
+        #e2c4ff,
+        #8b4fcb 45%,
+        #3b176e
+    );
+
+    clip-path: polygon(
+        50% 0%,
+        95% 35%,
+        70% 85%,
+        50% 100%,
+        25% 85%,
+        5% 35%
+    );
+
+    filter: drop-shadow(0 0 12px #a65cff);
+
+    animation: stormCrystalFloat 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes stormCrystalFloat {
+    0% {
+        transform: translateY(-35px) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(35px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(-35px) rotate(-8deg);
+    }
+}
+
+
+/* =========================================
+   HIPPORA - CELESTIAL SANCTUARY
+========================================= */
+
+.celestial-portal {
+    position: absolute;
+    width: 100px;
+    height: 130px;
+
+    border: 7px solid #ffe6a0;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(170, 220, 255, 0.8) 35%,
+        rgba(110, 145, 255, 0.45) 70%,
+        transparent 100%
+    );
+
+    box-shadow:
+        0 0 20px #ffe8a0,
+        0 0 45px rgba(255, 220, 130, 0.9),
+        inset 0 0 25px #ffffff;
+
+    animation: celestialPortalGlow 2s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes celestialPortalGlow {
+    from {
+        filter: brightness(0.9);
+        transform: scale(0.95);
+    }
+
+    to {
+        filter: brightness(1.4);
+        transform: scale(1.05);
+    }
+}
+
+#continueFlight {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: 1px solid #ffe2a0;
+    border-radius: 10px;
+    background: #304a83;
+    color: #fff0c7;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 220, 140, 0.5);
+}
+
+#continueFlight:hover {
+    background: #486bb0;
+    box-shadow: 0 0 30px rgba(255, 220, 140, 0.9);
+}
+
+#continueFlight[hidden] {
+    display: none;
+}
+.storm-crystal {
+    animation: stormCrystalFloat 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* =========================================
+   HIPPORA - THE MANTLE OF THE FOUR WINDS
+========================================= */
+
+.hippora-mantle {
+    position: absolute;
+    width: 19%;
+    left: 13%;
+    bottom: 3%;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    filter: drop-shadow(0 0 10px rgba(255, 220, 140, 0.45));
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.hippora-mantle img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hippora-mantle:hover,
+.hippora-mantle:focus-visible {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 22px rgba(255, 220, 140, 0.9));
+}
+
+@media (max-width: 600px) {
+    .hippora-mantle {
+        width: 25%;
+        left: 6%;
+        bottom: 3%;
+    }
+}
+
+/* =========================================
+   HIPPORA - MANTLE CEREMONY
+========================================= */
+
+.mantle-ceremony {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+
+    border: 1px solid rgba(255, 220, 140, 0.5);
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(30, 45, 90, 0.95),
+        rgba(65, 50, 100, 0.9)
+    );
+
+    box-shadow: 0 0 25px rgba(255, 215, 130, 0.2);
+    line-height: 1.8;
+}
+
+.mantle-ceremony[hidden],
+.hippora-mantle[hidden] {
+    display: none;
+}
+
+.mantle-ceremony p {
+    margin-bottom: 18px;
+}
+
+#acceptWindMantle {
+    margin-top: 15px;
+    padding: 14px 28px;
+
+    border: 1px solid #ffe4a3;
+    border-radius: 10px;
+
+    background: #304a83;
+    color: #fff0c7;
+
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 215, 130, 0.4);
+}
+
+#acceptWindMantle:hover {
+    background: #4769a5;
+    box-shadow: 0 0 25px rgba(255, 215, 130, 0.8);
+}
+
+#beginFlightTrial:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* =========================================
+   HIPPORA - BLESSING OF WIND
+========================================= */
+
+.hippora-blessing {
+    max-width: 750px;
+    margin: 45px auto;
+    padding: 30px;
+    text-align: center;
+
+    border: 1px solid rgba(255, 225, 160, 0.6);
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(25, 45, 85, 0.95),
+        rgba(60, 75, 125, 0.9)
+    );
+
+    box-shadow: 0 0 35px rgba(170, 205, 255, 0.3);
+}
+
+.hippora-blessing[hidden] {
+    display: none;
+}
+
+.hippora-blessing h2,
+.hippora-blessing h3 {
+    color: #ffe4a3;
+}
+
+.hippora-blessing p {
+    margin: 18px 0;
+    line-height: 1.8;
+}
+
+.celestial-feather-reward {
+    display: block;
+    width: min(240px, 70%);
+    height: auto;
+    margin: 25px auto;
+
+    filter: drop-shadow(0 0 18px rgba(255, 225, 150, 0.7));
+
+    animation: celestialFeatherFloat 3s ease-in-out infinite;
+}
+
+@keyframes celestialFeatherFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+#claimWindBlessing {
+    margin-top: 15px;
+    padding: 14px 28px;
+    border: 1px solid #ffe4a3;
+    border-radius: 10px;
+    background: #304a83;
+    color: #fff0c7;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 215, 130, 0.4);
+}
+
+#claimWindBlessing:hover {
+    background: #4769a5;
+    box-shadow: 0 0 25px rgba(255, 215, 130, 0.8);
+}
+
+#claimWindBlessing[hidden] {
+    display: none;
+}
+
+#windBlessingMessage {
+    color: #fff0c7;
+    font-weight: bold;
+}
+
+/* =====================================
+   HOUSE GUARDIAN - FIRST TRIAL
+===================================== */
+
+/* Highlight the student's first guardian */
+
+.guardian-first {
+    outline: 2px solid rgba(255, 230, 150, 0.85);
+    outline-offset: 6px;
+    border-radius: 50%;
+}
+
+/* Other guardians remain locked initially */
+
+.guardian-portal.guardian-locked {
+    opacity: 0.35;
+    filter: grayscale(0.8);
+    cursor: not-allowed;
+}
+
+.guardian-portal.guardian-locked:hover {
+    transform: none;
+}
+
+/* =====================================
+   HALL OF GUARDIANS - STUDENT JOURNEY
+===================================== */
+
+.guardian-journey {
+    max-width: 750px;
+    margin: 30px auto 40px;
+    padding: 25px 30px;
+    text-align: center;
+
+    border: 1px solid rgba(200, 180, 255, 0.35);
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(35, 30, 75, 0.85),
+        rgba(25, 45, 85, 0.85)
+    );
+
+    box-shadow: 0 0 22px rgba(155, 115, 255, 0.18);
+}
+
+.guardian-journey h2 {
+    color: #f6dda4;
+    margin-bottom: 14px;
+    text-shadow: 0 0 12px rgba(255, 220, 140, 0.35);
+}
+
+.guardian-journey p {
+    color: #e5e1f7;
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .guardian-journey {
+        padding: 18px;
+        margin: 20px auto 30px;
+    }
+}
+
+/* =====================================
+   AETHERLIGHT ELIXIR
+===================================== */
+
+.aetherlight-main {
+    padding: 40px 20px 80px;
+    text-align: center;
+}
+
+.aetherlight-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.aetherlight-chamber {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.aetherlight-chamber-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 0 35px rgba(150, 90, 255, 0.35);
+}
+
+.aetherlight-message {
+    max-width: 750px;
+    margin: 35px auto;
+    color: #e5ddfa;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .aetherlight-main {
+        padding: 20px 12px 50px;
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - SACRED INGREDIENTS
+===================================== */
+
+.aetherlight-ingredients {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: 5%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.aether-ingredient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-width: 0;
+    padding: 12px 5px;
+
+    background: rgba(15, 12, 35, 0.85);
+    border: 1px solid rgba(200, 180, 255, 0.4);
+    border-radius: 12px;
+
+    color: white;
+    font-family: inherit;
+}
+
+.ingredient-symbol {
+    font-size: 26px;
+}
+
+.ingredient-name {
+    font-size: 12px;
+    text-align: center;
+}
+
+.aether-ingredient.ingredient-owned {
+    border-color: #e7c77a;
+    box-shadow: 0 0 15px rgba(255, 215, 120, 0.5);
+    opacity: 1;
+}
+
+.aether-ingredient.ingredient-missing {
+    filter: grayscale(1);
+    opacity: 0.45;
+}
+
+@media (max-width: 600px) {
+    .aetherlight-ingredients {
+        left: 3%;
+        right: 3%;
+        bottom: 3%;
+        gap: 4px;
+    }
+
+    .aether-ingredient {
+        padding: 5px 2px;
+    }
+
+    .ingredient-symbol {
+        font-size: 18px;
+    }
+
+    .ingredient-name {
+        font-size: 9px;
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - INGREDIENT IMAGES
+===================================== */
+
+.ingredient-image {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.aether-ingredient.ingredient-owned.ingredient-water .ingredient-image {
+    filter: drop-shadow(0 0 10px #39bfff);
+}
+
+.aether-ingredient.ingredient-owned.ingredient-fire .ingredient-image {
+    filter: drop-shadow(0 0 10px #ff7425);
+}
+
+.aether-ingredient.ingredient-owned.ingredient-earth .ingredient-image {
+    filter: drop-shadow(0 0 10px #65db69);
+}
+
+.aether-ingredient.ingredient-owned.ingredient-wind .ingredient-image {
+    filter: drop-shadow(0 0 10px #e7dcff);
+}
+
+@media (max-width: 600px) {
+    .ingredient-image {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - FLOATING INGREDIENTS
+===================================== */
+
+.aetherlight-ingredients {
+    left: 8%;
+    right: 8%;
+    bottom: 16%;
+    gap: 0;
+}
+
+.aether-ingredient {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.aether-ingredient.ingredient-owned {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.aether-ingredient.ingredient-missing {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.ingredient-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.ingredient-name {
+    margin-top: 5px;
+    color: #f5e6bc;
+    font-size: 12px;
+    text-shadow: 0 2px 5px #000, 0 0 8px #000;
+}
+
+@media (max-width: 600px) {
+    .aetherlight-ingredients {
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .ingredient-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ingredient-name {
+        font-size: 9px;
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - INGREDIENT POSITIONING
+===================================== */
+
+/* Keep ingredients on their pedestals */
+.aetherlight-ingredients {
+    bottom: 18.5%;
+}
+
+/* Larger magical ingredients */
+.ingredient-image {
+    width: 90px;
+    height: 90px;
+}
+
+/* Liquid Fire needs a little extra size */
+.ingredient-fire .ingredient-image {
+    width: 110px;
+    height: 110px;
+}
+
+/* Move Water slightly right */
+.ingredient-water {
+    transform: translateX(14px);
+}
+
+/* Move Wind slightly left */
+.ingredient-wind {
+    transform: translateX(-14px);
+}
+
+/* Hide ingredient labels */
+.aetherlight-ingredients .ingredient-name {
+    display: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+
+    .ingredient-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .ingredient-fire .ingredient-image {
+        width: 58px;
+        height: 58px;
+    }
+
+    .ingredient-water {
+        transform: translateX(5px);
+    }
+
+    .ingredient-wind {
+        transform: translateX(-5px);
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - BREWING ANIMATION
+===================================== */
+
+.aether-ingredient.ingredient-owned {
+    cursor: pointer;
+}
+
+.aether-ingredient.ingredient-owned:hover .ingredient-image {
+    transform: translateY(-8px) scale(1.1);
+}
+
+.aether-ingredient:disabled {
+    cursor: not-allowed;
+}
+
+.aether-ingredient.ingredient-brewing {
+    pointer-events: none;
+    z-index: 10;
+}
+
+.aether-ingredient.ingredient-brewing .ingredient-image {
+    animation: ingredientIntoCauldron 1.5s ease-in forwards;
+}
+
+@keyframes ingredientIntoCauldron {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translate(0, -90px) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(var(--brew-x), var(--brew-y))
+            scale(0.1);
+        opacity: 0;
+    }
+}
+
+.aetherlight-chamber.cauldron-awakened {
+    animation: cauldronPulse 0.8s ease;
+}
+
+@keyframes cauldronPulse {
+    0%, 100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - ELEMENTAL CAULDRON
+===================================== */
+
+.aether-cauldron-glow {
+    position: absolute;
+
+    left: 50%;
+    top: 40%;
+
+    width: 36%;
+    height: 18%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    pointer-events: none;
+
+    opacity: 0;
+    z-index: 2;
+}
+
+.aether-cauldron-glow.glow-active {
+    animation: elementalCauldronGlow 1.2s ease-out;
+}
+
+.aether-cauldron-glow.glow-water {
+    background: radial-gradient(
+        ellipse,
+        rgba(40, 180, 255, 0.65),
+        transparent 70%
+    );
+}
+
+.aether-cauldron-glow.glow-fire {
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 100, 20, 0.7),
+        transparent 70%
+    );
+}
+
+.aether-cauldron-glow.glow-earth {
+    background: radial-gradient(
+        ellipse,
+        rgba(80, 255, 130, 0.6),
+        transparent 70%
+    );
+}
+
+.aether-cauldron-glow.glow-wind {
+    background: radial-gradient(
+        ellipse,
+        rgba(230, 225, 255, 0.7),
+        transparent 70%
+    );
+}
+
+@keyframes elementalCauldronGlow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - FINAL AWAKENING
+===================================== */
+
+.aetherlight-awakening[hidden] {
+    display: none;
+}
+
+.aetherlight-awakening {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.aetherlight-magic {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+
+    width: 55%;
+    aspect-ratio: 1;
+
+    transform: translate(-50%, -50%);
+
+    background: conic-gradient(
+        #48caff,
+        #ff7c35,
+        #72e89b,
+        #eee7ff,
+        #48caff
+    );
+
+    border-radius: 50%;
+    filter: blur(35px);
+    opacity: 0;
+
+    animation: aetherMagicAwakens 3s ease-out forwards;
+}
+
+@keyframes aetherMagicAwakens {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.1) rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(1.1) rotate(180deg);
+    }
+
+    100% {
+        opacity: 0.35;
+        transform: translate(-50%, -50%) scale(0.8) rotate(360deg);
+    }
+}
+
+.aetherlight-elixir-image {
+    position: absolute;
+    left: 50%;
+    top: 38%;
+
+    width: 18%;
+    max-width: 190px;
+    height: auto;
+
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+
+    filter: drop-shadow(0 0 25px #e8c7ff);
+
+    animation: revealAetherlight 2.5s ease-out 1.5s forwards;
+}
+
+@keyframes revealAetherlight {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -55%) scale(1.15);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.aetherlight-revelation {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 3%;
+
+    opacity: 0;
+    animation: revealAetherText 1.5s ease 3s forwards;
+
+    color: #fff4d9;
+    text-shadow: 0 0 12px #000, 0 0 20px #a96dff;
+}
+
+.aetherlight-revelation h2 {
+    color: #ffe4a2;
+}
+
+@keyframes revealAetherText {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .aetherlight-elixir-image {
+        width: 25%;
+    }
+
+    .aetherlight-revelation h2 {
+        font-size: 16px;
+    }
+
+    .aetherlight-revelation p {
+        font-size: 11px;
+    }
+}
+
+/* =====================================
+   AETHERLIGHT - CLAIM REWARD
+===================================== */
+
+.aetherlight-revelation {
+    pointer-events: auto;
+}
+
+.claim-aetherlight {
+    margin-top: 12px;
+    padding: 12px 24px;
+
+    background: linear-gradient(
+        135deg,
+        #59419a,
+        #9a72dc
+    );
+
+    border: 1px solid #e5caff;
+    border-radius: 25px;
+
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(176, 116, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.claim-aetherlight:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(205, 160, 255, 0.9);
+}
+
+.claim-aetherlight:disabled {
+    opacity: 0.65;
+    cursor: default;
+    transform: none;
+}
+
+.aetherlight-claim-message {
+    margin-top: 12px;
+    color: #ffe6a4;
+    text-shadow: 0 0 10px #000;
+}
+
+/* =====================================
+   AETHERLIGHT CHAMBER - ENTRANCE
+===================================== */
+
+.enter-aetherlight[hidden] {
+    display: none;
+}
+
+.enter-aetherlight {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #49347f,
+        #8c65c5
+    );
+
+    border: 1px solid #e6d1ff;
+    border-radius: 28px;
+
+    color: #fff4d9;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+
+    box-shadow: 0 0 18px rgba(160, 110, 255, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enter-aetherlight:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(200, 160, 255, 0.8);
+}
+
+/* =====================================
+   AETHERLIGHT - RETURN NAVIGATION
+===================================== */
+
+.aetherlight-navigation {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.return-guardians-btn {
+    display: inline-block;
+    padding: 13px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #29204e,
+        #59418b
+    );
+
+    border: 1px solid rgba(215, 190, 255, 0.65);
+    border-radius: 28px;
+
+    color: #f5eaff;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+
+    box-shadow: 0 0 15px rgba(150, 100, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.return-guardians-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(190, 145, 255, 0.7);
+}
+
+/* =====================================
+   HEART OF AETHER
+===================================== */
+
+.aether-heart-main {
+    padding: 40px 20px 80px;
+    text-align: center;
+}
+
+.aether-heart-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.aether-heart-scene {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+
+    box-shadow: 0 0 35px rgba(110, 100, 170, 0.25);
+}
+
+.aether-heart-background {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.aether-heart-story {
+    max-width: 750px;
+    margin: 40px auto;
+    color: #ded9ed;
+    line-height: 1.9;
+}
+
+.aether-heart-story p {
+    margin-bottom: 18px;
+}
+
+.aether-heart-navigation {
+    margin-top: 35px;
+}
+
+@media (max-width: 600px) {
+    .aether-heart-main {
+        padding: 20px 12px 50px;
+    }
+
+    .aether-heart-story {
+        margin: 25px auto;
+    }
+}
+
+/* =====================================
+   HEART OF AETHER - SLEEPING HEART
+===================================== */
+
+.aether-heart-crystal {
+    position: absolute;
+
+    /* Crystal at the center of the ancient tree */
+    left: 51%;
+    top: 43%;
+
+    width: 6%;
+    height: 11%;
+
+    transform: translate(-50%, -50%);
+
+    background: transparent;
+    border: none;
+    border-radius: 45%;
+
+    cursor: pointer;
+    z-index: 5;
+}
+
+.aether-heart-crystal:hover {
+    background: rgba(190, 175, 255, 0.12);
+    box-shadow: 0 0 22px rgba(180, 160, 255, 0.5);
+}
+
+.aether-heart-crystal:focus-visible {
+    outline: 2px solid #e7d3ff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .aether-heart-crystal {
+        width: 15%;
+        height: 20%;
+    }
+}
+
+/* THE HEART IS READY */
+
+.aether-heart-crystal.heart-ready {
+    animation: heartReadyPulse 2s ease-in-out infinite;
+}
+
+@keyframes heartReadyPulse {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(185, 155, 255, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(215, 185, 255, 0.85);
+    }
+}
+
+/* =====================================
+   HEART OF AETHER - RESTORATION
+===================================== */
+
+.aether-heart-restored {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+
+    transition: opacity 5s ease-in-out;
+}
+
+.aether-heart-restored.is-restored {
+    opacity: 1;
+}
+
+.aether-heart-crystal {
+    z-index: 5;
+}
+
+.aether-heart-crystal.restoring {
+    animation: restoringHeart 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes restoringHeart {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(190, 160, 255, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 50px 20px rgba(220, 190, 255, 0.85);
+    }
+}
+
+/* =====================================
+   HEART OF AETHER - SILVER STAG
+===================================== */
+
+.silver-stag-appearance[hidden] {
+    display: none;
+}
+
+.silver-stag-appearance {
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+
+    width: 28%;
+    height: auto;
+
+    z-index: 4;
+    pointer-events: none;
+
+    transform: translateX(-50%) scale(0.25);
+    transform-origin: center bottom;
+    opacity: 0;
+
+    filter: drop-shadow(0 0 25px rgba(210, 185, 255, 0.9));
+}
+
+.silver-stag-appearance.stag-awakening {
+    animation: silverStagArrival 5s ease-out forwards;
+}
+
+.silver-stag-appearance.stag-present {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+@keyframes silverStagArrival {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.25);
+        filter: brightness(3) blur(12px);
+    }
+
+    35% {
+        opacity: 0.65;
+        filter: brightness(2) blur(5px);
+    }
+
+    75% {
+        opacity: 1;
+        filter: brightness(1.4) blur(1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        filter: drop-shadow(0 0 25px rgba(210, 185, 255, 0.9));
+    }
+}
+
+@media (max-width: 600px) {
+    .silver-stag-appearance {
+        width: 35%;
+        bottom: 12%;
+    }
+}
+
+/* =====================================
+   SILVER STAG - INTERACTION
+===================================== */
+
+.silver-stag-interaction[hidden],
+.stag-dialogue[hidden] {
+    display: none;
+}
+
+.silver-stag-interaction {
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+    width: 28%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 6;
+    transform: translateX(-50%);
+}
+
+.silver-stag-interaction .silver-stag-appearance {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(0.25);
+    transform-origin: center bottom;
+    opacity: 0;
+}
+
+.silver-stag-interaction .silver-stag-appearance.stag-present {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.silver-stag-interaction .silver-stag-appearance.stag-awakening {
+    animation: stagDialogueArrival 5s ease-out forwards;
+}
+
+@keyframes stagDialogueArrival {
+    from {
+        opacity: 0;
+        transform: scale(0.25);
+        filter: brightness(3) blur(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 0 25px #cdb6ff);
+    }
+}
+
+.silver-stag-interaction:hover .stag-present {
+    filter: drop-shadow(0 0 35px #e4d5ff);
+}
+
+.stag-dialogue {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 3%;
+    z-index: 10;
+    padding: 20px 25px;
+    border: 1px solid #d9c2ff;
+    border-radius: 15px;
+    background: rgba(18, 13, 42, 0.94);
+    color: #f5edff;
+    box-shadow: 0 0 30px rgba(170, 125, 255, 0.45);
+}
+
+.stag-dialogue h2 {
+    color: #ffe4a2;
+    margin-bottom: 10px;
+}
+
+.stag-dialogue p {
+    line-height: 1.7;
+}
+
+.stag-dialogue button {
+    margin-top: 12px;
+    padding: 10px 24px;
+    border-radius: 25px;
+    border: 1px solid #d9c2ff;
+    background: #61438f;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .silver-stag-interaction {
+        width: 35%;
+        bottom: 12%;
+    }
+
+    .stag-dialogue {
+        left: 3%;
+        right: 3%;
+        padding: 12px;
+    }
+
+    .stag-dialogue h2 {
+        font-size: 16px;
+    }
+
+    .stag-dialogue p {
+        font-size: 12px;
+    }
+}
+
+/* SILVER STAG - POSITION FIX */
+
+.silver-stag-interaction {
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+    width: 28%;
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+.silver-stag-interaction .silver-stag-appearance {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .silver-stag-interaction {
+        width: 35%;
+        bottom: 12%;
+    }
+}
+
+/* SILVER STAG - CLICK FIX */
+
+.silver-stag-interaction {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.silver-stag-interaction .silver-stag-appearance {
+    pointer-events: none;
+}
+
+
+.silver-stag-interaction {
+    background: transparent;
+    outline: none;
+}
+
+/* =====================================
+   THE PATH TO THE HEART OF AETHER
+===================================== */
+
+.heart-of-aether-unlock {
+    max-width: 650px;
+    margin: 60px auto 30px;
+    padding: 30px;
+    text-align: center;
+
+    background: rgba(30, 20, 55, 0.8);
+    border: 1px solid rgba(200, 170, 255, 0.35);
+    border-radius: 18px;
+
+    box-shadow: 0 0 30px rgba(150, 100, 255, 0.2);
+}
+
+.heart-of-aether-unlock h2 {
+    color: #f5dfaa;
+    margin-bottom: 15px;
+}
+
+.heart-of-aether-unlock p {
+    color: #ddd0ef;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.heart-of-aether-link {
+    display: inline-block;
+    padding: 14px 30px;
+
+    background: linear-gradient(135deg, #44316e, #8463bd);
+    color: #fff;
+
+    border: 1px solid #c9aaff;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    box-shadow: 0 0 18px rgba(180, 140, 255, 0.45);
+    transition: all 0.3s ease;
+}
+
+.heart-of-aether-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(210, 180, 255, 0.8);
+}
+
+/* Respect the hidden attribute */
+.heart-of-aether-link[hidden] {
+    display: none;
+}
+
+/* =====================================
+   THE GIFT OF AETHER
+===================================== */
+
+.aether-gift[hidden] {
+    display: none;
+}
+
+.aether-gift {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        rgba(24, 18, 55, 0.95),
+        rgba(60, 38, 100, 0.9)
+    );
+
+    border: 1px solid rgba(220, 195, 255, 0.6);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 35px rgba(170, 125, 255, 0.35);
+}
+
+.aether-gift h2 {
+    color: #ffe7b0;
+    margin-bottom: 20px;
+}
+
+.aether-gift h3 {
+    color: #e8d5ff;
+    margin: 15px 0;
+}
+
+.aether-gift p {
+    color: #eee5ff;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.aether-gift-symbol {
+    font-size: 80px;
+    color: #f5e6ff;
+
+    margin: 25px auto;
+
+    text-shadow:
+        0 0 15px #c99fff,
+        0 0 35px #a46cff,
+        0 0 60px #e3c8ff;
+
+    animation: aetherSymbolGlow 10s ease-in-out infinite;
+}
+
+@keyframes aetherSymbolGlow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+#claimAetherMark {
+    margin-top: 15px;
+    padding: 14px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #6c4c9e,
+        #a786d9
+    );
+
+    color: white;
+    border: 1px solid #e4caff;
+    border-radius: 30px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    box-shadow: 0 0 20px rgba(190, 145, 255, 0.4);
+    transition: 0.3s;
+}
+
+#claimAetherMark:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(220, 180, 255, 0.8);
+}
+
+#claimAetherMark[hidden] {
+    display: none;
+}
+
+/* THE MARK OF AETHER */
+
+.aether-mark-image {
+    display: block;
+    width: 240px;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+
+    filter: drop-shadow(
+        0 0 20px rgba(190, 150, 255, 0.6)
+    );
+
+    animation: aetherMarkFloat 8s ease-in-out infinite;
+}
+
+@keyframes aetherMarkFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 600px) {
+    .aether-mark-image {
+        width: 180px;
+    }
+}
+
+/* =====================================
+   PROFILE - THE MARK OF AETHER
+===================================== */
+
+.profile-aether-mark[hidden] {
+    display: none;
+}
+
+.profile-aether-mark {
+    max-width: 450px;
+    margin: 35px auto;
+    padding: 30px 25px;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        rgba(35, 23, 70, 0.85),
+        rgba(75, 45, 115, 0.65)
+    );
+
+    border: 1px solid rgba(220, 190, 255, 0.5);
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px rgba(175, 130, 255, 0.25);
+}
+
+.aether-mark-heading {
+    color: #e6caff;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.profile-aether-mark-image {
+    display: block;
+    width: 190px;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+
+    filter: drop-shadow(0 0 20px rgba(190, 150, 255, 0.5));
+
+    animation: aetherMarkFloat 8s ease-in-out infinite;
+}
+
+.profile-aether-mark h3 {
+    color: #ffe5a8;
+    margin-bottom: 12px;
+}
+
+.profile-aether-mark p {
+    line-height: 1.7;
+    color: #e8ddf5;
+}
+
+.aether-mark-title {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 8px 18px;
+
+    border: 1px solid rgba(220, 190, 255, 0.5);
+    border-radius: 30px;
+
+    color: #f3e5ff;
+    background: rgba(140, 95, 190, 0.2);
+}
+
+@media (max-width: 600px) {
+    .profile-aether-mark {
+        margin: 25px 15px;
+        padding: 25px 15px;
+    }
+
+    .profile-aether-mark-image {
+        width: 150px;
+    }
+}
+
+/* =====================================
+   ORB OF FORGOTTEN STARS - VISIONS
+===================================== */
+
+.orb-vision-modal[hidden] {
+    display: none;
+}
+
+.orb-vision-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    background: rgba(5, 3, 20, 0.85);
+    backdrop-filter: blur(7px);
+}
+
+.orb-vision-container {
+    position: relative;
+    width: min(90vw, 650px);
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: orbVisionAppear 0.8s ease-out;
+}
+
+.orb-vision-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+
+    filter: drop-shadow(0 0 35px rgba(170, 110, 255, 0.5));
+}
+
+.orb-vision-content {
+    position: relative;
+    z-index: 2;
+
+    width: 65%;
+    text-align: center;
+}
+
+.orb-vision-content h2 {
+    color: #ffe4ac;
+    font-size: clamp(18px, 3vw, 26px);
+    margin-bottom: 18px;
+    text-shadow: 0 0 12px #5b347d;
+}
+
+.orb-vision-content p {
+    color: #ffffff;
+    font-size: clamp(13px, 2vw, 17px);
+    line-height: 1.7;
+    white-space: pre-line;
+    text-shadow: 0 2px 8px #100821;
+}
+
+#closeOrbVision {
+    margin-top: 25px;
+    padding: 10px 28px;
+
+    color: #ffffff;
+    background: rgba(75, 40, 125, 0.9);
+
+    border: 1px solid #d8b8ff;
+    border-radius: 25px;
+
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(190, 140, 255, 0.4);
+}
+
+#closeOrbVision:hover {
+    background: #7952b5;
+    box-shadow: 0 0 25px rgba(210, 165, 255, 0.8);
+}
+
+@keyframes orbVisionAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .orb-vision-container {
+        width: 95vw;
+    }
+
+    .orb-vision-content {
+        width: 70%;
+    }
+
+    .orb-vision-content h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .orb-vision-content p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    #closeOrbVision {
+        margin-top: 12px;
+        padding: 8px 18px;
+    }
+}
+
+/* =====================================
+   ORB VISION - TEXT READABILITY
+===================================== */
+
+.orb-vision-content {
+    width: 68%;
+    padding: 22px 18px;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(12, 5, 35, 0.88) 0%,
+        rgba(20, 8, 50, 0.65) 65%,
+        rgba(20, 8, 50, 0) 100%
+    );
+
+    border-radius: 50%;
+}
+
+.orb-vision-content h2 {
+    color: #ffe6aa;
+
+    text-shadow:
+        0 2px 5px #080316,
+        0 0 12px rgba(255, 215, 145, 0.5);
+}
+
+.orb-vision-content p {
+    color: #ffffff;
+    font-weight: 500;
+
+    text-shadow:
+        0 2px 4px #000000,
+        0 0 8px #000000;
+}
+
+@media (max-width: 600px) {
+    .orb-vision-content {
+        width: 75%;
+        padding: 12px 8px;
+    }
+}
+
+/* =====================================
+   ORB VISION - PURPLE TEXT SHADOW
+===================================== */
+
+.orb-vision-content {
+    width: 72%;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+}
+
+.orb-vision-content h2 {
+    color: #ffe6aa;
+    margin-bottom: 12px;
+
+    text-shadow:
+        2px 2px 3px #160026,
+        -2px -2px 3px #160026,
+        0 0 10px #250044,
+        0 0 18px #170025;
+}
+
+.orb-vision-content p {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+
+    text-shadow:
+        2px 2px 3px #160026,
+        -2px -2px 3px #160026,
+        0 0 8px #250044,
+        0 0 15px #170025;
+}
+
+#closeOrbVision {
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .orb-vision-content {
+        width: 74%;
+        padding: 0;
+    }
+
+    .orb-vision-content h2 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .orb-vision-content p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    #closeOrbVision {
+        margin-top: 10px;
+    }
+}
+
+/* =====================================
+   ACHIEVEMENTS - MAGICAL IMAGES
+===================================== */
+
+.achievement-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 18px;
+
+    filter: grayscale(0.7) brightness(0.65);
+    opacity: 0.65;
+
+    transition: all 0.4s ease;
+}
+
+.achievement-card.unlocked .achievement-image {
+    filter: drop-shadow(
+        0 0 15px rgba(210, 175, 255, 0.6)
+    );
+
+    opacity: 1;
+}
+
+.achievement-card:hover .achievement-image {
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .achievement-image {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+/* =====================================
+   ACHIEVEMENTS - RESPONSIVE GRID
+===================================== */
+
+.achievements-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.achievement-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+    .achievements-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .achievements-list {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+}
+
+/* =====================================
+   ACHIEVEMENT RARITIES
+===================================== */
+
+.achievement-card {
+    position: relative;
+}
+
+.achievement-rarity {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.achievement-novice {
+    border-color: #a8b8d4;
+}
+
+.achievement-novice .achievement-rarity {
+    color: #dce7ff;
+    background: rgba(140, 165, 200, 0.15);
+}
+
+.achievement-master {
+    border-color: #d7a94f;
+}
+
+.achievement-master .achievement-rarity {
+    color: #ffe2a0;
+    background: rgba(210, 160, 60, 0.15);
+}
+
+.achievement-legendary {
+    border-color: #b995ff;
+}
+
+.achievement-legendary .achievement-rarity {
+    color: #e6d4ff;
+    background: rgba(160, 100, 255, 0.2);
+}
+
+.achievement-legendary.unlocked {
+    box-shadow:
+        0 0 18px rgba(190, 145, 255, 0.45),
+        0 0 35px rgba(130, 75, 220, 0.2);
+}
+
+.achievement-legendary.unlocked .achievement-image {
+    filter: drop-shadow(0 0 22px rgba(205, 170, 255, 0.85));
+}
+
+/* =====================================
+   ACHIEVEMENT PROGRESS
+===================================== */
+
+.achievement-progress {
+    margin: 12px auto;
+    font-size: 12px;
+    color: #d9c4ff;
+    letter-spacing: 0.5px;
+}
+
+.achievement-card.unlocked .achievement-progress {
+    color: #ffe0a0;
+}
+
+/* =====================================
+   ACHIEVEMENT PROGRESS OVERVIEW
+===================================== */
+
+.achievement-overview {
+    max-width: 800px;
+    margin: 35px auto 45px;
+    padding: 30px;
+    text-align: center;
+
+    background: rgba(20, 12, 40, 0.85);
+    border: 1px solid rgba(180, 130, 255, 0.35);
+    border-radius: 18px;
+
+    box-shadow: 0 0 25px rgba(140, 80, 255, 0.15);
+}
+
+.achievement-overview h2 {
+    color: #e4ccff;
+    margin-bottom: 15px;
+}
+
+.achievement-counter {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.achievement-progress-bar {
+    width: 100%;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.achievement-progress-fill {
+    width: 0%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #7040b8,
+        #b98aff,
+        #e0b8ff
+    );
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 15px rgba(190, 140, 255, 0.8);
+
+    transition: width 0.8s ease;
+}
+
+/* =====================================
+   ACHIEVEMENT CATEGORY HEADINGS
+===================================== */
+
+.achievement-section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 55px auto 25px;
+    letter-spacing: 2px;
+    font-family: Georgia, serif;
+}
+
+.novice-title {
+    color: #a5dfb3;
+    text-shadow: 0 0 15px rgba(90, 220, 130, 0.35);
+}
+
+.master-title {
+    color: #c6a0ff;
+    text-shadow: 0 0 18px rgba(170, 100, 255, 0.5);
+}
+
+.legendary-title {
+    color: #f4d37c;
+    text-shadow: 0 0 20px rgba(255, 195, 70, 0.55);
+}
+
+.achievements-list {
+    margin-bottom: 45px;
+}
