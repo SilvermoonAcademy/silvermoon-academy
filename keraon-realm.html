@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keraon's Realm | Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+
+        <section class="keraon-realm">
+
+            <p>CHAPTER V – THE TRIAL OF FIRE</p>
+
+            <h1>Keraon's Realm</h1>
+
+            <h2>The Eternal Flame</h2>
+
+            
+<div class="keraon-scene">
+    <img
+        src="images/keraon-realm.png"
+        alt="The volcanic kingdom of Keraon"
+        class="keraon-background"
+    >
+
+    <img
+        src="images/keraon-guardian.png"
+        alt="Keraon, the ancient Guardian of Fire"
+        class="keraon-guardian"
+    >
+</div>
+
+            <p>
+                Beyond the burning mountains lies an ancient
+                temple, where the Eternal Flame has guarded
+                the memories of Ingnistil for three thousand years.
+            </p>
+
+            <p>
+                But the flame is fading, and the mountains
+                have begun to tremble.
+            </p>
+
+            <h3>Keraon, Guardian of Fire</h3>
+
+            <p>
+                "The fire that once united these lands is dying.
+                Without it, the balance of the elements
+                will begin to unravel."
+            </p>
+
+            <p>
+                "Only one who possesses both courage and
+                protection may enter the heart of the mountain."
+            </p>
+
+            <button class="forgotten-orb-button"
+                    id="beginKeraonTrial">
+                Enter the Burning Mountain
+            </button>
+
+            
+<section class="keraon-trial" id="keraonTrial" hidden>
+
+    <h2>The Burning Passage</h2>
+
+    <p>
+        You approach the entrance to the ancient mountain.
+        Rivers of molten lava flow beneath the obsidian bridge.
+    </p>
+
+    <p>
+        The heat is unbearable. Every step forward
+        feels as though the flames are reaching for you.
+    </p>
+
+    <p class="keraon-warning">
+        Keraon's voice echoes through the flames:
+        "Courage alone will not protect you.
+        The ancient magic of Armatura must shield your path."
+    </p>
+
+    <button class="forgotten-orb-button"
+            id="useArmaturaPotion">
+        Use Armatura Potion
+    </button>
+
+    <p id="keraonPotionFeedback" aria-live="polite"></p>
+
+</section>
+
+<!-- The Chamber of the Eternal Flame -->
+<section class="keraon-chamber" id="keraonChamber" hidden>
+
+    <h2>The Chamber of the Eternal Flame</h2>
+
+    
+<img
+    id="keraonChamberImage"
+    src="images/keraon-chamber-dying.png"
+    alt="The Eternal Flame is fading inside the ancient chamber"
+    class="keraon-chamber-image"
+>
+
+    <p>
+        Deep within the mountain, you discover an ancient
+        chamber carved from black obsidian.
+    </p>
+
+    <p>
+        At its center burns a small, flickering flame.
+        Three ancient seals surround it, their magic fading.
+    </p>
+
+    <p class="keraon-warning">
+        "Ingnistil entrusted the Eternal Flame to these
+        sacred seals. But their harmony has been broken."
+    </p>
+
+    <p>
+        An inscription glows upon the chamber wall:
+    </p>
+
+    <p class="keraon-riddle">
+        "From the first spark, courage is born.
+        Through courage, strength awakens.
+        And through strength, the eternal flame endures."
+    </p>
+
+    <h3>Restore the Three Seals</h3>
+
+    <div class="keraon-seals">
+        <button class="keraon-seal" data-seal="strength">
+            Strength
+        </button>
+
+        <button class="keraon-seal" data-seal="eternity">
+            Eternity
+        </button>
+
+        <button class="keraon-seal" data-seal="courage">
+            Courage
+        </button>
+    </div>
+
+    <p id="keraonSealFeedback" aria-live="polite"></p>
+
+</section>
+
+<!-- Keraon's blessing and reward -->
+<section class="keraon-reward" id="keraonReward" hidden>
+
+    <h2>The Blessing of Fire</h2>
+
+    <p>
+        The Eternal Flame rises once more, filling the
+        ancient chamber with golden light.
+    </p>
+
+    <p>
+        Keraon steps forward, his fiery mane burning
+        brighter than ever before.
+    </p>
+
+    <p class="keraon-reward-dialogue">
+        "Ingnistil believed that courage was not the
+        absence of fear, but the strength to face it."
+    </p>
+
+    <p class="keraon-reward-dialogue">
+        "You have restored the flame that has guarded
+        these lands for three thousand years."
+    </p>
+
+    <p class="keraon-reward-dialogue">
+        "May its fire guide you through the darkness,
+        and may your courage never fade."
+    </p>
+
+    <h3>You have earned the Blessing of Fire!</h3>
+
+    <div class="keraon-reward-item">
+
+        <img
+            src="images/liquid-fire.png"
+            alt="Liquid Fire"
+            class="keraon-reward-image"
+        >
+
+        <h3>Liquid Fire</h3>
+
+        <p>
+            From the heart of the Eternal Flame,
+            Keraon presents a vessel of living fire.
+            Its magic will become part of the
+            legendary Aetherlight Elixir.
+        </p>
+
+    </div>
+
+    <button
+        class="forgotten-orb-button"
+        id="claimFireBlessing">
+        Accept the Blessing
+    </button>
+
+    <p id="fireBlessingFeedback" aria-live="polite"></p>
+
+</section>
+
+        </section>
+
+        <p>
+            <a href="hall-of-guardians.html">
+                Return to the Hall of Guardians
+            </a>
+        </p>
+
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/keraon.js"></script>
+
+</body>
+</html>

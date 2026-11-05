@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+            <p class="welcome">STUDENT PROFILE</p>
+            <h1>Your Silvermoon Journey</h1>
+
+            <p class="subtitle">
+                Every great mage has a story.
+                This is where yours begins.
+            </p>
+        </section>
+
+        <section class="profile-setup" id="profileSetup">
+
+    <h2>Create Your Student</h2>
+
+    <div class="profile-form">
+
+        <label for="studentName">Student Name</label>
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter your magical name"
+        >
+
+        <p>Choose your path</p>
+
+        <div class="role-options">
+    <button type="button" data-role="Witch">
+        🧙‍♀️ Witch
+    </button>
+
+    <button type="button" data-role="Wizard">
+        🧙‍♂️ Wizard
+    </button>
+</div>
+
+<label for="profileBackground">Profile Background</label>
+
+<select id="profileBackground">
+    <option value="">Choose a background...</option>
+
+    <!-- Original Backgrounds -->
+    <optgroup label="Academy Backgrounds">
+        <option value="student-room">Student Room</option>
+        <option value="enchanted-forest">Enchanted Forest</option>
+        <option value="silvermoon-lake">Silvermoon Lake</option>
+    </optgroup>
+
+    <!-- Magical Shop Backgrounds -->
+    <optgroup label="Enchanted Sceneries">
+        <option value="moonlit-library">Moonlit Library 🔒</option>
+        <option value="crystal-cavern">Crystal Cavern 🔒</option>
+        <option value="astral-observatory">Astral Observatory 🔒</option>
+        <option value="elementorumia">Elementorumia 🔒</option>
+        <option value="whispering-glade">Whispering Glade 🔒</option>
+        <option value="celestial-gardens">Celestial Gardens 🔒</option>
+    </optgroup>
+</select>
+
+<label for="profileHat">Witch / Wizard Hat</label>
+
+<select id="profileHat">
+    <option value="">Choose an option...</option>
+    <option value="hat">With Hat</option>
+    <option value="no-hat">Without Hat</option>
+</select>
+
+<button id="saveProfile" type="button">
+    Create Profile
+</button>
+
+        <p id="profileMessage"></p>
+
+    </div>
+
+        </section>
+        <section class="student-profile" id="studentProfile">
+
+            <!-- Student House Crest -->
+<div id="profileHouseCrest" class="profile-house-crest" hidden>
+    <img
+        id="profileHouseCrestImage"
+        src=""
+        alt="Student House Crest"
+    >
+</div>
+    <p class="welcome">SILVERMOON STUDENT</p>
+
+    <div class="profile-avatar-wrapper">
+
+    <div class="profile-avatar" id="profileAvatar">
+        🧙
+    </div>
+
+    <!-- Hidden Elementorumia Symbol -->
+    <button
+        id="elementorumiaSecret"
+        class="elementorumia-secret"
+        type="button"
+        aria-label="Discover the hidden symbol"
+        hidden>
+        <img
+            src="images/elementorumia-spiral.png"
+            alt=""
+        >
+    </button>
+
+</div>
+
+    <h2 id="displayName">Student Name</h2>
+
+    <p class="profile-role" id="displayRole">
+        Witch / Wizard
+    </p>
+
+    <!-- Moon Amulet -->
+<div id="profileMoonAmulet" class="profile-moon-amulet" hidden>
+    <img
+        src="images/moon-amulet.png"
+        alt="Moon Amulet"
+    >
+    <span>Moon Amulet</span>
+</div>
+
+<!-- Crystal Ball -->
+<div id="profileCrystalBall" class="profile-crystal-ball" hidden>
+
+    <img
+        src="images/crystal-ball.png"
+        alt="Crystal Ball"
+        class="profile-crystal-ball-image"
+    >
+
+    <button id="consultCrystalBall" class="crystal-ball-button">
+        Consult the Crystal Ball
+    </button>
+
+</div>
+
+    <!-- Orb of Forgotten Stars -->
+<div id="profileForgottenOrb" class="profile-forgotten-orb" hidden>
+
+    <img
+        src="images/orb-of-forgotten-stars.png"
+        alt="The Orb of Forgotten Stars"
+        class="profile-forgotten-orb-image"
+    >
+
+    <h3>The Orb of Forgotten Stars</h3>
+
+    <p>
+        Five forgotten prophecies await those
+        who dare uncover the truth.
+    </p>
+
+    <button id="openForgottenProphecies"
+            class="forgotten-orb-button">
+        Uncover the Prophecies
+    </button>
+
+</div>
+
+<!-- THE MARK OF AETHER -->
+<div class="profile-aether-mark" id="profileAetherMark" hidden>
+
+    <p class="aether-mark-heading">THE FIFTH LIGHT</p>
+
+    <img
+        src="images/mark-of-aether.png"
+        alt="The Mark of Aether"
+        class="profile-aether-mark-image"
+    >
+
+    <h3>Keeper of the Fifth Light</h3>
+
+    <p>
+        You have restored the Heart of Aether
+        and united the four elements.
+    </p>
+
+    <span class="aether-mark-title">
+        The Mark of Aether
+    </span>
+
+</div>
+
+    <div class="profile-familiar" id="profileFamiliar">
+
+    <a href="familiar-ritual.html"
+       id="familiarRitualLink"
+       class="familiar-token-link"
+       title="Begin the Familiar Bonding Ritual">
+
+        <img
+            src="images/familiar-bond-token.png"
+            alt="Familiar Bond Token"
+            id="profileFamiliarImage"
+        >
+
+        <span id="profileFamiliarText">
+            Begin Familiar Ritual
+        </span>
+
+    </a>
+
+</div>
+    <div class="profile-details">
+
+        <div>
+            <span>Coins</span>
+            <strong id="profileCoins">0</strong>
+        </div>
+
+        <div>
+            <span>House</span>
+            <strong id="profileHouse">Not Assigned</strong>
+        </div>
+
+    </div>
+    <!-- Magical Equipment -->
+<div class="profile-equipment">
+
+    <h3>Magical Equipment</h3>
+
+    <div class="equipped-item" id="equippedItem">
+        <p>No magical equipment equipped.</p>
+    </div>
+
+    <button id="changeEquipment" class="equipment-button">
+        Choose Equipment
+    </button>
+
+    <div class="equipment-inventory" id="equipmentInventory" hidden>
+        <!-- Purchased wands and staffs will appear here -->
+    </div>
+
+</div>
+
+<!-- =====================================
+     POTION INVENTORY
+===================================== -->
+
+<div class="profile-potion-inventory">
+
+    <h3>Potion Inventory</h3>
+
+    <p class="potion-inventory-description">
+        Your collection of magical brews.
+    </p>
+
+    <div id="profilePotionGrid" class="profile-potion-grid">
+        <!-- Potions will appear here -->
+    </div>
+
+</div>
+
+    <button id="takeHouseTrial" class="house-trial-button">
+     Take the House Trial
+    </button>
+        <button id="editProfile" class="edit-profile-button">
+            Edit Profile
+        </button>
+</section>
+    </main>
+<!-- Crystal Ball Prophecy Popup -->
+<div id="crystalBallModal" class="crystal-ball-modal" hidden>
+
+    <div class="crystal-ball-popup">
+
+        <button
+            id="closeCrystalBall"
+            class="crystal-ball-close"
+            aria-label="Close Crystal Ball"
+        >
+            &times;
+        </button>
+
+        <div class="crystal-ball-vision">
+
+            <img
+                src="images/crystal-ball.png"
+                alt="Magical Crystal Ball"
+                class="crystal-ball-large"
+            >
+
+            <p id="crystalBallProphecy" class="crystal-ball-prophecy"></p>
+
+        </div>
+
+        <button id="newProphecy" class="crystal-ball-button">
+            Seek Another Vision
+        </button>
+
+    </div>
+
+</div>
+<!-- Forgotten Prophecies Popup -->
+<div id="forgottenPropheciesPopup" class="forgotten-prophecies-popup" hidden>
+
+    <div class="forgotten-prophecies-content">
+
+        <button id="closeForgottenProphecies"
+                class="forgotten-prophecies-close"
+                aria-label="Close">
+            &times;
+        </button>
+
+        <h2>The Forgotten Prophecies</h2>
+
+        <p class="forgotten-prophecies-intro">
+            For three thousand years, the stars have remained silent.
+            Now, an ancient power begins to awaken...
+        </p>
+
+        <h3 id="prophecyChapterTitle">Chapter I: The Orb Awakens</h3>
+
+        <p id="prophecyChapterText">
+    Three thousand years ago, beneath a silver moon,
+    four powerful mages united their divided worlds.
+
+    Yet the stars remember something history has forgotten.
+
+    Before the four stood together, a fifth light
+    shone upon the ancient lands.
+
+    Now, after centuries of silence,
+    the Orb has awakened once more...
+</p>
+
+        <button id="beginProphecyTrial" class="forgotten-orb-button">
+            Begin the Trial
+        </button>
+        <!-- Chapter I Quiz -->
+<div id="prophecyQuiz" class="prophecy-quiz" hidden>
+
+    <p id="prophecyQuestionNumber"></p>
+
+    <h3 id="prophecyQuestionText"></h3>
+
+    <div id="prophecyAnswerOptions"></div>
+
+    <p id="prophecyQuizFeedback"></p>
+
+</div>
+<!-- =====================================
+     CHAPTER IV - THE LOST INCANTATION
+===================================== -->
+
+<div id="prophecyRunePuzzle" class="prophecy-rune-puzzle" hidden>
+
+    <!-- Ancient inscription -->
+    <div class="rune-inscription">
+        <p>
+            After taking the first breath, the world awakened.<br>
+            A burning heart brought warmth to the darkness.<br>
+            Upon ancient ground, the first roots took hold.<br>
+            And in the silent depths, the forgotten secret awaits.
+        </p>
+    </div>
+
+    <div class="rune-wall">
+
+        <!-- Wind - Ventlia -->
+        <button class="rune-button rune-wind"
+                data-rune="wind"
+                type="button"
+                aria-label="Wind Rune">
+            <img src="images/rune-wind.png" alt="Wind Rune">
+        </button>
+
+        <!-- Fire - Ingnistil -->
+        <button class="rune-button rune-fire"
+                data-rune="fire"
+                type="button"
+                aria-label="Fire Rune">
+            <img src="images/rune-fire.png" alt="Fire Rune">
+        </button>
+
+        <!-- Earth - Solumer -->
+        <button class="rune-button rune-earth"
+                data-rune="earth"
+                type="button"
+                aria-label="Earth Rune">
+            <img src="images/rune-earth.png" alt="Earth Rune">
+        </button>
+
+        <!-- Water - Aquillia -->
+        <button class="rune-button rune-water"
+                data-rune="water"
+                type="button"
+                aria-label="Water Rune">
+            <img src="images/rune-water.png" alt="Water Rune">
+        </button>
+
+        <!-- The Fifth Element -->
+        <button class="rune-button rune-aether"
+                id="aetherRune"
+                type="button"
+                aria-label="Aether Rune"
+                hidden>
+            <img src="images/rune-aether.png" alt="Aether Rune">
+        </button>
+
+    </div>
+
+    <p id="runePuzzleFeedback"></p>
+
+</div>
+    </div>
+
+</div>
+
+<!-- ORB OF FORGOTTEN STARS - VISIONS -->
+<div id="orbVisionModal" class="orb-vision-modal" hidden>
+
+    <div class="orb-vision-container"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="orbVisionTitle">
+
+        <img
+            src="images/forgotten-orb-vision.png"
+            alt=""
+            class="orb-vision-image"
+        >
+
+        <div class="orb-vision-content">
+            <h2 id="orbVisionTitle"></h2>
+
+            <p id="orbVisionText"></p>
+
+            <button id="closeOrbVision" type="button">
+                Continue
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="js/global.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/crystal-ball.js"></script>
+    <script src="js/forgotten-prophecies.js"></script>
+    <script src="js/potion-inventory.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spellcraft – Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+
+            <p class="welcome">SILVERMOON ACADEMY</p>
+
+            <h1>Spellcraft</h1>
+
+            <p class="subtitle">
+                Master the art of spells, enchantments and magical energy.
+            </p>
+
+        </section>
+        <section class="spell-list">
+
+    <div class="spell-card lux">
+    <img
+        src="images/spell-lux.png"
+        alt="Lux spell"
+        class="spell-image"
+    >
+
+    <h2>Lux</h2>
+    <p>A simple spell that creates a bright magical light.</p>
+</div>
+
+    <div class="spell-card ignis">
+    <img
+        src="images/spell-ignis.png"
+        alt="Ignis spell"
+        class="spell-image"
+    >
+    <h2>Ignis</h2>
+    <p>Summon a small flame using magical energy.</p>
+</div>
+
+<div class="spell-card aegis">
+    <img
+        src="images/spell-aegis.png"
+        alt="Aegis spell"
+        class="spell-image"
+    >
+    <h2>Aegis</h2>
+    <p>Create a magical shield to protect yourself.</p>
+</div>
+
+<div class="spell-card glacius">
+    <img
+        src="images/spell-glacius.png"
+        alt="Glacius spell"
+        class="spell-image"
+    >
+    <h2>Glacius</h2>
+    <p>Freeze a target or cover an area in magical frost.</p>
+</div>
+
+<div class="spell-card incrementum">
+    <img
+        src="images/spell-incrementum.png"
+        alt="Incrementum spell"
+        class="spell-image"
+    >
+    <h2>Incrementum</h2>
+    <p>Cause plants and magical vegetation to grow rapidly.</p>
+</div>
+
+<div class="spell-card procella">
+    <img
+        src="images/spell-procella.png"
+        alt="Procella spell"
+        class="spell-image"
+    >
+    <h2>Procella</h2>
+    <p>Create a powerful gust of wind that pushes away anything in its path.</p>
+</div>
+
+<div class="spell-card duplicatio">
+    <img
+        src="images/spell-duplicatio.png"
+        alt="Duplicatio spell"
+        class="spell-image"
+    >
+    <h2>Duplicatio</h2>
+    <p>Create a temporary magical copy of a person or object.</p>
+</div>
+
+</section>
+<section class="spell-discovery">
+
+    <h2>🔮 Discover a Spell</h2>
+
+    <p>Click the button to reveal a mysterious spell.</p>
+
+    <button id="discoverSpell">Discover Spell</button>
+
+    <p id="spellResult"></p>
+
+</section>
+    </main>
+
+    <script src="js/spellcraft.js"></script>
+    <script src="js/global.js"></script>
+    
+</body>
+</html>

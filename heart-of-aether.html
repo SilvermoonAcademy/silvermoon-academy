@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Heart of Aether | Silvermoon Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="aether-heart-main">
+
+        <section class="aether-heart-intro">
+
+            <p class="welcome">
+                CHAPTER V – THE FIFTH LIGHT
+            </p>
+
+            <h1>The Heart of Aether</h1>
+
+            <p class="subtitle">
+                Where the first light was born,
+                only silence remains.
+            </p>
+
+        </section>
+
+        <!-- THE ANCIENT HEART -->
+        <section class="aether-heart-scene"
+                 id="aetherHeartScene">
+
+            <img
+                src="images/heart-of-aether-faded.png"
+                alt="The fading Heart of Aether"
+                class="aether-heart-background"
+                id="aetherHeartBackground"
+            >
+
+<!-- RESTORED HEART OF AETHER -->
+<img
+    src="images/heart-of-aether.png"
+    alt="The restored Heart of Aether"
+    class="aether-heart-restored"
+    id="aetherHeartRestored"
+>
+
+
+<!-- THE SILVER STAG -->
+<button
+    id="silverStagInteraction"
+    class="silver-stag-interaction"
+    type="button"
+    aria-label="Speak to the Silver Stag"
+    hidden>
+
+    <img
+        src="images/silver-stag-front.png"
+        alt="The Silver Stag"
+        class="silver-stag-appearance"
+        id="silverStagAppearance"
+    >
+
+</button>
+
+<!-- THE FORGOTTEN PROPHECY -->
+<div class="stag-dialogue" id="stagDialogue" hidden>
+
+    <h2>The Silver Stag</h2>
+
+    <p id="stagDialogueText"></p>
+
+    <button id="stagDialogueNext" type="button">
+        Continue
+    </button>
+
+</div>
+
+
+            
+<!-- THE SLEEPING HEART -->
+<button
+    id="aetherHeartCrystal"
+    class="aether-heart-crystal"
+    type="button"
+    aria-label="Examine the Heart of Aether"
+    title="Examine the Heart of Aether">
+</button>
+
+        </section>
+
+<!-- THE GIFT OF AETHER -->
+<section class="aether-gift" id="aetherGift" hidden>
+
+    <h2>The Gift of Aether</h2>
+
+    <p>
+        The Silver Stag lowers its magnificent antlers.
+        A silver light gathers before you.
+    </p>
+
+    <p>
+        "You have restored what was once lost.
+        The Fifth Light now lives within you."
+    </p>
+
+    
+<div class="aether-gift-symbol">
+    <img
+        src="images/mark-of-aether.png"
+        alt="The Mark of Aether"
+        class="aether-mark-image"
+    >
+</div>
+
+
+    <h3>The Mark of Aether</h3>
+
+    <p>
+        A symbol of unity between
+        Water, Fire, Earth and Wind.
+    </p>
+
+    <button id="claimAetherMark" type="button">
+        Accept the Mark of Aether
+    </button>
+
+    <p id="aetherGiftMessage"></p>
+
+</section>
+
+        <!-- STORY -->
+        <section class="aether-heart-story">
+
+            <p>
+                Before you stands the Heart of Aether,
+                once the source of harmony between
+                the four elements.
+            </p>
+
+            <p>
+                Its silver branches have withered,
+                its ancient light has faded,
+                and the guardian who once protected
+                this sacred place has vanished.
+            </p>
+
+            <p>
+                Yet something within the roots
+                still seems to be waiting...
+            </p>
+
+        </section>
+
+        <!-- RETURN NAVIGATION -->
+        <div class="aether-heart-navigation">
+
+            <a href="hall-of-guardians.html"
+               class="return-guardians-btn">
+                Return to the Hall of Guardians
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/heart-of-aether.js"></script>
+
+</body>
+</html>

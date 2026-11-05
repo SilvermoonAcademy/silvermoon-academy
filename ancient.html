@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Knowledge – Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+       <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+
+            <p class="welcome">THE SILVERMOON ARCHIVES</p>
+
+            <h1>Ancient Knowledge</h1>
+
+            <p class="subtitle">
+                Explore the ancient books and discover the history of Silvermoon Academy.
+            </p>
+
+        </section>
+
+        <section class="library">
+
+    <div class="book" data-book="kingdoms">
+        <img src="images/four-kingdoms.png"
+             alt="The Four Kingdoms"
+             class="ancient-book-cover">
+        <h2>The Four Kingdoms</h2>
+        <p>The age before Silvermoon.</p>
+    </div>
+
+    <div class="book" data-book="children">
+        <img src="images/children-silver-moon.png"
+             alt="Children of the Silver Moon"
+             class="ancient-book-cover">
+        <h2>Children of the Silver Moon</h2>
+        <p>The story of the four founders.</p>
+    </div>
+
+    <div class="book" data-book="meeting">
+        <img src="images/meeting-of-four.png"
+             alt="The Meeting of Four"
+             class="ancient-book-cover">
+        <h2>The Meeting of Four</h2>
+        <p>Where four destinies became one.</p>
+    </div>
+
+    <div class="book" data-book="founding">
+        <img src="images/founding-silvermoon.png"
+             alt="The Founding of Silvermoon"
+             class="ancient-book-cover">
+        <h2>The Founding of Silvermoon</h2>
+        <p>The birth of the academy.</p>
+    </div>
+
+    <div class="book" data-book="unity">
+        <img src="images/age-of-unity.png"
+             alt="The Age of Unity"
+             class="ancient-book-cover">
+        <h2>The Age of Unity</h2>
+        <p>The beginning of a new magical age.</p>
+    </div>
+
+</section>
+            <div id="bookModal" class="book-modal">
+
+    <div class="open-book">
+
+        <button id="closeBook" class="close-book">✕</button>
+
+        <p class="book-chapter">THE SILVERMOON ARCHIVES</p>
+
+        <h2 id="bookTitle">The Four Kingdoms</h2>
+
+        <div id="bookContent" class="book-content">
+        </div>
+
+    </div>
+
+</div>
+    </main>
+    
+    <script src="js/ancient.js"></script>
+    <script src="js/global.js"></script>
+    
+</body>
+</html>

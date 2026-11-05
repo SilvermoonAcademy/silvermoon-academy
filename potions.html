@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potions – Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+
+            <p class="welcome">SILVERMOON ACADEMY</p>
+
+            <h1>Potions</h1>
+
+            <p class="subtitle">
+                Discover mysterious ingredients and learn the art of magical potions.
+            </p>
+
+        </section>
+
+        <section class="potion-list">
+
+    <div class="potion-card">
+    <img
+        src="images/potion-moonlight-elixir.png"
+        alt="Moonlight Elixir"
+        class="potion-image"
+    >
+    <h2>Moonlight Elixir</h2>
+    <p>A shimmering potion said to restore magical energy.</p>
+</div>
+
+<div class="potion-card">
+    <img
+        src="images/potion-forest-draught.png"
+        alt="Forest Draught"
+        class="potion-image"
+    >
+    <h2>Forest Draught</h2>
+    <p>A mysterious green potion made from enchanted herbs.</p>
+</div>
+
+<div class="potion-card">
+    <img
+        src="images/potion-phoenix-essence.png"
+        alt="Phoenix Essence"
+        class="potion-image"
+    >
+    <h2>Phoenix Essence</h2>
+    <p>A rare potion containing a spark of phoenix magic.</p>
+</div>
+
+<div class="potion-card">
+    <img
+        src="images/potion-amoria.png"
+        alt="Amoria Potion"
+        class="potion-image"
+    >
+    <h2>Amoria Potion</h2>
+    <p>A magical potion associated with love and affection.</p>
+</div>
+
+<div class="potion-card">
+    <img
+        src="images/potion-armatura.png"
+        alt="Armatura Potion"
+        class="potion-image"
+    >
+    <h2>Armatura Potion</h2>
+    <p>A protective potion that temporarily hardens the drinker's skin like stone.</p>
+</div>
+
+<div class="potion-card">
+    <img
+        src="images/potion-sanatio.png"
+        alt="Sanatio Potion"
+        class="potion-image"
+    >
+    <h2>Sanatio Potion</h2>
+    <p>A restorative potion used to heal minor magical injuries.</p>
+</div>
+<!-- The Moonbound Grimoire -->
+<section class="potion-grimoire">
+
+    <h2>The Moonbound Grimoire</h2>
+
+    <p>
+        Ancient knowledge awaits within these enchanted pages.
+    </p>
+
+    <img
+        src="images/moonbound-grimoire.png"
+        alt="The Moonbound Grimoire"
+        class="grimoire-image"
+    >
+
+    <button id="openGrimoire" class="grimoire-button">
+        Open Grimoire
+    </button>
+
+    <p id="grimoireStatus"></p>
+
+</section>
+<!-- Grimoire Popup -->
+<div id="grimoireModal" class="grimoire-modal" hidden>
+
+    <div class="grimoire-book">
+
+        <button id="closeGrimoire" class="grimoire-close" aria-label="Close book">
+            &times;
+        </button>
+
+        <h2>The Moonbound Grimoire</h2>
+
+        <div class="grimoire-pages">
+
+            <div class="grimoire-page" id="grimoireLeftPage"></div>
+
+            <div class="grimoire-page" id="grimoireRightPage"></div>
+
+        </div>
+
+        <div class="grimoire-navigation">
+            <button id="previousRecipes">← Previous</button>
+            <span id="grimoirePageNumber">Pages 1–2</span>
+            <button id="nextRecipes">Next →</button>
+        </div>
+
+    </div>
+
+</div>
+<section class="potion-mixer">
+
+    <h2>Potion Mixer</h2>
+
+    <p>Choose two ingredients and discover your potion.</p>
+<!-- Cauldron Selection -->
+<div class="cauldron-selection">
+
+    <h3>Choose Your Cauldron</h3>
+
+    <div class="cauldron-options">
+
+        <button id="standardCauldron" class="cauldron-option selected">
+            Standard Cauldron
+        </button>
+
+        <button id="enchantedCauldron" class="cauldron-option" disabled>
+            Enchanted Cauldron 🔒
+        </button>
+
+    </div>
+
+</div>
+    <div class="alchemy-workbench">
+
+    <img
+        src="images/alchemy-workbench.png"
+        alt="Silvermoon alchemy workbench"
+        class="workbench-image"
+    >
+
+    <img
+        src="images/enchanted-cauldron.png"
+        alt="Enchanted Cauldron"
+        id="enchantedCauldronImage"
+        class="enchanted-cauldron-overlay"
+        hidden
+    >
+
+</div>
+    <div id="brewedPotion" class="brewed-potion">
+    <img
+        id="brewedPotionImage"
+        src=""
+        alt="Brewed potion"
+    >
+</div>
+
+    <div class="ingredients">
+
+        <button data-ingredient="Moonleaf" class="ingredient-button">
+    <img src="images/ingredient-moonleaf.png" alt="Moonleaf">
+    <span>Moonleaf</span>
+</button>
+        <button data-ingredient="Mooncap Mushroom" class="ingredient-button">
+    <img src="images/ingredient-mooncap-mushroom.png" alt="Mooncap Mushroom">
+    <span>Mooncap Mushroom</span>
+</button>
+
+<button data-ingredient="Starflower" class="ingredient-button">
+    <img src="images/ingredient-starflower.png" alt="Starflower">
+    <span>Starflower</span>
+</button>
+
+<button data-ingredient="Ember Root" class="ingredient-button">
+    <img src="images/ingredient-ember-root.png" alt="Ember Root">
+    <span>Ember Root</span>
+</button>
+
+<button data-ingredient="Heart Kelp" class="ingredient-button">
+    <img src="images/ingredient-heart-kelp.png" alt="Heart Kelp">
+    <span>Heart Kelp</span>
+</button>
+
+<button data-ingredient="Gorgon Scale" class="ingredient-button">
+    <img src="images/ingredient-gorgon-scale.png" alt="Gorgon Scale">
+    <span>Gorgon Scale</span>
+</button>
+
+<button data-ingredient="Unicorn Hair" class="ingredient-button">
+    <img src="images/ingredient-unicorn-hair.png" alt="Unicorn Hair">
+    <span>Unicorn Hair</span>
+</button>
+
+    </div>
+
+    <p id="potionResult"></p>
+
+</section>
+
+        </section>
+
+    </main>
+
+    <script src="js/potions.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/grimoire.js"></script>
+    <script src="js/cauldron.js"></script>
+    
+    
+</body>
+</html>

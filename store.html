@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Whispering Crescent | Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="store-page">
+<header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+    <main class="store-main">
+        <section class="store-intro">
+            <h1>The Whispering Crescent</h1>
+            <p>Where every treasure has a story.</p>
+        </section>
+
+        
+<section class="store-products">
+
+    <div class="store-card">
+        <img
+    src="images/familiar-bond-token.png"
+    alt="Familiar Bond Token"
+    class="store-item-image"
+>
+
+        <h2>Familiar Bond Token</h2>
+
+        <p>
+            A mystical token that unlocks the Familiar
+            Bonding Ritual. Discover which magical
+            companion is destined to walk beside you.
+        </p>
+
+        <div class="store-price">
+    <img src="images/coin-pile.png" alt="Coins" class="store-coin-icon">
+    <span>25 Coins</span>
+</div>
+
+        <button class="store-buy-button" id="buyFamiliarToken">
+    Purchase
+</button>
+    </div>
+
+</section>
+
+    <section class="store-equipment-section">
+
+    <h2>Wands & Staffs</h2>
+
+    <p class="store-equipment-description">
+        Magic lives within the wielder, not the wand.
+        These enchanted instruments simply help guide
+        the power already there.
+    </p>
+
+    <div class="store-products">
+
+        <div class="store-card">
+            <img src="images/tidewood-wand.png" alt="Tidewood Wand" class="store-item-image">
+            <h3>Tidewood Wand</h3>
+            <p>Water & Earth</p>
+            <p class="store-price">20 Coins</p>
+            <button class="store-buy-button" data-item="tidewood-wand">Buy</button>
+        </div>
+
+        <div class="store-card">
+            <img src="images/stormflame-wand.png" alt="Stormflame Wand" class="store-item-image">
+            <h3>Stormflame Wand</h3>
+            <p>Wind & Fire</p>
+            <p class="store-price">30 Coins</p>
+            <button class="store-buy-button" data-item="stormflame-wand">Buy</button>
+        </div>
+
+        <div class="store-card">
+            <img src="images/celestial-wand.png" alt="Celestial Wand" class="store-item-image">
+            <h3>Celestial Wand</h3>
+            <p>Silver Moon</p>
+            <p class="store-price">45 Coins</p>
+            <button class="store-buy-button" data-item="celestial-wand">Buy</button>
+        </div>
+
+        <div class="store-card">
+            <img src="images/mistweaver-staff.png" alt="Mistweaver Staff" class="store-item-image staff-image">
+            <h3>Mistweaver Staff</h3>
+            <p>Water & Wind</p>
+            <p class="store-price">35 Coins</p>
+            <button class="store-buy-button" data-item="mistweaver-staff">Buy</button>
+        </div>
+
+        <div class="store-card">
+            <img src="images/ashforge-staff.png" alt="Ashforge Staff" class="store-item-image staff-image">
+            <h3>Ashforge Staff</h3>
+            <p>Earth & Fire</p>
+            <p class="store-price">50 Coins</p>
+            <button class="store-buy-button" data-item="ashforge-staff">Buy</button>
+        </div>
+
+        <div class="store-card">
+            <img src="images/celestial-staff.png" alt="Celestial Staff" class="store-item-image staff-image">
+            <h3>Celestial Staff</h3>
+            <p>Silver Moon</p>
+            <p class="store-price">75 Coins</p>
+            <button class="store-buy-button" data-item="celestial-staff">Buy</button>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Magical Items -->
+<section class="store-equipment-section">
+
+    <h2>Magical Items</h2>
+
+    <p class="store-equipment-description">
+        Curious treasures, enchanted tools and ancient
+        secrets await those who dare to explore.
+    </p>
+
+    <div class="store-products">
+
+        <!-- Moon Amulet -->
+        <div class="store-card">
+            <img
+                src="images/moon-amulet.png"
+                alt="Moon Amulet"
+                class="store-item-image"
+            >
+
+            <h3>Moon Amulet</h3>
+            <p>A celestial charm touched by moonlight.</p>
+            <p class="store-price">15 Coins</p>
+
+            <button class="store-buy-button" data-item="moon-amulet">
+                Buy
+            </button>
+        </div>
+
+        <!-- Enchanted Cauldron -->
+        <div class="store-card">
+            <img
+                src="images/enchanted-cauldron.png"
+                alt="Enchanted Cauldron"
+                class="store-item-image"
+            >
+
+            <h3>Enchanted Cauldron</h3>
+            <p>Every great potion begins with a little magic.</p>
+            <p class="store-price">35 Coins</p>
+
+            <button class="store-buy-button" data-item="enchanted-cauldron">
+                Buy
+            </button>
+        </div>
+
+        <!-- The Moonbound Grimoire -->
+        <div class="store-card">
+            <img
+                src="images/moonbound-grimoire.png"
+                alt="The Moonbound Grimoire"
+                class="store-item-image"
+            >
+
+            <h3>The Moonbound Grimoire</h3>
+            <p>Six magical recipes waiting to be discovered.</p>
+            <p class="store-price">20 Coins</p>
+
+            <button class="store-buy-button" data-item="moonbound-grimoire">
+                Buy
+            </button>
+        </div>
+
+        <!-- Crystal Ball -->
+        <div class="store-card">
+            <img
+                src="images/crystal-ball.png"
+                alt="Crystal Ball"
+                class="store-item-image"
+            >
+
+            <h3>Crystal Ball</h3>
+            <p>Peer into the mist and hear the whispers of fate.</p>
+            <p class="store-price">40 Coins</p>
+
+            <button class="store-buy-button" data-item="crystal-ball">
+                Buy
+            </button>
+        </div>
+        <div class="store-card">
+    <img src="images/orb-of-forgotten-stars.png"
+         alt="The Orb of Forgotten Stars"
+         class="store-item-image">
+
+    <h3>The Orb of Forgotten Stars</h3>
+
+    <p>
+        An ancient relic holding five forgotten prophecies
+        and the secrets of a mysterious fifth element.
+    </p>
+
+    <p class="store-price">100 Coins</p>
+
+    <button class="store-buy-button"
+            data-item="orb-of-forgotten-stars">Buy</button>
+</div>
+    </div>
+
+    <div class="store-section-heading">
+    <h2>House Treasures</h2>
+    <p>
+        Wear the pride of your house and carry its magic
+        wherever you go.
+    </p>
+</div>
+    <div class="store-card">
+
+    <img
+        id="storeHouseCrestImage"
+        src=""
+        alt="House Crest"
+        class="store-item-image"
+    >
+
+    <h3>House Crest</h3>
+
+    <p>
+        A magical emblem representing your
+        place among the four houses of Silvermoon Academy.
+    </p>
+
+    <p class="store-price">20 Coins</p>
+
+    <button
+        class="store-buy-button"
+        data-item="house-crest"
+    >
+        Buy
+    </button>
+
+</div>
+<!-- Enchanted Sceneries -->
+<div class="store-section-heading">
+    <h2>Enchanted Sceneries</h2>
+    <p>Find your own magical corner of Silvermoon Academy.</p>
+</div>
+
+<div class="store-products">
+
+    <div class="store-card">
+        <img src="images/moonlit-library.png" alt="Moonlit Library" class="store-item-image">
+        <h3>Moonlit Library</h3>
+        <p>Where ancient knowledge sleeps beneath the moonlight.</p>
+        <p class="store-price">30 Coins</p>
+        <button class="store-buy-button" data-item="moonlit-library">Buy</button>
+    </div>
+
+    <div class="store-card">
+        <img src="images/crystal-cavern.png" alt="Crystal Cavern" class="store-item-image">
+        <h3>Crystal Cavern</h3>
+        <p>A hidden sanctuary illuminated by enchanted crystals.</p>
+        <p class="store-price">30 Coins</p>
+        <button class="store-buy-button" data-item="crystal-cavern">Buy</button>
+    </div>
+
+    <div class="store-card">
+        <img src="images/astral-observatory.png" alt="Astral Observatory" class="store-item-image">
+        <h3>Astral Observatory</h3>
+        <p>Reach for the stars from the academy's highest tower.</p>
+        <p class="store-price">30 Coins</p>
+        <button class="store-buy-button" data-item="astral-observatory">Buy</button>
+    </div>
+
+    <div class="store-card">
+        <img src="images/elementorumia.png" alt="Elementorumia" class="store-item-image">
+        <h3>Elementorumia</h3>
+        <p>Where the four founders united their elemental magic.</p>
+        <p class="store-price">30 Coins</p>
+        <button class="store-buy-button" data-item="elementorumia">Buy</button>
+    </div>
+
+    <div class="store-card">
+        <img src="images/whispering-glade.png" alt="Whispering Glade" class="store-item-image">
+        <h3>Whispering Glade</h3>
+        <p>A peaceful forest clearing where nature whispers secrets.</p>
+        <p class="store-price">30 Coins</p>
+        <button class="store-buy-button" data-item="whispering-glade">Buy</button>
+    </div>
+
+    <div class="store-card">
+        <img src="images/celestial-gardens.png" alt="Celestial Gardens" class="store-item-image">
+        <h3>Celestial Gardens</h3>
+        <p>Wander among enchanted flowers beneath the golden sun.</p>
+        <p class="store-price">30 Coins</p>
+        <button class="store-buy-button" data-item="celestial-gardens">Buy</button>
+    </div>
+
+</div>
+
+</section>
+
+    
+<!-- =====================================
+     THE ALCHEMIST'S SUPPLIES
+===================================== -->
+
+<section class="store-equipment-section">
+
+    <h2>The Alchemist's Supplies</h2>
+
+    <p class="store-equipment-description">
+        From common herbs to rare magical treasures,
+        every great potion begins with the right ingredients.
+    </p>
+
+    <div class="store-products" id="alchemistProducts">
+        <!-- Ingredients will appear here -->
+    </div>
+
+</section>
+
+    </main>
+
+    <div id="storePopup" class="store-popup-overlay">
+    <div class="store-popup">
+        <img
+    src="images/familiar-bond-token.png"
+    alt="Familiar Bond Token"
+    class="store-popup-image"
+>
+        <h2 id="storePopupTitle">Purchase Complete!</h2>
+        <p id="storePopupMessage"></p>
+        <div class="store-popup-actions">
+
+    <button id="closeStorePopup" class="store-buy-button">
+        Continue Shopping
+    </button>
+
+    <button id="goToFamiliarRitual" class="store-buy-button" hidden>
+        Begin the Ritual
+    </button>
+
+</div>
+    </div>
+</div>
+
+    <script src="js/global.js"></script>
+    <script src="js/store.js"></script>
+</body>
+</html>

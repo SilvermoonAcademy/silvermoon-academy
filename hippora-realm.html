@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hippora's Realm | Silvermoon Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="hippora-realm">
+
+    <p class="chapter-label">
+        CHAPTER V – THE FIFTH LIGHT
+    </p>
+
+    <h1>Hippora's Realm</h1>
+    <h2>The Whispering Skies</h2>
+
+    <!-- Hippora's realm -->
+    <div class="hippora-scene">
+
+        <img
+            src="images/hippora-realm.png"
+            alt="The floating temples of the Whispering Skies"
+            class="hippora-background"
+        >
+
+        <img
+            src="images/hippora-guardian.png"
+            alt="Hippora, Guardian of Wind"
+            class="hippora-guardian"
+        >
+        
+<!-- The Mantle of the Four Winds -->
+<button
+    type="button"
+    class="hippora-mantle"
+    id="hipporaMantle"
+    aria-label="Examine the Mantle of the Four Winds"
+>
+    <img
+        src="images/mantle-of-four-winds.png"
+        alt="The Mantle of the Four Winds resting on a marble pedestal"
+    >
+</button>
+
+
+    </div>
+
+<!-- THE MANTLE CEREMONY -->
+<section class="mantle-ceremony" id="mantleCeremony" hidden>
+
+    <h2>The Mantle of the Four Winds</h2>
+
+    <p>
+        As you approach the ancient pedestal,
+        the golden embroidery begins to shimmer.
+    </p>
+
+    <p>
+        <strong>Hippora:</strong>
+        "This mantle was woven beneath the first silver moon.
+        Ventlia entrusted it to those who would one day
+        carry the harmony of the four elements."
+    </p>
+
+    <p>
+        "Its threads hold the memory of Water, Fire,
+        Earth and Wind. At its heart shines the
+        forgotten light of Aether."
+    </p>
+
+    <p>
+        "Wear it, young guardian. Let the winds
+        recognize you as one of their own."
+    </p>
+
+    <button id="acceptWindMantle">
+        Accept the Mantle
+    </button>
+
+</section>
+
+    <section class="hippora-intro">
+
+        <p>
+            High above the clouds, where the winds carry
+            the memories of ancient magic, the last
+            guardian awaits.
+        </p>
+
+        <p>
+            Hippora, the eternal companion of Ventlia,
+            stands before the Celestial Sanctuary.
+        </p>
+
+        <p>
+            <strong>Hippora:</strong>
+            "The skies have forgotten their harmony,
+            young guardian. The ancient winds
+            no longer know their paths."
+        </p>
+
+        <p>
+            "Climb upon my back. Together, we shall
+            awaken the winds of Ventlia."
+        </p>
+
+        <p>
+            "But remember... flight is not about control.
+            It is about trust."
+        </p>
+
+        <button id="beginFlightTrial">
+            Begin the Flight Trial
+        </button>
+
+    </section>
+
+<!-- =====================================
+     HIPPORA - THE FLIGHT TRIAL
+===================================== -->
+
+<section class="hippora-flight-trial" id="hipporaFlightTrial" hidden>
+
+    <h2>The Flight Trial</h2>
+
+    <p>
+        The winds of Ventlia await your courage.
+        Guide Hippora through the skies and restore
+        harmony to the ancient winds.
+    </p>
+
+    <div class="flight-info">
+        <span id="flightStage">Stage 1: The Gentle Winds</span>
+        <span id="flightScore">Wind Rings: 0 / 5</span>
+    </div>
+
+    <div class="flight-game" id="flightGame">
+
+        <div class="flight-player" id="flightPlayer"></div>
+
+    </div>
+
+    <p id="flightMessage" aria-live="polite">
+        Use the arrow keys or WASD to guide Hippora.
+    </p>
+
+    <div class="flight-controls">
+        <button id="flightUp">↑</button>
+        <button id="flightDown">↓</button>
+        <button id="flightLeft">←</button>
+        <button id="flightRight">→</button>
+    </div>
+
+    <button id="startFlightGame">
+        Take Flight
+    </button>
+    <button id="continueFlight" hidden>
+    Continue to the Celestial Sanctuary
+</button>
+</section>
+
+<!-- HIPPORA - FINAL BLESSING -->
+<section class="hippora-blessing" id="hipporaBlessing" hidden>
+
+    <h2>Blessing of Wind</h2>
+
+    <p>
+        Beyond the celestial gateway, the ancient winds
+        gather around you and Hippora.
+    </p>
+
+    <p>
+        <strong>Hippora:</strong>
+        "You have trusted the winds, faced the storm,
+        and followed the path that Ventlia once walked."
+    </p>
+
+    <p>
+        "The skies remember their harmony once more.
+        You have earned my blessing, young guardian."
+    </p>
+
+    <img
+        src="images/celestial-feather.png"
+        alt="Celestial Feather"
+        class="celestial-feather-reward"
+    >
+
+    <h3>Celestial Feather</h3>
+
+    <p>
+        A feather carrying the ancient winds of Ventlia.
+        One of the four sacred ingredients needed
+        to awaken the forgotten light of Aether.
+    </p>
+
+    <button id="claimWindBlessing">
+        Claim Blessing of Wind
+    </button>
+
+    <p id="windBlessingMessage" aria-live="polite"></p>
+
+</section>
+
+    <a href="hall-of-guardians.html">
+        Return to the Hall of Guardians
+    </a>
+
+</main>
+
+<script src="js/global.js"></script>
+<script src="js/hippora.js"></script>
+
+</body>
+</html>

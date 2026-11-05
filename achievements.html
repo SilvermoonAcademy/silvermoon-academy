@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements – Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+
+            <p class="welcome">YOUR MAGICAL JOURNEY</p>
+
+            <h1>Achievements</h1>
+
+            <p class="subtitle">
+                Complete challenges and prove your skills at Silvermoon Academy.
+            </p>
+
+        </section>
+
+<!-- ACHIEVEMENT PROGRESS -->
+<section class="achievement-overview">
+
+    <h2>Achievement Progress</h2>
+
+    <p class="achievement-counter">
+        <span id="unlockedAchievements">0</span>
+        /
+        <span id="totalAchievements">0</span>
+        Achievements Unlocked
+    </p>
+
+    <div class="achievement-progress-bar">
+        <div
+            class="achievement-progress-fill"
+            id="achievementProgressFill">
+        </div>
+    </div>
+
+</section>
+
+        
+<!-- =====================================
+     NOVICE ACHIEVEMENTS
+===================================== -->
+
+<h2 class="achievement-section-title novice-title">
+    ✦ Novice Achievements ✦
+</h2>
+
+<section class="achievements-list">
+
+    <!-- SPELL APPRENTICE -->
+    <div class="achievement-card" id="spellApprentice">
+        <img
+            src="images/ashforge-staff.png"
+            alt="Spell Apprentice"
+            class="achievement-image"
+        >
+
+        <h2>Spell Apprentice</h2>
+        <p>Discover your first magical spell.</p>
+
+        <span class="achievement-status" id="spellApprenticeStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- POTION NOVICE -->
+    <div class="achievement-card" id="potionNovice">
+        <img
+            src="images/potion-moonlight-elixir.png"
+            alt="Potion Novice"
+            class="achievement-image"
+        >
+
+        <h2>Potion Novice</h2>
+        <p>Successfully create your first potion.</p>
+
+        <span class="achievement-status" id="potionNoviceStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- COIN COLLECTOR -->
+    <div class="achievement-card" id="coinCollector">
+        <img
+            src="images/coin-pile.png"
+            alt="Coin Collector"
+            class="achievement-image"
+        >
+
+        <h2>Coin Collector</h2>
+        <p>Collect your first 10 magical coins.</p>
+
+        <span class="achievement-status" id="coinCollectorStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- PERFECT STUDENT -->
+    <div class="achievement-card" id="perfectStudent">
+        <img
+            src="images/children-silver-moon.png"
+            alt="Perfect Student"
+            class="achievement-image"
+        >
+
+        <h2>Perfect Student</h2>
+        <p>Complete a quiz with a perfect score.</p>
+
+        <span class="achievement-status" id="perfectStudentStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- CREATURE EXPLORER -->
+    <div class="achievement-card achievement-novice" id="creatureExplorer">
+
+        <span class="achievement-rarity">NOVICE</span>
+
+        <img
+            src="images/hippogriff.png"
+            alt="Magical Hippogriff"
+            class="achievement-image"
+        >
+
+        <h2>Creature Explorer</h2>
+        <p>Discover your first magical creature.</p>
+
+        <span class="achievement-status" id="creatureExplorerStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- CELESTIAL OBSERVER -->
+    <div class="achievement-card achievement-novice" id="celestialObserver">
+
+        <span class="achievement-rarity">NOVICE</span>
+
+        <img
+            src="images/astral-telescope.png"
+            alt="Celestial Observer"
+            class="achievement-image"
+        >
+
+        <h2>Celestial Observer</h2>
+        <p>Observe your first celestial phenomenon.</p>
+
+        <span class="achievement-status" id="celestialObserverStatus">
+            Locked
+        </span>
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     MASTER ACHIEVEMENTS
+===================================== -->
+
+<h2 class="achievement-section-title master-title">
+    ✦ Master Achievements ✦
+</h2>
+
+<section class="achievements-list">
+
+    <!-- POTION MASTER -->
+    <div class="achievement-card achievement-master" id="potionMaster">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/enchanted-cauldron.png"
+            alt="Enchanted Cauldron"
+            class="achievement-image"
+        >
+
+        <h2>Potion Master</h2>
+        <p>Brew 10 magical potions.</p>
+
+        <p class="achievement-progress" id="potionMasterProgress">
+            0 / 10 potions brewed
+        </p>
+
+        <span class="achievement-status" id="potionMasterStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- ARCANE MASTER -->
+    <div class="achievement-card achievement-master" id="arcaneMaster">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/celestial-wand.png"
+            alt="Celestial Wand"
+            class="achievement-image"
+        >
+
+        <h2>Arcane Master</h2>
+        <p>Cast 25 magical spells.</p>
+
+        <p class="achievement-progress" id="arcaneMasterProgress">
+            0 / 25 spells cast
+        </p>
+
+        <span class="achievement-status" id="arcaneMasterStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- BEAST SCHOLAR -->
+    <div class="achievement-card achievement-master" id="beastScholar">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/hippogriff.png"
+            alt="Beast Scholar"
+            class="achievement-image"
+        >
+
+        <h2>Beast Scholar</h2>
+        <p>Discover all eight magical creatures.</p>
+
+        <p class="achievement-progress" id="beastScholarProgress">
+            0 / 8 creatures discovered
+        </p>
+
+        <span class="achievement-status" id="beastScholarStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- MASTER OF THE HEAVENS -->
+    <div class="achievement-card achievement-master" id="masterOfHeavens">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/astral-telescope.png"
+            alt="Master of the Heavens"
+            class="achievement-image"
+        >
+
+        <h2>Master of the Heavens</h2>
+        <p>Witness all four celestial phenomena.</p>
+
+        <p class="achievement-progress" id="masterOfHeavensProgress">
+            0 / 4 phenomena observed
+        </p>
+
+        <span class="achievement-status" id="masterOfHeavensStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- KEEPER OF KNOWLEDGE -->
+    <div class="achievement-card achievement-master" id="keeperOfKnowledge">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/four-kingdoms.png"
+            alt="Keeper of Knowledge"
+            class="achievement-image"
+        >
+
+        <h2>Keeper of Knowledge</h2>
+        <p>Study all five books of Silvermoon's history.</p>
+
+        <p class="achievement-progress" id="keeperOfKnowledgeProgress">
+            0 / 5 books studied
+        </p>
+
+        <span class="achievement-status" id="keeperOfKnowledgeStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- SPELLCRAFT SCHOLAR -->
+    <div class="achievement-card achievement-master" id="spellcraftScholar">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/academy-spellcraft.png"
+            alt="Spellcraft Scholar"
+            class="achievement-image"
+        >
+
+        <h2>Spellcraft Scholar</h2>
+        <p>Achieve a perfect score in the Spellcraft examination.</p>
+
+        <span class="achievement-status" id="spellcraftScholarStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- POTION SCHOLAR -->
+    <div class="achievement-card achievement-master" id="potionScholar">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/potion-phoenix-essence.png"
+            alt="Potion Scholar"
+            class="achievement-image"
+        >
+
+        <h2>Potion Scholar</h2>
+        <p>Achieve a perfect score in the Potions examination.</p>
+
+        <span class="achievement-status" id="potionScholarStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- ASTRAL SCHOLAR -->
+    <div class="achievement-card achievement-master" id="astralScholar">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/astral-vespera.png"
+            alt="Astral Scholar"
+            class="achievement-image"
+        >
+
+        <h2>Astral Scholar</h2>
+        <p>Achieve a perfect score in the Astral Studies examination.</p>
+
+        <span class="achievement-status" id="astralScholarStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- HISTORY SCHOLAR -->
+    <div class="achievement-card achievement-master" id="historyScholar">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/academy-ancient.png"
+            alt="History Scholar"
+            class="achievement-image"
+        >
+
+        <h2>History Scholar</h2>
+        <p>Achieve a perfect score in the Ancient Knowledge examination.</p>
+
+        <span class="achievement-status" id="historyScholarStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- CREATURE SCHOLAR -->
+    <div class="achievement-card achievement-master" id="creatureScholar">
+
+        <span class="achievement-rarity">MASTER</span>
+
+        <img
+            src="images/siren.png"
+            alt="Creature Scholar"
+            class="achievement-image"
+        >
+
+        <h2>Creature Scholar</h2>
+        <p>Achieve a perfect score in the Magical Creatures examination.</p>
+
+        <span class="achievement-status" id="creatureScholarStatus">
+            Locked
+        </span>
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     LEGENDARY ACHIEVEMENTS
+===================================== -->
+
+<h2 class="achievement-section-title legendary-title">
+    ✦ Legendary Achievements ✦
+</h2>
+
+<section class="achievements-list">
+
+    <!-- KEEPER OF THE FIFTH LIGHT -->
+    <div class="achievement-card achievement-legendary" id="keeperFifthLight">
+
+        <span class="achievement-rarity">LEGENDARY</span>
+
+        <img
+            src="images/mark-of-aether.png"
+            alt="The Mark of Aether"
+            class="achievement-image"
+        >
+
+        <h2>Keeper of the Fifth Light</h2>
+        <p>Restore the Heart of Aether and claim its sacred mark.</p>
+
+        <span class="achievement-status" id="keeperFifthLightStatus">
+            Locked
+        </span>
+    </div>
+
+    <!-- GRAND SCHOLAR -->
+    <div class="achievement-card achievement-legendary" id="grandScholar">
+
+        <span class="achievement-rarity">LEGENDARY</span>
+
+        <img
+            src="images/quiz-passed-stamp.png"
+            alt="Grand Scholar"
+            class="achievement-image"
+        >
+
+        <h2>Grand Scholar</h2>
+        <p>Achieve a perfect score in the Master Examination.</p>
+
+        <span class="achievement-status" id="grandScholarStatus">
+            Locked
+        </span>
+    </div>
+
+</section>
+
+
+    </main>
+    
+    <script src="js/global.js"></script>
+    <script src="js/achievements.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Familiar Bonding Ritual | Silvermoon Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="familiar-ritual-page">
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img
+                    src="images/silvermoon-logo.png"
+                    alt="Silvermoon Academy"
+                >
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="coin-counter">
+                <span id="coinBalance">0</span>
+            </div>
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                aria-label="Switch theme"
+            >
+                <img
+                    id="themeIcon"
+                    src="images/theme-sun.png"
+                    alt="Switch to light mode"
+                >
+            </button>
+
+        </div>
+    </header>
+
+    <main class="familiar-ritual-main">
+
+        <section class="familiar-ritual-intro">
+
+            <h1>The Familiar Bonding Ritual</h1>
+
+            <p class="familiar-ritual-subtitle">
+                Under the Silver Moon, every soul finds its companion.
+            </p>
+
+            <p>
+                Seven questions await you. Answer with your heart,
+                and discover which magical familiar is destined
+                to walk beside you.
+            </p>
+
+            <button
+                id="beginFamiliarRitual"
+                class="store-buy-button"
+            >
+                Begin the Ritual
+            </button>
+
+        </section>
+
+        <section class="familiar-question-card" id="familiarQuestionCard" hidden>
+
+    <p class="familiar-question-number" id="familiarQuestionNumber">
+        Question 1 of 7
+    </p>
+
+    <div class="familiar-progress" id="familiarProgress"></div>
+
+    <h2 id="familiarQuestionText"></h2>
+
+    <div class="familiar-answer-options" id="familiarAnswerOptions"></div>
+
+</section>
+<section class="familiar-result-card" id="familiarResultCard" hidden>
+
+    <p class="familiar-result-label">
+        THE SILVER MOON HAS CHOSEN
+    </p>
+
+    <h2>Your Familiar Has Found You</h2>
+
+    <img
+        id="familiarResultImage"
+        src=""
+        alt="Your magical familiar"
+    >
+
+    <h3 id="familiarResultName"></h3>
+
+    <p id="familiarResultDescription"></p>
+
+    <a href="profile.html" class="store-buy-button familiar-profile-link">
+        Return to Profile
+    </a>
+
+</section>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/familiar-ritual.js"></script>
+
+</body>
+</html>

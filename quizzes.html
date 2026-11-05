@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes – Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+
+            <p class="welcome">TEST YOUR KNOWLEDGE</p>
+
+            <h1>Magical Quizzes</h1>
+
+            <p class="subtitle">
+                Prove your knowledge and earn magical rewards.
+            </p>
+
+        </section>
+
+        <section class="quiz-area">
+
+            <h2>Choose Your Study</h2>
+
+<p class="quiz-intro">
+    Choose a subject and prove what you have learned at Silvermoon Academy.
+</p>
+
+<div class="quiz-parchment" data-quiz="spellcraft">
+
+    <img src="images/quiz-parchment.png" alt="Magical examination parchment">
+
+    <div class="parchment-content">
+        <h3>Spellcraft Examination</h3>
+
+        <p>
+            Test your knowledge of spells and enchantments.
+        </p>
+
+        <div class="parchment-info">
+            <span>5 Questions</span>
+            <span>🥈 Reward: 5 Coins</span>
+        </div>
+
+        <button data-subject="spellcraft" class="parchment-button">
+            Begin Examination
+        </button>
+    </div>
+
+</div>
+
+    <div class="quiz-parchment" data-quiz="potions">
+    <img src="images/quiz-parchment.png" alt="Magical examination parchment">
+
+    <div class="parchment-content">
+        <h3>Potions Examination</h3>
+
+        <p>
+            Test your knowledge of ingredients and magical brews.
+        </p>
+
+        <div class="parchment-info">
+            <span>5 Questions</span>
+            <span>🥈 Reward: 5 Coins</span>
+        </div>
+
+        <button data-subject="potions" class="parchment-button">
+            Begin Examination
+        </button>
+    </div>
+</div>
+
+    <!-- Astral Studies Examination -->
+<div class="quiz-parchment" data-quiz="astral">
+    <img src="images/quiz-parchment.png" alt="Magical examination parchment">
+
+    <div class="parchment-content">
+        <h3>Astral Studies Examination</h3>
+
+        <p>
+            Test your knowledge of the stars and celestial magic.
+        </p>
+
+        <div class="parchment-info">
+            <span>5 Questions</span>
+            <span>🥈 Reward: 5 Coins</span>
+        </div>
+
+        <button data-subject="astral" class="parchment-button">
+            Begin Examination
+        </button>
+    </div>
+</div>
+
+
+<!-- Ancient Knowledge Examination -->
+<div class="quiz-parchment" data-quiz="ancient">
+    <img src="images/quiz-parchment.png" alt="Magical examination parchment">
+
+    <div class="parchment-content">
+        <h3>Ancient Knowledge Examination</h3>
+
+        <p>
+            Test your knowledge of Silvermoon's history and ancient lore.
+        </p>
+
+        <div class="parchment-info">
+            <span>5 Questions</span>
+            <span>🥈 Reward: 5 Coins</span>
+        </div>
+
+        <button data-subject="ancient" class="parchment-button">
+            Begin Examination
+        </button>
+    </div>
+</div>
+
+
+<!-- Magical Creatures Examination -->
+<div class="quiz-parchment" data-quiz="creatures">
+    <img src="images/quiz-parchment.png" alt="Magical examination parchment">
+
+    <div class="parchment-content">
+        <h3>Magical Creatures Examination</h3>
+
+        <p>
+            Test your knowledge of magical creatures and their secrets.
+        </p>
+
+        <div class="parchment-info">
+            <span>5 Questions</span>
+            <span>🥈 Reward: 5 Coins</span>
+        </div>
+
+        <button data-subject="creatures" class="parchment-button">
+            Begin Examination
+        </button>
+    </div>
+</div>
+
+
+<!-- Silvermoon Master Examination -->
+<div class="quiz-parchment" data-quiz="master">
+    <img src="images/quiz-parchment.png" alt="Magical examination parchment">
+
+    <div class="parchment-content">
+        <h3>Silvermoon Master Examination</h3>
+
+        <p>
+            Face the ultimate test of your Silvermoon knowledge.
+        </p>
+
+        <div class="parchment-info">
+            <span>10 Questions</span>
+            <span>🥇 Reward: 10 Coins</span>
+        </div>
+
+        <button data-subject="master" class="parchment-button">
+            Begin Examination
+        </button>
+    </div>
+</div>
+
+</div>
+
+<div class="quiz-question-parchment">
+
+    <img src="images/quiz-parchment.png"
+         alt="Magical examination parchment">
+
+    <div class="quiz-question-content">
+
+        <p id="questionCounter"></p>
+
+        <p id="question">
+            Select a study to begin your quiz.
+        </p>
+
+        <div class="quiz-options">
+            <button id="answer1"></button>
+            <button id="answer2"></button>
+            <button id="answer3"></button>
+        </div>
+
+        <p id="quizResult"></p>
+
+        <button id="retryQuiz">Try Again</button>
+
+    </div>
+
+</div>
+
+</section>
+
+    </main>
+    
+    <script src="js/quizzes.js"></script>
+    <script src="js/global.js"></script>
+    
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astral Studies – Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+
+            <p class="welcome">SILVERMOON ACADEMY</p>
+
+            <h1>Astral Studies</h1>
+
+            <p class="subtitle">
+                Explore the stars, the moon and the magical mysteries of the night sky.
+            </p>
+
+        </section>
+
+        <section class="astral-list">
+
+    <div class="astral-card silver-moon">
+        <img
+            src="images/astral-silver-moon.png"
+            alt="The Silver Moon"
+            class="astral-image"
+        >
+        <h2>The Silver Moon</h2>
+        <p>Magic, intuition and balance.</p>
+    </div>
+
+    <div class="astral-card aqualis">
+        <img
+            src="images/astral-aqualis.png"
+            alt="Aqualis"
+            class="astral-image"
+        >
+        <h2>Aqualis</h2>
+        <p>Emotion, dreams and healing.</p>
+    </div>
+
+    <div class="astral-card ignara">
+        <img
+            src="images/astral-ignara.png"
+            alt="Ignara"
+            class="astral-image"
+        >
+        <h2>Ignara</h2>
+        <p>Courage, passion and strength.</p>
+    </div>
+
+    <div class="astral-card terravon">
+        <img
+            src="images/astral-terravon.png"
+            alt="Terravon"
+            class="astral-image"
+        >
+        <h2>Terravon</h2>
+        <p>Growth, nature and stability.</p>
+    </div>
+
+    <div class="astral-card caelus">
+        <img
+            src="images/astral-caelus.png"
+            alt="Caelus"
+            class="astral-image"
+        >
+        <h2>Caelus</h2>
+        <p>Freedom, knowledge and discovery.</p>
+    </div>
+
+    <div class="astral-card vespera">
+        <img
+            src="images/astral-vespera.png"
+            alt="Vespera"
+            class="astral-image"
+        >
+        <h2>Vespera</h2>
+        <p>Mystery, illusion and hidden magic.</p>
+    </div>
+
+    <div class="astral-card eternal-stars">
+        <img
+            src="images/astral-eternal-stars.png"
+            alt="The Eternal Stars"
+            class="astral-image"
+        >
+        <h2>The Eternal Stars</h2>
+        <p>Destiny, prophecy and divination.</p>
+    </div>
+
+</section>
+<section class="celestial-observation">
+
+    <p class="welcome">CELESTIAL OBSERVATORY</p>
+
+    <h2>Observe the Night Sky</h2>
+
+    <p class="observation-intro">
+        Study the heavens and discover what the stars reveal tonight.
+    </p>
+
+    <div class="observation-sky" id="observationSky">
+
+    <button id="observeSky" class="telescope-button" aria-label="Observe the Sky">
+        <img
+            src="images/astral-telescope.png"
+            alt=""
+            class="telescope-image"
+        >
+    </button>
+
+</div>
+
+<p class="observe-label">Observe the Sky</p>
+
+<div id="celestialResult"></div>
+
+</section>
+    </main>
+    
+    <script src="js/global.js"></script>
+    <script src="js/astral.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hall of Guardians | Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="guardians-page">
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/silvermoon-logo.png"
+                     alt="Silvermoon Academy">
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="coin-counter">
+                <span id="coinBalance">0</span>
+            </div>
+
+            <button id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Switch theme">
+                <img id="themeIcon"
+                     src="images/theme-sun.png"
+                     alt="Switch to light mode">
+            </button>
+        </div>
+    </header>
+
+    <main class="guardians-main">
+
+        <section class="guardians-intro">
+
+            <p class="welcome">CHAPTER V – THE FIFTH LIGHT</p>
+
+            <h1>The Hall of Guardians</h1>
+
+            <p class="subtitle">
+                Four ancient guardians await beyond the veil.
+                Their blessings shall reveal the path
+                to the Heart of Aether.
+            </p>
+
+        </section>
+
+                <!-- STUDENT GUARDIAN JOURNEY -->
+        <section class="guardian-journey" id="guardianJourney">
+
+            <h2 id="guardianJourneyTitle">
+                Your Guardian Journey
+            </h2>
+
+            <p id="guardianJourneyMessage"></p>
+
+            
+<a href="aetherlight-elixir.html"
+   id="enterAetherlightChamber"
+   class="enter-aetherlight"
+   hidden>
+    Enter the Ancient Cauldron
+</a>
+
+<!-- THE HEART OF AETHER -->
+<section class="heart-of-aether-unlock">
+
+    <h2>The Heart of Aether</h2>
+
+    <p id="heartOfAetherMessage">
+        An ancient path remains hidden...
+    </p>
+
+    <a
+        href="heart-of-aether.html"
+        id="heartOfAetherLink"
+        class="heart-of-aether-link"
+        hidden>
+        Enter the Heart of Aether
+    </a>
+
+</section>
+
+        </section>
+
+        <!-- THE FOUR GUARDIAN PORTALS -->
+<section class="guardians-hall">
+
+    <img
+        src="images/hall-of-guardians.png"
+        alt="The Hall of Guardians"
+        class="guardians-hall-image"
+    >
+
+    <!-- Elemental portals -->
+    <button class="guardian-portal portal-water"
+            data-guardian="sirena"
+            aria-label="Enter Sirena's realm"></button>
+
+    <button class="guardian-portal portal-fire"
+            data-guardian="keraon"
+            aria-label="Enter Keraon's realm"></button>
+
+    <button class="guardian-portal portal-earth"
+            data-guardian="gorgana"
+            aria-label="Enter Gorgana's realm"></button>
+
+    <button class="guardian-portal portal-wind"
+            data-guardian="hippora"
+            aria-label="Enter Hippora's realm"></button>
+
+</section>
+
+
+        <section class="guardians-message">
+
+            <p>
+                The chamber has remained silent for three thousand years.
+                Yet as you step forward, the ancient portals
+                begin to stir...
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/guardians.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirena's Realm | Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="sirena-page">
+
+    <main class="sirena-main">
+
+        <section class="sirena-intro">
+            <p>CHAPTER V – THE TRIAL OF WATER</p>
+            <h1>Sirena's Realm</h1>
+            <h2>The Drowning Light</h2>
+        </section>
+
+        <section class="sirena-scene">
+
+            <img
+                src="images/sirena-realm.png"
+                alt="Sirena's underwater sanctuary"
+                class="sirena-background"
+            >
+
+            <img
+                src="images/sirena-guardian.png"
+                alt="Sirena, Guardian of Water"
+                class="sirena-character"
+            >
+
+        </section>
+
+        <section class="sirena-dialogue">
+
+            <h3>Sirena, Guardian of Water</h3>
+
+            <p>
+                "For three thousand years, these waters
+                have guarded the memories of Aquillia.
+                But something has disturbed their peace."
+            </p>
+
+            <p>
+                "A young creature has become trapped
+                among the ancient ruins.
+                I can feel her light growing weaker."
+            </p>
+
+            <p>
+                "Her name is Neriel.
+                Will you help me save her?"
+            </p>
+
+            <button class="forgotten-orb-button"
+                    id="beginSirenaTrial">
+                Help Neriel
+            </button>
+
+        </section>
+
+        
+<!-- Neriel's rescue -->
+<section class="neriel-rescue" id="nerielRescue" hidden>
+
+    <h2>The Trapped Light</h2>
+
+<img
+    id="nerielImage"
+    src="images/neriel-trapped.png"
+    alt="Neriel, a young seal trapped in an abandoned fishing net"
+    class="neriel-image"
+>
+
+    <p>
+        You follow Sirena through the ancient coral gardens.
+        Beneath a broken stone arch, a faint silver glow
+        flickers in the darkness.
+    </p>
+
+    <p>
+        A young seal lies trapped beneath an abandoned fishing net.
+        Her breathing is weak, and the magical light
+        surrounding her is slowly fading.
+    </p>
+
+    <p>
+        Neriel looks up at you with frightened eyes.
+        She tries to move, but the tangled ropes hold her still.
+    </p>
+
+    <button class="forgotten-orb-button"
+            id="inspectNerielNet">
+        Examine the Fishing Net
+    </button>
+
+    
+<!-- Neriel's fishing net puzzle -->
+<div class="neriel-net-puzzle" id="nerielNetPuzzle" hidden>
+
+    <h3>The Three Knots</h3>
+
+    <p>
+        Three enchanted knots hold the ancient net together.
+        Each carries a symbol of the sea.
+    </p>
+
+    <p class="neriel-puzzle-clue">
+        "The moon guides the waves,
+        the waves awaken the pearl,
+        and the pearl brings light to the darkness."
+    </p>
+
+    <div class="neriel-knot-buttons">
+
+        <button class="neriel-knot" data-knot="pearl">
+            Pearl
+        </button>
+
+        <button class="neriel-knot" data-knot="moon">
+            Moon
+        </button>
+
+        <button class="neriel-knot" data-knot="wave">
+            Wave
+        </button>
+
+    </div>
+
+    <p id="nerielPuzzleFeedback" aria-live="polite"></p>
+
+    
+<!-- Heal Neriel after freeing her -->
+<div class="neriel-healing" id="nerielHealing" hidden>
+
+    <p>
+        Neriel is finally free, but her injuries remain.
+        A gentle healing potion may restore her fading light.
+    </p>
+
+    <button class="forgotten-orb-button"
+            id="healNeriel">
+        Use Sanatio Potion
+    </button>
+
+    <p id="nerielHealingFeedback" aria-live="polite"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Sirena's blessing and Neriel's gift -->
+<section class="sirena-reward" id="sirenaReward" hidden>
+
+    <h2>The Blessing of Water</h2>
+
+    
+<img
+    src="images/neriel-healed.png"
+    alt="Neriel, healed and surrounded by silver-blue magic"
+    class="neriel-reward-image"
+>
+
+    <p>
+        As Neriel's wounds disappear, the ancient waters
+        begin to shimmer with silver-blue light.
+    </p>
+
+    <p>
+        Sirena approaches, her eyes filled with warmth.
+    </p>
+
+    <p class="sirena-reward-dialogue">
+        "Aquillia believed that true magic was never
+        measured by power alone, but by the kindness
+        we show to those who cannot protect themselves."
+    </p>
+
+    <p class="sirena-reward-dialogue">
+        "You have shown the compassion that once united
+        the founders and their guardians.
+        The waters shall remember your kindness."
+    </p>
+
+    <h3>You have earned the Blessing of Water!</h3>
+
+    <div class="sirena-reward-item">
+
+        <img
+            src="images/tear-of-the-tides.png"
+            alt="Tear of the Tides"
+            class="sirena-reward-image"
+        >
+
+        <h3>Tear of the Tides</h3>
+
+        <p>
+            Neriel swims towards you and gently places
+            a shimmering crystal within an ancient seashell.
+            A gift from the heart of the ocean.
+        </p>
+
+    </div>
+
+    <button class="forgotten-orb-button"
+            id="claimWaterBlessing">
+        Accept the Blessing
+    </button>
+
+    <p id="waterBlessingFeedback" aria-live="polite"></p>
+
+</section>
+
+        <div class="sirena-return">
+            <a href="hall-of-guardians.html">
+                Return to the Hall of Guardians
+            </a>
+        </div>
+
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/sirena.js"></script>
+
+</body>
+</html>

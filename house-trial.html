@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Trial | Silvermoon Academy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <img src="images/silvermoon-logo.png" alt="Silvermoon Academy">
+    </a>
+</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="profile.html">Profile</a>
+            <a href="store.html">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+
+    <div class="coin-counter">
+        <span id="coinBalance">0</span>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme">
+        <img
+            id="themeIcon"
+            src="images/theme-sun.png"
+            alt="Switch to light mode"
+        >
+    </button>
+
+</div>
+    </header>
+
+    <main>
+
+        <section class="academy-intro">
+            <p class="welcome">THE HOUSE TRIAL</p>
+
+            <h1>The Seven Questions of Silvermoon</h1>
+
+            <p class="subtitle">
+                The Houses of Silvermoon are not defined by the magic
+                you wield, but by the values that guide you.
+            </p>
+        </section>
+
+        <section class="house-trial-intro">
+            <h2>Your path awaits...</h2>
+
+            <p>
+                Seven questions stand between you and your House.
+                There are no right or wrong answers.
+                Choose the path that feels most true to you.
+            </p>
+
+            <button id="beginTrial">
+                🌙 Begin the Trial
+            </button>
+        </section>
+            <section class="house-trial-question" id="trialQuestion">
+
+                <p class="welcome" id="questionNumber">
+                QUESTION 1 OF 7
+                </p>
+
+                <h2 id="questionText">
+                Your first question awaits...
+                </h2>
+
+                <div class="house-answer-options" id="answerOptions">
+                <!-- Answers will be added with JavaScript -->
+                </div>
+
+            </section>
+
+            <section class="house-result" id="houseResult">
+
+    <p class="welcome">THE TRIAL IS COMPLETE</p>
+
+    <h2>The founders have seen the path that guides you...</h2>
+
+    <p class="house-reveal-text">
+        Your House is
+    </p>
+
+    <h1 id="winningHouse">
+        House
+    </h1>
+
+    <p id="houseMotto" class="house-motto">
+        Motto
+    </p>
+
+    <button id="returnProfile">
+        🌙 Return to Your Profile
+    </button>
+
+</section>
+    </main>
+
+    <script src="js/global.js"></script>
+    <script src="js/house-trial.js"></script>
+
+</body>
+
+</html>

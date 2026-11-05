@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorgana's Realm - Silvermoon Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="gorgana-realm">
+
+    <p>CHAPTER V – THE TRIAL OF EARTH</p>
+
+    <h1>Gorgana's Realm</h1>
+    <h2>The Petrified Heart</h2>
+
+    <div class="gorgana-scene">
+
+        <img
+            src="images/gorgana-realm.png"
+            alt="The ancient kingdom of Earth"
+            class="gorgana-background"
+        >
+
+        <img
+            src="images/gorgana-guardian.png"
+            alt="Gorgana, Guardian of Earth"
+            class="gorgana-guardian"
+        >
+
+    </div>
+
+    <p>
+        Deep within the ancient forests lies the
+        sacred kingdom once protected by Solumer.
+    </p>
+
+    <p>
+        For three thousand years, the Heartroot
+        has nourished the land with ancient earth magic.
+    </p>
+
+    <p>
+        But now the roots are turning to stone,
+        and the forest is slowly losing its life.
+    </p>
+
+    <h3>Gorgana, Guardian of Earth</h3>
+
+    <p>
+        "Welcome, young student. I am Gorgana,
+        guardian of the ancient earth."
+    </p>
+
+    <p>
+        "The Heartroot is fading. Without its magic,
+        even the oldest forests will fall silent."
+    </p>
+
+    <p>
+        "Will you help me awaken the life
+        that sleeps beneath the stone?"
+    </p>
+
+    <button class="forgotten-orb-button" id="beginGorganaTrial">
+        Help Restore the Heartroot
+    </button>
+
+<!-- Gorgana's first trial -->
+<section class="gorgana-trial" id="gorganaTrial" hidden>
+
+    <h2>The Silent Forest</h2>
+
+    <p>
+        You follow an ancient path deeper into the forest.
+        The air grows still, and the songs of birds fade away.
+    </p>
+
+    <p>
+        Around you, enormous roots have turned to stone.
+        Even the smallest flowers stand frozen in time.
+    </p>
+
+    <p class="gorgana-warning">
+        Gorgana whispers:
+        "The earth remembers every life it has nurtured.
+        But the Heartroot has forgotten how to grow."
+    </p>
+
+    <button class="forgotten-orb-button" id="exploreHeartroot">
+        Follow the Ancient Roots
+    </button>
+
+</section>
+
+<!-- The Shattered Heartroot Puzzle -->
+<section class="heartroot-puzzle" id="heartrootPuzzle" hidden>
+
+    <h2>The Shattered Heartroot</h2>
+
+    <p>
+        Before you stands the ancient Heartroot,
+        shattered into nine pieces of lifeless stone.
+    </p>
+
+    <p>
+        Restore the broken image to awaken
+        the magic sleeping within its roots.
+    </p>
+
+    <div class="heartroot-grid" id="heartrootGrid"></div>
+
+    <p id="heartrootFeedback" aria-live="polite"></p>
+
+    <button class="forgotten-orb-button"
+            id="resetHeartroot">
+        Shuffle Pieces
+    </button>
+
+    <img
+        src="images/heartroot-awakened.png"
+        alt="The Heartroot restored to life"
+        id="heartrootAwakened"
+        class="heartroot-awakened"
+        hidden
+    >
+
+    
+<div id="gorganaReward" class="gorgana-reward" hidden>
+
+    <h2>The Blessing of Earth</h2>
+
+    <p>
+        Gorgana raises her hand, and a small emerald
+        seed emerges from the ancient roots.
+    </p>
+
+    <p>
+        "Accept the Seed of Eternity, guardian.
+        Within it rests the memory of every
+        forest that has ever lived."
+    </p>
+
+    <img
+        src="images/seed-of-eternity.png"
+        alt="The Seed of Eternity"
+        class="gorgana-seed"
+    >
+
+    <button id="claimEarthBlessing">
+        Receive the Blessing of Earth
+    </button>
+
+    <p id="earthBlessingMessage" aria-live="polite"></p>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="js/global.js"></script>
+<script src="js/gorgana.js"></script>
+
+</body>
+</html>
